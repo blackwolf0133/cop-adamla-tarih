@@ -103,6 +103,8 @@ jobs:
 
       - name: Videoyu herkese açık adrese koy (GitHub Pages)
         id: pages
+        # EAA (sistem kullanıcı) anahtarıyla video doğrudan dosyadan yüklenir, Pages gerekmez
+        continue-on-error: true
         uses: actions/deploy-pages@v4
 
       - name: Videoyu al
