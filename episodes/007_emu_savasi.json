@@ -1,0 +1,389 @@
+{
+  "id": "007",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Ordu Emulara Yenildi!",
+  "year": "1932",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Bir ülke kuşlara savaş açtı... ve kaybetti 🦤😂\n\n1932'de Batı Avustralya'da yaklaşık 20 bin emu buğday tarlalarını talan edince hükümet orduyu gönderdi. Binlerce mermi harcandı ama hızlı ve kalabalık emular dağılıp kaçtı. Askerler kısa süre sonra geri çekildi. Tarihe 'Büyük Emu Savaşı' olarak geçti!\n\nSence kim kazandı? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #avustralya #emusavaşı #ilginçbilgiler #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dur! Bir ülke kuşlara savaş açtı. Ve tahmin et kim kazandı? Kuşlar!",
+      "text": "Dur! Bir ülke kuşlara savaş açtı. Ve tahmin et kim kazandı? Kuşlar!",
+      "voice_delay": 1.0,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DUR!",
+          "x": 0.25,
+          "y": 0.15,
+          "size": 130,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "KUŞLAR MI?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 92,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1932, Avustralya. Çiftçiler buğday ekmiş, hasat bekliyor.",
+      "text": "Yıl 1932, Avustralya. Çiftçiler buğday ekmiş, hasat bekliyor.",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "ciftci",
+          "x": 0.35,
+          "hat": "slouch",
+          "pose": "hips",
+          "face": "happy",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "fence",
+          "x1": 0.6,
+          "x2": 1.0,
+          "y": 0.9
+        }
+      ]
+    },
+    {
+      "say": "Derken ufukta yaklaşık yirmi bin emu belirir. Kocaman, hızlı ve çok aç!",
+      "text": "Derken ufukta yaklaşık 20 bin emu belirir. Kocaman, hızlı ve çok aç!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "ciftci",
+          "x": 0.2,
+          "hat": "slouch",
+          "pose": "shock",
+          "face": "shock",
+          "scale": 1.15,
+          "y": 0.9,
+          "anim": "shake"
+        }
+      ],
+      "props": [
+        {
+          "type": "emu",
+          "x": 1.1,
+          "y": 0.92,
+          "flip": true,
+          "anim": "run",
+          "to_x": 0.55,
+          "move_dur": 4
+        },
+        {
+          "type": "emu",
+          "x": 1.3,
+          "y": 0.94,
+          "scale": 0.8,
+          "flip": true,
+          "anim": "run",
+          "to_x": 0.8,
+          "move_dur": 4
+        },
+        {
+          "type": "pop",
+          "text": "20 BİN EMU!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 100,
+          "delay": 3.0,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Tarlalar talan edilir. Çiftçiler hükümete yalvarır: Bizi kurtarın!",
+      "text": "Tarlalar talan edilir. Çiftçiler hükümete yalvarır: Bizi kurtarın!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "ciftci",
+          "x": 0.25,
+          "hat": "slouch",
+          "pose": "shrug",
+          "face": "sad",
+          "scale": 1.15,
+          "y": 0.9,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "emu",
+          "x": 0.62,
+          "y": 0.92,
+          "flip": true
+        },
+        {
+          "type": "emu",
+          "x": 0.85,
+          "y": 0.93,
+          "scale": 0.85,
+          "flip": true
+        },
+        {
+          "type": "bubble",
+          "text": "Kurtarın bizi!",
+          "x": 0.3,
+          "y": 0.13,
+          "tx": 0.27,
+          "ty": 0.3,
+          "delay": 1.5
+        }
+      ]
+    },
+    {
+      "say": "Hükümet orduyu gönderir. Askerler kendinden emin: Birkaç günde işi bitiririz!",
+      "text": "Hükümet orduyu gönderir. Askerler kendinden emin: Birkaç günde işi bitiririz!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "asker1",
+          "x": 0.25,
+          "hat": "slouch",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.2,
+          "y": 0.9
+        },
+        {
+          "id": "asker2",
+          "x": 0.45,
+          "hat": "slouch",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.1,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ORDU GELDİ!",
+          "x": 0.7,
+          "y": 0.25,
+          "size": 100,
+          "delay": 1.0,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Ama emular çok hızlı ve çok kurnaz. Askerler yaklaşınca küçük gruplara ayrılıp her yöne kaçıyorlar.",
+      "text": "Ama emular çok hızlı ve çok kurnaz. Askerler yaklaşınca küçük gruplara ayrılıp her yöne kaçıyorlar.",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "asker1",
+          "x": 0.2,
+          "hat": "slouch",
+          "pose": "push",
+          "face": "effort",
+          "scale": 1.05,
+          "y": 0.9,
+          "anim": "walk"
+        }
+      ],
+      "props": [
+        {
+          "type": "emu",
+          "x": 0.5,
+          "y": 0.92,
+          "anim": "run",
+          "to_x": 1.2,
+          "move_dur": 3
+        },
+        {
+          "type": "emu",
+          "x": 0.6,
+          "y": 0.94,
+          "scale": 0.8,
+          "anim": "run",
+          "to_x": 1.3,
+          "move_dur": 2.5
+        },
+        {
+          "type": "pop",
+          "text": "FIRT!",
+          "x": 0.6,
+          "y": 0.25,
+          "size": 110,
+          "delay": 1.5,
+          "rot": 8
+        }
+      ]
+    },
+    {
+      "say": "Binlerce mermi harcanır ama emular hâlâ ortalıkta! Komutan, bu kuşlar tank gibi dayanıklı, der.",
+      "text": "Binlerce mermi harcanır ama emular hâlâ ortalıkta! Komutan, bu kuşlar tank gibi dayanıklı, der.",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "asker1",
+          "x": 0.25,
+          "hat": "slouch",
+          "pose": "shrug",
+          "face": "sad",
+          "scale": 1.15,
+          "y": 0.9
+        },
+        {
+          "id": "komutan",
+          "x": 0.55,
+          "hat": "slouch",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.2,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "emu",
+          "x": 0.85,
+          "y": 0.92,
+          "flip": true
+        },
+        {
+          "type": "pop",
+          "text": "TANK GİBİ!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 100,
+          "delay": 3.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Sonunda ordu geri çekilir. Tarihe Büyük Emu Savaşı olarak geçer. Günün dersi: Rakibini asla küçümseme!",
+      "text": "Sonunda ordu geri çekilir. Tarihe Büyük Emu Savaşı olarak geçer. Günün dersi: Rakibini asla küçümseme!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "asker1",
+          "x": 0.2,
+          "hat": "slouch",
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.1,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "emu",
+          "x": 0.6,
+          "y": 0.92,
+          "flip": true
+        },
+        {
+          "type": "emu",
+          "x": 0.82,
+          "y": 0.93,
+          "scale": 0.9,
+          "flip": true
+        },
+        {
+          "type": "pop",
+          "text": "EMULAR KAZANDI!",
+          "x": 0.6,
+          "y": 0.2,
+          "size": 96,
+          "delay": 2.5,
+          "rot": 5
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ]
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

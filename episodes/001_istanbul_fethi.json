@@ -1,0 +1,453 @@
+{
+  "id": "001",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Fatih Bizans'ı Nasıl Trolledi?",
+  "year": "1453",
+  "instagram_caption": "Bizans zinciri gerdi, Fatih \"tamam o zaman karadan gideriz\" dedi 😅⛵\n\n21-22 Nisan 1453 gecesi Osmanlı gemileri, Galata'nın arkasındaki tepelerden yağlanmış kızaklarla kaydırılıp Haliç'e indirildi. Sabah uyanan Bizanslılar Haliç'te 70 kadar Osmanlı gemisi gördü. Zincir yerinde duruyordu... ama artık hiçbir işe yaramıyordu! 🔗😂\n\nSen Bizans imparatoru olsan ne yapardın? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #istanbulunfethi #fatihsultanmehmet #osmanlıtarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dur, kaydırma! Sana bir sır vereyim. Bir zamanlar gemiler karada yürüdü. Hem de tek bir gecede!",
+      "text": "Dur, kaydırma! Sana bir sır vereyim... Bir zamanlar gemiler karada yürüdü. Hem de tek bir gecede!",
+      "voice_delay": 1.0,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.2,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.5,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.8,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DUR!",
+          "x": 0.22,
+          "y": 0.16,
+          "size": 140,
+          "f": 0.0,
+          "rot": -12,
+          "until_f": 0.48
+        },
+        {
+          "type": "pop",
+          "text": "GEMİLER KARADA?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 96,
+          "f": 0.5,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Bunu ilk gören Bizanslılar oldu. Ve hiç mutlu olmadılar!",
+      "text": "Bunu ilk gören Bizanslılar oldu. Ve hiç mutlu olmadılar!",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "bizansli",
+          "x": 0.2,
+          "y": 0.92,
+          "scale": 1.05,
+          "hat": "helmet",
+          "pose": "shock",
+          "face": "shock",
+          "anim": "shake"
+        }
+      ],
+      "props": [
+        {
+          "type": "ship",
+          "path": "hill",
+          "from": 0.25,
+          "to": 0.75,
+          "scale": 0.85
+        },
+        {
+          "type": "pop",
+          "text": "?!",
+          "x": 0.24,
+          "y": 0.24,
+          "size": 130,
+          "delay": 0.3
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1453. 21 yaşındaki Fatih Sultan Mehmet, İstanbul'u almaya kararlı.",
+      "text": "Yıl 1453. 21 yaşındaki Fatih Sultan Mehmet, İstanbul'u almaya kararlı.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "fatih",
+          "x": 0.42,
+          "y": 0.93,
+          "scale": 1.35,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "anim": "idle",
+          "enter": "left"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "21 YAŞINDA!",
+          "x": 0.72,
+          "y": 0.28,
+          "size": 96,
+          "delay": 1.6,
+          "rot": -8
+        },
+        {
+          "type": "wall",
+          "x": 0.84,
+          "w": 0.32,
+          "h": 0.3
+        }
+      ]
+    },
+    {
+      "say": "Ama bir sorun var. Bizans, Haliç'in ağzına kocaman bir zincir germiş. Gemiler içeri giremiyor.",
+      "text": "Ama bir sorun var: Bizans, Haliç'in ağzına kocaman bir zincir germiş. Gemiler içeri giremiyor.",
+      "bg": "sea",
+      "actors": [],
+      "props": [
+        {
+          "type": "chain",
+          "x1": 0.55,
+          "x2": 1.05,
+          "y": 0.8,
+          "anim": "shake"
+        },
+        {
+          "type": "ship",
+          "x": 0.28,
+          "y": 0.86,
+          "scale": 0.95,
+          "anim": "bump"
+        },
+        {
+          "type": "pop",
+          "text": "BONK!",
+          "x": 0.55,
+          "y": 0.42,
+          "size": 100,
+          "delay": 1.2,
+          "rot": 10
+        }
+      ]
+    },
+    {
+      "say": "Bizans imparatoru ise çok rahat.",
+      "text": "Bizans imparatoru ise çok rahat.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "imparator",
+          "x": 0.3,
+          "y": 0.62,
+          "scale": 1.4,
+          "hat": "crown",
+          "pose": "relax",
+          "face": "smug",
+          "anim": "idle",
+          "stand_on": "wall"
+        }
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "x": 0.5,
+          "w": 1.2,
+          "h": 0.3,
+          "towers": false
+        },
+        {
+          "type": "bubble",
+          "text": "Zincir bizde, keyif bizde!",
+          "x": 0.63,
+          "y": 0.13,
+          "tx": 0.42,
+          "ty": 0.25,
+          "delay": 0.3
+        }
+      ]
+    },
+    {
+      "say": "Fatih düşünür, taşınır ve der ki: Denizden olmuyorsa, karadan gideriz!",
+      "text": "Fatih düşünür, taşınır ve der ki: \"Denizden olmuyorsa... karadan gideriz!\"",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "fatih",
+          "x": 0.5,
+          "y": 0.93,
+          "scale": 1.35,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "anim": "idle",
+          "pose2": "point",
+          "face2": "happy",
+          "switch": 0.45
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "fatih",
+          "delay": 0.45
+        }
+      ]
+    },
+    {
+      "say": "Bir gecede yağlanmış kızaklar döşenir ve gemiler, Galata'nın arkasındaki tepelerden kaydırılarak Haliç'e indirilir.",
+      "text": "Bir gecede yağlanmış kızaklar döşenir ve gemiler Galata'nın arkasındaki tepelerden kaydırılarak Haliç'e indirilir.",
+      "bg": "hill",
+      "night": true,
+      "actors": [
+        {
+          "id": "asker1",
+          "x": 0.1,
+          "y": 0.8,
+          "scale": 0.85,
+          "hat": "bork",
+          "pose": "push",
+          "face": "effort",
+          "anim": "walk",
+          "follow": "ship",
+          "offset": -0.17
+        },
+        {
+          "id": "asker2",
+          "x": 0.1,
+          "y": 0.8,
+          "scale": 0.85,
+          "hat": "bork",
+          "pose": "push",
+          "face": "effort",
+          "anim": "walk",
+          "follow": "ship",
+          "offset": -0.3
+        }
+      ],
+      "props": [
+        {
+          "type": "ship",
+          "path": "hill",
+          "from": 0.22,
+          "to": 0.82,
+          "scale": 0.85
+        },
+        {
+          "type": "label",
+          "text": "yağlı kızaklar",
+          "x": 0.3,
+          "y": 0.97,
+          "delay": 1.0
+        }
+      ]
+    },
+    {
+      "say": "Sabah Bizanslılar uyanır ve Haliç'te 70 kadar Osmanlı gemisi görür.",
+      "text": "Sabah Bizanslılar uyanır ve Haliç'te 70 kadar Osmanlı gemisi görür.",
+      "bg": "sea",
+      "actors": [
+        {
+          "id": "bizansli",
+          "x": 0.16,
+          "y": 0.62,
+          "scale": 1.15,
+          "hat": "helmet",
+          "pose": "stretch",
+          "face": "sleepy",
+          "anim": "idle",
+          "pose2": "shock",
+          "face2": "shock",
+          "switch": 0.4,
+          "anim2": "shake",
+          "stand_on": "wall"
+        }
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "x": 0.14,
+          "w": 0.3,
+          "h": 0.33
+        },
+        {
+          "type": "ship",
+          "x": 0.5,
+          "y": 0.86,
+          "scale": 0.55,
+          "anim": "bob",
+          "delay": 0.0
+        },
+        {
+          "type": "ship",
+          "x": 0.72,
+          "y": 0.88,
+          "scale": 0.6,
+          "anim": "bob",
+          "delay": 0.15
+        },
+        {
+          "type": "ship",
+          "x": 0.92,
+          "y": 0.85,
+          "scale": 0.5,
+          "anim": "bob",
+          "delay": 0.3
+        },
+        {
+          "type": "pop",
+          "text": "70 GEMİ!",
+          "x": 0.68,
+          "y": 0.35,
+          "size": 100,
+          "delay": 2.2,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Zincir hâlâ yerinde. Ama artık pek bir anlamı yok.",
+      "text": "Zincir hâlâ yerinde... ama artık pek bir anlamı yok.",
+      "bg": "sea",
+      "actors": [
+        {
+          "id": "imparator",
+          "x": 0.3,
+          "y": 0.72,
+          "scale": 1.15,
+          "hat": "crown",
+          "pose": "sad",
+          "face": "sad",
+          "anim": "idle",
+          "stand_on": "wall"
+        }
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "x": 0.28,
+          "w": 0.44,
+          "h": 0.3
+        },
+        {
+          "type": "chain",
+          "x1": 0.5,
+          "x2": 1.05,
+          "y": 0.84
+        },
+        {
+          "type": "pop",
+          "text": "...",
+          "x": 0.45,
+          "y": 0.13,
+          "size": 120,
+          "delay": 1.2
+        }
+      ]
+    },
+    {
+      "say": "29 Mayıs 1453'te İstanbul fethedilir. Günün dersi: Önünde engel varsa, etrafından dolaş!",
+      "text": "29 Mayıs 1453'te İstanbul fethedilir. Günün dersi: Önünde engel varsa, etrafından dolaş!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "fatih",
+          "x": 0.42,
+          "y": 0.62,
+          "scale": 1.2,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "anim": "bounce",
+          "stand_on": "wall"
+        }
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "x": 0.42,
+          "w": 0.7,
+          "h": 0.22
+        },
+        {
+          "type": "flag",
+          "actor": "fatih"
+        }
+      ]
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ],
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  }
+}

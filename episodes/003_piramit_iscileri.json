@@ -1,0 +1,379 @@
+{
+  "id": "003",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Piramitleri Kim Yaptı? Cevap: Biracılar!",
+  "year": "MÖ 2560",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Piramitleri köleler yaptı sanıyorsan yanılıyorsun 😅 Maaşlarını ekmek ve birayla alan işçiler yaptı!\n\nGize'deki Büyük Piramit yaklaşık 4500 yıl önce Firavun Keops için inşa edildi. Arkeologlar işçilerin köyünü, fırınlarını ve mezarlarını buldu. Kayıtlara göre işçilere her gün ekmek ve bira tayını veriliyordu.\n\nSen olsan bu maaşla çalışır mıydın? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #mısır #piramitler #antikmısır #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dur, kaydırma! Piramitleri köleler mi yaptı? Hayır! Maaşını birayla alan işçiler yaptı!",
+      "text": "Dur, kaydırma! Piramitleri köleler mi yaptı? Hayır! Maaşını birayla alan işçiler yaptı!",
+      "voice_delay": 1.0,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DUR!",
+          "x": 0.25,
+          "y": 0.15,
+          "size": 130,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "BİRA MAAŞI?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 92,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yaklaşık 4500 yıl önce Mısır. Firavun Keops kendine kocaman bir mezar istiyor.",
+      "text": "Yaklaşık 4500 yıl önce Mısır. Firavun Keops kendine kocaman bir mezar istiyor.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "keops",
+          "x": 0.3,
+          "hat": "nemes",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "type": "pyramid",
+          "x": 0.72,
+          "y": 0.88,
+          "scale": 1.0,
+          "progress": 0.15
+        },
+        {
+          "type": "pop",
+          "text": "KOCAMAN!",
+          "x": 0.7,
+          "y": 0.3,
+          "size": 100,
+          "delay": 3.0,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Ama bu bildiğin mezar değil. Yaklaşık iki milyon taş blok, her biri bir otomobilden ağır!",
+      "text": "Ama bu bildiğin mezar değil. Yaklaşık iki milyon taş blok, her biri bir otomobilden ağır!",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "isci1",
+          "x": 0.2,
+          "hat": null,
+          "pose": "push",
+          "face": "effort",
+          "anim": "walk",
+          "scale": 1.0,
+          "y": 0.9,
+          "to_x": 0.42,
+          "move_dur": 5
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "type": "block",
+          "x": 0.32,
+          "y": 0.9,
+          "scale": 1.2,
+          "to_x": 0.54,
+          "move_dur": 5
+        },
+        {
+          "type": "pyramid",
+          "x": 0.78,
+          "y": 0.88,
+          "scale": 0.8,
+          "build": 20
+        },
+        {
+          "type": "pop",
+          "text": "2 MİLYON TAŞ!",
+          "x": 0.5,
+          "y": 0.25,
+          "size": 96,
+          "delay": 2.6,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Uzun süre bunu kölelerin yaptığı sanıldı. Ama arkeologlar işçilerin köyünü, fırınlarını, hatta mezarlarını buldu.",
+      "text": "Uzun süre bunu kölelerin yaptığı sanıldı. Ama arkeologlar işçilerin köyünü, fırınlarını, hatta mezarlarını buldu.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "arkeolog",
+          "x": 0.35,
+          "hat": "slouch",
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 1.2,
+          "y": 0.9,
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "palm",
+          "x": 0.85,
+          "y": 0.9,
+          "scale": 0.9
+        },
+        {
+          "type": "pop",
+          "text": "KÖLE DEĞİLLER!",
+          "x": 0.55,
+          "y": 0.25,
+          "size": 96,
+          "delay": 4.5,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Peki maaşları ne? Ekmek ve bira! Kayıtlara göre her gün bira tayınları dağıtılıyordu.",
+      "text": "Peki maaşları ne? Ekmek ve bira! Kayıtlara göre her gün bira tayınları dağıtılıyordu.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "isci1",
+          "x": 0.3,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "holds": "mug",
+          "anim": "bounce",
+          "scale": 1.15,
+          "y": 0.9
+        },
+        {
+          "id": "isci2",
+          "x": 0.65,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "holds": "mug",
+          "anim": "bounce",
+          "scale": 1.15,
+          "y": 0.9,
+          "flip": true
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "type": "pop",
+          "text": "ŞEREFE!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 120,
+          "delay": 2.2,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Bu bira bugünkü gibi değildi tabii. Koyu, besleyici, neredeyse bir öğün gibiydi. Sıcakta çalışanlar için enerji deposu!",
+      "text": "Bu bira bugünkü gibi değildi tabii. Koyu, besleyici, neredeyse bir öğün gibiydi. Sıcakta çalışanlar için enerji deposu!",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "isci1",
+          "x": 0.4,
+          "hat": null,
+          "pose": "hips",
+          "face": "smug",
+          "holds": "mug",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "type": "pyramid",
+          "x": 0.8,
+          "y": 0.88,
+          "scale": 0.6,
+          "progress": 0.6
+        }
+      ]
+    },
+    {
+      "say": "Firavunun ise tek derdi vardı: Mezarım ne zaman bitecek?",
+      "text": "Firavunun ise tek derdi vardı: Mezarım ne zaman bitecek?",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "keops",
+          "x": 0.3,
+          "hat": "nemes",
+          "pose": "hips",
+          "face": "sad",
+          "scale": 1.25,
+          "y": 0.9,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "pyramid",
+          "x": 0.72,
+          "y": 0.88,
+          "scale": 1.0,
+          "progress": 0.9
+        },
+        {
+          "type": "bubble",
+          "text": "Bitmedi mi hâlâ?",
+          "x": 0.4,
+          "y": 0.13,
+          "tx": 0.32,
+          "ty": 0.3,
+          "delay": 0.8
+        }
+      ]
+    },
+    {
+      "say": "Sonuç: Dünyanın yedi harikasından bugün hâlâ ayakta kalan tek eser. Günün dersi: İyi doyurulan ekip, harikalar yaratır!",
+      "text": "Sonuç: Dünyanın yedi harikasından bugün hâlâ ayakta kalan tek eser. Günün dersi: İyi doyurulan ekip, harikalar yaratır!",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "keops",
+          "x": 0.22,
+          "hat": "nemes",
+          "pose": "cheer",
+          "face": "happy",
+          "anim": "bounce",
+          "scale": 1.1,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        },
+        {
+          "type": "pyramid",
+          "x": 0.65,
+          "y": 0.88,
+          "scale": 1.1
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ]
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

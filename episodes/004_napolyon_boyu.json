@@ -1,0 +1,333 @@
+{
+  "id": "004",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Napolyon Aslında Kısa Değildi!",
+  "year": "1769",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Napolyon kısa boyluydu, değil mi? Değil! 😅 İki asırdır süren bir yanlış anlaşılma...\n\nNapolyon yaklaşık 1,69 boyundaydı; dönemin Fransız erkek ortalamasından biraz bile uzundu. Efsanenin sebebi Fransız ve İngiliz ölçü birimlerinin karışması, İngiliz karikatüristlerin onu minik çizmesi ve 'Küçük Onbaşı' lakabı.\n\nSen de kısa sanıyor muydun? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #napolyon #fransa #tarihbilgisi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dur! Napolyon kısa boyluydu sanıyorsan, iki yüz yıldır kandırılıyorsun!",
+      "text": "Dur! Napolyon kısa boyluydu sanıyorsan, 200 yıldır kandırılıyorsun!",
+      "voice_delay": 1.0,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DUR!",
+          "x": 0.25,
+          "y": 0.15,
+          "size": 130,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "KANDIRILDIK MI?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 92,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Napolyon Bonapart. Avrupa'nın yarısını fetheden Fransız imparatoru. Ve herkes onu kısacık biri olarak hatırlar.",
+      "text": "Napolyon Bonapart. Avrupa'nın yarısını fetheden Fransız imparatoru. Ve herkes onu kısacık biri olarak hatırlar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "napolyon",
+          "x": 0.4,
+          "hat": "bicorne",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "MİNİK Mİ?",
+          "x": 0.72,
+          "y": 0.25,
+          "size": 100,
+          "delay": 4.0,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Peki gerçek ne? Napolyon yaklaşık bir altmış dokuz boyundaydı. O dönemin Fransız erkeklerinden biraz bile uzundu!",
+      "text": "Peki gerçek ne? Napolyon yaklaşık 1,69 boyundaydı. O dönemin Fransız erkeklerinden biraz bile uzundu!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "napolyon",
+          "x": 0.3,
+          "hat": "bicorne",
+          "pose": "point",
+          "face": "smug",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "ruler",
+          "x": 0.58,
+          "y_top": 0.18,
+          "labels": [
+            [
+              0.62,
+              "1,65 ortalama"
+            ],
+            [
+              0.72,
+              "1,69 Napolyon"
+            ]
+          ]
+        },
+        {
+          "type": "pop",
+          "text": "1,69!",
+          "x": 0.25,
+          "y": 0.2,
+          "size": 120,
+          "delay": 3.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Karışıklığın ilk sebebi: Ölçü birimi! Fransız inçi, İngiliz inçinden daha uzundu. Kayıtlar çevrilince Napolyon bir anda kısaldı.",
+      "text": "Karışıklığın ilk sebebi: Ölçü birimi! Fransız inçi, İngiliz inçinden daha uzundu. Kayıtlar çevrilince Napolyon bir anda kısaldı.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "katip",
+          "x": 0.3,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "holds": "scroll",
+          "scale": 1.2,
+          "pose2": "shock",
+          "face2": "shock",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "İNÇ KARIŞTI!",
+          "x": 0.65,
+          "y": 0.25,
+          "size": 96,
+          "delay": 4.5,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "İkinci sebep: İngiliz karikatüristler! Napolyon'u hep öfkeli, minicik bir adam olarak çizdiler. Kısacası, ilk trollenen imparator oldu.",
+      "text": "İkinci sebep: İngiliz karikatüristler! Napolyon'u hep öfkeli, minicik bir adam olarak çizdiler. Kısacası, ilk trollenen imparator oldu.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "napolyon",
+          "x": 0.35,
+          "hat": "bicorne",
+          "pose": "shock",
+          "face": "shock",
+          "scale": 0.75,
+          "anim": "shake"
+        },
+        {
+          "id": "ingiliz",
+          "x": 0.72,
+          "hat": "tophat",
+          "pose": "point",
+          "face": "smug",
+          "flip": true,
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "TROLL!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 120,
+          "delay": 5.0,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Üçüncü sebep: Askerleri ona Küçük Onbaşı derdi. Ama bu bir sevgi lakabıydı, boyla ilgisi yoktu.",
+      "text": "Üçüncü sebep: Askerleri ona Küçük Onbaşı derdi. Ama bu bir sevgi lakabıydı, boyla ilgisi yoktu.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "asker",
+          "x": 0.3,
+          "hat": "bicorne",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.1
+        },
+        {
+          "id": "napolyon",
+          "x": 0.7,
+          "hat": "bicorne",
+          "pose": "hips",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "bubble",
+          "text": "Küçük Onbaşı!",
+          "x": 0.35,
+          "y": 0.13,
+          "tx": 0.3,
+          "ty": 0.3,
+          "delay": 0.6
+        }
+      ]
+    },
+    {
+      "say": "Bir de etrafındaki muhafızlar özellikle uzun boylu seçilirdi. Yanlarında herkes kısa görünürdü!",
+      "text": "Bir de etrafındaki muhafızlar özellikle uzun boylu seçilirdi. Yanlarında herkes kısa görünürdü!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "muhafiz1",
+          "x": 0.2,
+          "hat": "bicorne",
+          "pose": "stand",
+          "face": "neutral",
+          "scale": 1.5
+        },
+        {
+          "id": "napolyon",
+          "x": 0.5,
+          "hat": "bicorne",
+          "pose": "shrug",
+          "face": "sad",
+          "scale": 1.15
+        },
+        {
+          "id": "muhafiz2",
+          "x": 0.8,
+          "hat": "bicorne",
+          "pose": "stand",
+          "face": "neutral",
+          "scale": 1.5,
+          "flip": true
+        }
+      ],
+      "props": []
+    },
+    {
+      "say": "Günün dersi: Bir yalanı yeterince tekrarlarsan, iki yüz yıl yaşar. Kaynağını kontrol et!",
+      "text": "Günün dersi: Bir yalanı yeterince tekrarlarsan, 200 yıl yaşar. Kaynağını kontrol et!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "napolyon",
+          "x": 0.45,
+          "hat": "bicorne",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.7
+        }
+      ]
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}
