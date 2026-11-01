@@ -1,0 +1,131 @@
+# Her gün sıradaki bölümü üretir ve Instagram'a Reel olarak paylaşır.
+name: Günlük paylaşım
+
+on:
+  schedule:
+    # 15:47 UTC = 18:47 Türkiye. Üretim birkaç dakika sürer, paylaşım ~19:00'da olur.
+    - cron: "47 15 * * *"
+  workflow_dispatch:
+    inputs:
+      sadece_video:
+        description: "Sadece videoyu üret, paylaşma (deneme)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # paylaşım kaydını (state/posted.json) depoya yazmak için
+  pages: write      # videoyu GitHub Pages'e koymak için
+  id-token: write
+
+concurrency:
+  group: gunluk-paylasim
+  cancel-in-progress: false
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      bolum: ${{ steps.uret.outputs.bolum }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Sistem paketleri ve yazı tipleri
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg espeak-ng libcairo2-dev pkg-config
+          mkdir -p ~/.fonts && cp fonts/*.ttf ~/.fonts/ && fc-cache -f
+
+      - name: Python paketleri
+        run: pip install -r requirements.txt
+
+      - name: Ses modeli (önbellek)
+        uses: actions/cache@v4
+        with:
+          path: models
+          key: piper-tr-fahrettin-v1
+
+      - name: Ses modelini indir
+        run: |
+          mkdir -p models
+          if [ ! -f models/tr_TR-fahrettin-medium.onnx ]; then
+            curl -sSL https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-tr_TR-fahrettin-medium.tar.bz2 | tar xj -C /tmp
+            cp /tmp/vits-piper-tr_TR-fahrettin-medium/tr_TR-fahrettin-medium.onnx* models/
+          fi
+
+      - name: Sıra durumu
+        run: python daily.py status
+
+      - name: Videoyu üret
+        id: uret
+        run: |
+          python daily.py render
+          echo "bolum=$(python -c "import json;print(json.load(open('output/today.json'))['id'])")" >> "$GITHUB_OUTPUT"
+          mkdir -p site/videos
+          cp output/today.json site/
+          cp "$(python -c "import json;print(json.load(open('output/today.json'))['path'])")" site/videos/
+          echo '<meta charset="utf-8"><h1>Çöp Adamla Tarih</h1>' > site/index.html
+
+      - name: Videoyu indirilebilir olarak sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ steps.uret.outputs.bolum }}
+          path: |
+            site/today.json
+            site/videos/*.mp4
+          retention-days: 14
+
+      - name: Pages paketi
+        if: ${{ !inputs.sadece_video }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  paylas:
+    needs: uret
+    if: ${{ !inputs.sadece_video }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Videoyu herkese açık adrese koy (GitHub Pages)
+        id: pages
+        uses: actions/deploy-pages@v4
+
+      - name: Videoyu al
+        uses: actions/download-artifact@v4
+        with:
+          name: video-${{ needs.uret.outputs.bolum }}
+          path: site
+
+      - name: Instagram'a paylaş
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_MODE: ${{ vars.IG_MODE }}
+        run: |
+          ID="${{ needs.uret.outputs.bolum }}"
+          mkdir -p output
+          python -c "import json; t=json.load(open('site/today.json')); t['path']='site/videos/'+t['id']+'.mp4'; json.dump(t, open('output/today.json','w'), ensure_ascii=False)"
+          python daily.py publish --video-url "${{ steps.pages.outputs.page_url }}videos/${ID}.mp4"
+
+      - name: Paylaşım kaydını depoya yaz
+        run: |
+          git config user.name "cop-adamla-tarih-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state/posted.json
+          git commit -m "Paylaşıldı: bölüm ${{ needs.uret.outputs.bolum }}" || echo "değişiklik yok"
+          git pull --rebase -q && git push

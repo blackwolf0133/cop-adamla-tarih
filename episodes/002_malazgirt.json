@@ -1,0 +1,355 @@
+{
+  "id": "002",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Alparslan Bizans İmparatorunu Nasıl Şok Etti?",
+  "year": "1071",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Esir düşen imparatora sordu: \"Ben senin elinde olsaydım ne yapardın?\" Cevap korkunçtu... Alparslan'ın cevabı ise efsane 😎\n\n26 Ağustos 1071'de Malazgirt'te Büyük Selçuklu Sultanı Alparslan, kendisinden çok daha kalabalık Bizans ordusunu yendi ve İmparator Romen Diyojen'i esir aldı. Sonra onu affedip hediyelerle serbest bıraktı. Bu zafer Anadolu'nun kapılarını Türklere açtı.\n\nSen olsan ne yapardın? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #malazgirt #alparslan #selçuklu #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dur! Bir imparator esir düştü ve ona öyle bir ceza verildi ki, hâlâ konuşuluyor!",
+      "text": "Dur! Bir imparator esir düştü ve ona öyle bir ceza verildi ki... hâlâ konuşuluyor!",
+      "voice_delay": 1.0,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DUR!",
+          "x": 0.25,
+          "y": 0.15,
+          "size": 130,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "NASIL BİR CEZA?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 92,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1071. Bizans İmparatoru Romen Diyojen, kocaman bir orduyla doğuya yürüyor.",
+      "text": "Yıl 1071. Bizans İmparatoru Romen Diyojen, kocaman bir orduyla doğuya yürüyor.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "romen",
+          "x": 0.62,
+          "hat": "crown",
+          "pose": "point",
+          "face": "confident",
+          "flip": true,
+          "scale": 1.25,
+          "enter": "right"
+        }
+      ],
+      "props": [
+        {
+          "type": "tent",
+          "x": 0.85,
+          "y": 0.9,
+          "scale": 0.7
+        },
+        {
+          "type": "pop",
+          "text": "KOCAMAN ORDU!",
+          "x": 0.35,
+          "y": 0.25,
+          "size": 90,
+          "delay": 2.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Karşısında Büyük Selçuklu Sultanı Alparslan var. Ordusu çok daha küçük, ama kafası çok çalışıyor.",
+      "text": "Karşısında Büyük Selçuklu Sultanı Alparslan var. Ordusu çok daha küçük, ama kafası çok çalışıyor.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "alparslan",
+          "x": 0.35,
+          "hat": "selcuk",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.3,
+          "pose2": "point",
+          "face2": "confident",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "horse",
+          "x": 0.72,
+          "y": 0.92,
+          "scale": 0.85,
+          "flip": true
+        },
+        {
+          "type": "bulb",
+          "actor": "alparslan",
+          "delay": 3.2
+        }
+      ]
+    },
+    {
+      "say": "Ve 26 Ağustos 1071'de Malazgirt'te savaş başlar. Selçuklular sahte geri çekilir, Bizans peşlerine takılır, sonra sürpriz!",
+      "text": "Ve 26 Ağustos 1071'de Malazgirt'te savaş başlar. Selçuklular sahte geri çekilir, Bizans peşlerine takılır, sonra sürpriz!",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "alparslan",
+          "x": 0.25,
+          "hat": "selcuk",
+          "pose": "cheer",
+          "face": "confident",
+          "holds": "sword",
+          "anim": "bounce",
+          "scale": 1.15
+        },
+        {
+          "id": "romen",
+          "x": 0.8,
+          "hat": "crown",
+          "pose": "shock",
+          "face": "shock",
+          "flip": true,
+          "anim": "shake",
+          "scale": 1.1
+        }
+      ],
+      "props": [
+        {
+          "type": "horse",
+          "x": 0.5,
+          "y": 0.92,
+          "scale": 0.8,
+          "anim": "gallop",
+          "to_x": 0.6,
+          "move_dur": 4
+        },
+        {
+          "type": "pop",
+          "text": "SÜRPRİZ!",
+          "x": 0.5,
+          "y": 0.25,
+          "size": 110,
+          "delay": 3.8,
+          "rot": 8
+        }
+      ]
+    },
+    {
+      "say": "Sonuç? Bizans ordusu dağılır, imparator da esir düşer.",
+      "text": "Sonuç? Bizans ordusu dağılır, imparator da esir düşer.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "romen",
+          "x": 0.6,
+          "hat": "crown",
+          "pose": "sad",
+          "face": "sad",
+          "flip": true,
+          "scale": 1.25
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ESİR!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "delay": 1.5,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Alparslan sorar: Ben senin elinde olsaydım ne yapardın? İmparator dürüst: Ya öldürürdüm, ya da zincirle sokaklarda gezdirirdim.",
+      "text": "Alparslan sorar: Ben senin elinde olsaydım ne yapardın? İmparator dürüst: Ya öldürürdüm, ya da zincirle sokaklarda gezdirirdim.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "alparslan",
+          "x": 0.25,
+          "hat": "selcuk",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.2,
+          "talk": true
+        },
+        {
+          "id": "romen",
+          "x": 0.75,
+          "hat": "crown",
+          "pose": "shrug",
+          "face": "sad",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "bubble",
+          "text": "Ne yapardın?",
+          "x": 0.3,
+          "y": 0.13,
+          "tx": 0.27,
+          "ty": 0.3,
+          "delay": 0.5
+        }
+      ]
+    },
+    {
+      "say": "Alparslan gülümser: Benim cezam daha ağır. Seni affediyorum! Ve imparatoru hediyelerle serbest bırakır.",
+      "text": "Alparslan gülümser: Benim cezam daha ağır. Seni affediyorum! Ve imparatoru hediyelerle serbest bırakır.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "alparslan",
+          "x": 0.3,
+          "hat": "selcuk",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.25
+        },
+        {
+          "id": "romen",
+          "x": 0.75,
+          "hat": "crown",
+          "pose": "shock",
+          "face": "shock",
+          "flip": true,
+          "scale": 1.2,
+          "anim": "shake"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "AFFEDİLDİN!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 110,
+          "delay": 3.0,
+          "rot": -6
+        },
+        {
+          "type": "coins",
+          "x": 0.55,
+          "y": 0.93,
+          "delay": 4.0
+        }
+      ]
+    },
+    {
+      "say": "Bu zafer, Anadolu'nun kapılarını Türklere açtı. Günün dersi: Bazen en büyük güç, affetmektir.",
+      "text": "Bu zafer, Anadolu'nun kapılarını Türklere açtı. Günün dersi: Bazen en büyük güç, affetmektir.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "alparslan",
+          "x": 0.45,
+          "hat": "selcuk",
+          "pose": "cheer",
+          "face": "happy",
+          "anim": "bounce",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "flag",
+          "actor": "alparslan",
+          "emblem": false
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ]
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "id": "008",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Kahve İçmek Yasak! IV. Murad'ın Yasağı",
+  "year": "1633",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Türk kahvesi içmek bir zamanlar yasaktı ☕🚫 Hem de çok ağır cezası vardı!\n\nIV. Murad 1633 civarında kahvehaneleri kapattırdı, kahve ve tütünü yasakladı. Gerekçe: Kahvehaneler dedikodu ve isyan sohbetlerinin merkeziydi. Rivayete göre padişah geceleri kılık değiştirip yasağa uyulup uyulmadığını kendisi kontrol ederdi. Ama kahve sevgisi yasağı yendi!\n\nSen kahvesiz kaç gün dayanırsın? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #türkkahvesi #4murad #osmanlıtarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dur! Bir zamanlar İstanbul'da kahve içmek yasaktı. Hem de yakalanmak çok pahalıya patlıyordu!",
+      "text": "Dur! Bir zamanlar İstanbul'da kahve içmek yasaktı. Hem de yakalanmak çok pahalıya patlıyordu!",
+      "voice_delay": 1.0,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DUR!",
+          "x": 0.25,
+          "y": 0.15,
+          "size": 130,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "KAHVE YASAK?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 92,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1633. İstanbul kahvehaneleri tıklım tıklım. Herkes kahvesini yudumluyor, sohbet koyu.",
+      "text": "Yıl 1633. İstanbul kahvehaneleri tıklım tıklım. Herkes kahvesini yudumluyor, sohbet koyu.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "adam1",
+          "x": 0.25,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "happy",
+          "holds": "cup",
+          "scale": 1.15
+        },
+        {
+          "id": "adam2",
+          "x": 0.7,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "happy",
+          "holds": "cup",
+          "scale": 1.15,
+          "flip": true,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KEYİF!",
+          "x": 0.5,
+          "y": 0.25,
+          "size": 110,
+          "delay": 3.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Ama padişah IV. Murad bu durumdan hiç hoşnut değil. Ona göre kahvehaneler dedikodu ve isyan yuvası!",
+      "text": "Ama padişah IV. Murad bu durumdan hiç hoşnut değil. Ona göre kahvehaneler dedikodu ve isyan yuvası!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "murad",
+          "x": 0.4,
+          "hat": "kavuk",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "İSYAN YUVASI!",
+          "x": 0.72,
+          "y": 0.25,
+          "size": 90,
+          "delay": 3.5,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Ve emir çıkar: Kahvehaneler kapatılsın! Kahve de tütün de yasak!",
+      "text": "Ve emir çıkar: Kahvehaneler kapatılsın! Kahve de tütün de yasak!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "murad",
+          "x": 0.3,
+          "hat": "kavuk",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "cezve",
+          "x": 0.7,
+          "y": 0.9,
+          "scale": 0.9
+        },
+        {
+          "type": "ban",
+          "x": 0.7,
+          "y": 0.62,
+          "scale": 0.9,
+          "delay": 1.5
+        },
+        {
+          "type": "pop",
+          "text": "YASAK!",
+          "x": 0.7,
+          "y": 0.22,
+          "size": 120,
+          "delay": 1.6,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Rivayete göre padişah geceleri kılık değiştirip sokaklarda dolaşır, yasağa uyan var mı diye kendisi kontrol eder.",
+      "text": "Rivayete göre padişah geceleri kılık değiştirip sokaklarda dolaşır, yasağa uyan var mı diye kendisi kontrol eder.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "murad",
+          "x": 0.15,
+          "hat": "sarik",
+          "pose": "stand",
+          "face": "smug",
+          "scale": 1.1,
+          "anim": "walk",
+          "to_x": 0.55,
+          "move_dur": 5
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "GİZLİ DEVRİYE!",
+          "x": 0.6,
+          "y": 0.2,
+          "size": 96,
+          "delay": 3.0,
+          "rot": 6
+        }
+      ],
+      "night": true
+    },
+    {
+      "say": "Yakalananlara çok ağır cezalar verilir. Kahvesever İstanbul'da büyük bir sessizlik!",
+      "text": "Yakalananlara çok ağır cezalar verilir. Kahvesever İstanbul'da büyük bir sessizlik!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "adam1",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "ban",
+          "x": 0.75,
+          "y": 0.4,
+          "scale": 0.6
+        }
+      ]
+    },
+    {
+      "say": "Ama Türk insanının kahve sevgisi padişahtan da güçlü çıkar. Yasaklar zamanla gevşer, kahvehaneler yeniden açılır.",
+      "text": "Ama Türk insanının kahve sevgisi padişahtan da güçlü çıkar. Yasaklar zamanla gevşer, kahvehaneler yeniden açılır.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "adam1",
+          "x": 0.25,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "holds": "cup",
+          "scale": 1.15,
+          "anim": "bounce"
+        },
+        {
+          "id": "adam2",
+          "x": 0.7,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "holds": "cup",
+          "scale": 1.15,
+          "flip": true,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KAHVE GERİ DÖNDÜ!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 92,
+          "delay": 3.5,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Bugün Türk kahvesi UNESCO listesinde. Günün dersi: Bir Türk'ün kahvesine sakın karışma!",
+      "text": "Bugün Türk kahvesi UNESCO listesinde. Günün dersi: Bir Türk'ün kahvesine sakın karışma!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "adam1",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "smug",
+          "holds": "cup",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "cezve",
+          "x": 0.75,
+          "y": 0.93,
+          "scale": 0.8
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ]
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}
