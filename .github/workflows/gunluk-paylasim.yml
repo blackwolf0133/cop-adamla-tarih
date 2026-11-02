@@ -13,9 +13,7 @@ on:
         default: false
 
 permissions:
-  contents: write   # paylaşım kaydını (state/posted.json) depoya yazmak için
-  pages: write      # videoyu GitHub Pages'e koymak için
-  id-token: write
+  contents: write   # paylaşım kaydı + videoyu GitHub Releases'e koymak için
 
 concurrency:
   group: gunluk-paylasim
@@ -83,20 +81,12 @@ jobs:
             site/videos/*.mp4
           retention-days: 14
 
-      - name: Pages paketi
-        if: ${{ !inputs.sadece_video && steps.uret.outputs.skip != 'true' }}
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
 
   paylas:
     needs: uret
     if: ${{ !inputs.sadece_video && needs.uret.outputs.skip != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment:
-      name: github-pages
-      url: ${{ steps.pages.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -104,17 +94,23 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Videoyu herkese açık adrese koy (GitHub Pages)
-        id: pages
-        # EAA (sistem kullanıcı) anahtarıyla video doğrudan dosyadan yüklenir, Pages gerekmez
-        continue-on-error: true
-        uses: actions/deploy-pages@v4
-
       - name: Videoyu al
         uses: actions/download-artifact@v4
         with:
           name: video-${{ needs.uret.outputs.bolum }}
           path: site
+
+      - name: Videoyu herkese açık adrese koy (GitHub Releases)
+        id: yayin
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ID="${{ needs.uret.outputs.bolum }}"
+          TAG="video-${ID}-$(date +%Y%m%d%H%M)"
+          gh release create "$TAG" "site/videos/${ID}.mp4" --title "Bölüm ${ID}" --notes "Otomatik paylaşım videosu" --repo "${{ github.repository }}"
+          echo "url=https://github.com/${{ github.repository }}/releases/download/${TAG}/${ID}.mp4" >> "$GITHUB_OUTPUT"
+          # Eski video sürümlerini temizle (son 10 kalsın)
+          gh release list --repo "${{ github.repository }}" --limit 100 --json tagName --jq '.[].tagName' | grep '^video-' | tail -n +11 | while read t; do gh release delete "$t" --cleanup-tag -y --repo "${{ github.repository }}"; done || true
 
       - name: Instagram'a paylaş
         env:
@@ -122,10 +118,9 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_MODE: ${{ vars.IG_MODE }}
         run: |
-          ID="${{ needs.uret.outputs.bolum }}"
           mkdir -p output
           python -c "import json; t=json.load(open('site/today.json')); t['path']='site/videos/'+t['id']+'.mp4'; json.dump(t, open('output/today.json','w'), ensure_ascii=False)"
-          python daily.py publish --video-url "${{ steps.pages.outputs.page_url }}videos/${ID}.mp4"
+          python daily.py publish --video-url "${{ steps.yayin.outputs.url }}"
 
       - name: Paylaşım kaydını depoya yaz
         run: |

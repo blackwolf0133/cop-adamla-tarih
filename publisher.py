@@ -125,20 +125,39 @@ def publish_reel(video_path=None, video_url=None, caption="", mode=None,
     params = {"media_type": "REELS", "caption": caption,
               "share_to_feed": "true" if share_to_feed else "false", "access_token": token}
 
-    if mode == "facebook" and video_path and os.path.exists(video_path):
+    upload_error = None
+    if mode == "facebook":
         # 1) Yükleme oturumu aç
         params["upload_type"] = "resumable"
         c = _request("POST", f"{base}/{user_id}/media", params)
         cid = c["id"]
         upload_uri = c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{API_VERSION}/{cid}"
-        # 2) Dosyayı gönder
-        size = os.path.getsize(video_path)
-        with open(video_path, "rb") as fh:
-            data = fh.read()
-        r = _request("POST", upload_uri, headers={
-            "Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)}, data=data, timeout=600)
-        if not r.get("success", True):
-            raise PublishError(f"Video yüklenemedi: {r}")
+        uploaded = False
+        # 2a) Meta videoyu herkese açık adresten kendisi çeksin (~40 sn üstü Reels için güvenilir yol)
+        if video_url:
+            try:
+                _request("POST", upload_uri, headers={"Authorization": f"OAuth {token}", "file_url": video_url},
+                         timeout=600)
+                uploaded = True
+            except PublishError as e:
+                upload_error = e
+                print(f"file_url ile yükleme olmadı, dosyadan deneniyor: {e}")
+        # 2b) Yedek: dosyayı doğrudan gönder
+        if not uploaded and video_path and os.path.exists(video_path):
+            size = os.path.getsize(video_path)
+            with open(video_path, "rb") as fh:
+                data = fh.read()
+            try:
+                _request("POST", upload_uri, headers={
+                    "Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size),
+                    "Content-Type": "application/octet-stream"}, data=data, timeout=600)
+                uploaded = True
+            except PublishError as e:
+                # Meta bazen hata döndürüp yine de işliyor; kararı kapsayıcı durumu versin
+                upload_error = e
+                print(f"Dosya yüklemesi hata verdi, kapsayıcı durumu kontrol ediliyor: {e}")
+        if not uploaded and upload_error is None:
+            raise PublishError("Yüklenecek video yok (ne video_url ne dosya)")
     else:
         if not video_url:
             raise PublishError("instagram modunda herkese açık video_url gerekir")
@@ -148,7 +167,12 @@ def publish_reel(video_path=None, video_url=None, caption="", mode=None,
         cid = c["id"]
 
     # 3) Instagram işlemesini bitirsin
-    _wait_container(host, cid, token)
+    try:
+        _wait_container(host, cid, token, timeout=300 if upload_error else 900)
+    except PublishError as e:
+        if upload_error:
+            raise PublishError(f"{e} | yükleme hatası: {upload_error}") from None
+        raise
     # 4) Yayınla
     pub = _request("POST", f"{base}/{user_id}/media_publish", {"creation_id": cid, "access_token": token})
     media_id = pub["id"]

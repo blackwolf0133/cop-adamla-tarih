@@ -40,8 +40,29 @@ with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as fh:
 r = P.publish_reel(video_path=fh.name, caption="c", mode="facebook", user_id="17841", token="TOK")
 assert calls[0][1] == "https://graph.facebook.com/v26.0/17841/media" and calls[0][2]["upload_type"] == "resumable"
 up = [c for c in calls if "rupload" in c[1]][0]
-assert up[3] == {"Authorization": "OAuth TOK", "offset": "0", "file_size": "12345"} and up[4] == 12345
-print("facebook modu: OK")
+assert up[3]["offset"] == "0" and up[3]["file_size"] == "12345" and up[4] == 12345
+print("facebook modu (dosya): OK")
+
+# 2b) Facebook modu, adresten çekme (file_url) - dosya gönderilmemeli
+calls.clear()
+r = P.publish_reel(video_path=fh.name, video_url="https://github.com/u/r/releases/download/video-002/002.mp4",
+                   caption="c", mode="facebook", user_id="17841", token="TOK")
+ups = [c for c in calls if "rupload" in c[1]]
+assert len(ups) == 1 and ups[0][3]["file_url"].endswith("002.mp4") and ups[0][4] == 0, ups
+print("facebook modu (file_url): OK")
+
+# 2c) file_url reddedilirse dosyaya düşsün
+calls.clear()
+orig = P._request
+def flaky(method, url, params=None, headers=None, data=None, timeout=120):
+    if "rupload" in url and (headers or {}).get("file_url"):
+        raise P.PublishError("HTTP 400 ProcessingFailedError")
+    return orig(method, url, params, headers, data, timeout)
+P._request = flaky
+r = P.publish_reel(video_path=fh.name, video_url="https://x/y.mp4", caption="c", mode="facebook", user_id="1", token="TOK")
+assert r["media_id"] == "M999"
+P._request = orig
+print("facebook modu (yedek yol): OK")
 
 # 3) Hata durumu
 def fake_err(method, url, params=None, headers=None, data=None, timeout=120):
