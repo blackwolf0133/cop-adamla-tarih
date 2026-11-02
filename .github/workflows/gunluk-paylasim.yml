@@ -27,6 +27,7 @@ jobs:
     timeout-minutes: 40
     outputs:
       bolum: ${{ steps.uret.outputs.bolum }}
+      skip: ${{ steps.uret.outputs.skip }}
     steps:
       - uses: actions/checkout@v4
 
@@ -65,6 +66,7 @@ jobs:
         id: uret
         run: |
           python daily.py render
+          if grep -q "skip=true" "$GITHUB_OUTPUT"; then exit 0; fi
           echo "bolum=$(python -c "import json;print(json.load(open('output/today.json'))['id'])")" >> "$GITHUB_OUTPUT"
           mkdir -p site/videos
           cp output/today.json site/
@@ -72,6 +74,7 @@ jobs:
           echo '<meta charset="utf-8"><h1>Çöp Adamla Tarih</h1>' > site/index.html
 
       - name: Videoyu indirilebilir olarak sakla
+        if: ${{ steps.uret.outputs.skip != 'true' }}
         uses: actions/upload-artifact@v4
         with:
           name: video-${{ steps.uret.outputs.bolum }}
@@ -81,14 +84,14 @@ jobs:
           retention-days: 14
 
       - name: Pages paketi
-        if: ${{ !inputs.sadece_video }}
+        if: ${{ !inputs.sadece_video && steps.uret.outputs.skip != 'true' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   paylas:
     needs: uret
-    if: ${{ !inputs.sadece_video }}
+    if: ${{ !inputs.sadece_video && needs.uret.outputs.skip != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment:

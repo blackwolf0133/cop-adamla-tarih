@@ -20,6 +20,18 @@ TODAY = os.path.join(ROOT, "output", "today.json")
 VOICE = os.environ.get("COPTARIH_VOICE", os.path.join(ROOT, "models", "tr_TR-fahrettin-medium.onnx"))
 
 
+def today_tr():
+    """Türkiye tarihi (UTC+3)."""
+    return (dt.datetime.utcnow() + dt.timedelta(hours=3)).date().isoformat()
+
+
+def set_output(key, val):
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a") as fh:
+            fh.write(f"{key}={val}\n")
+
+
 def load_state():
     if os.path.exists(STATE):
         return json.load(open(STATE, encoding="utf-8"))
@@ -61,6 +73,11 @@ def cmd_render(_):
     if not q:
         print("::error::Sırada bölüm yok! episodes/ klasörüne yeni bölüm ekleyin.")
         sys.exit(1)
+    if os.environ.get("FORCE") != "1" and any(p.get("date") == today_tr() for p in load_state()["posted"]):
+        print(f"Bugün ({today_tr()}) zaten paylaşım yapılmış, ikinci video üretilmiyor.")
+        set_output("skip", "true")
+        return
+    set_output("skip", "false")
     path, ep = q[0]
     os.makedirs(os.path.join(ROOT, "output"), exist_ok=True)
     out = os.path.join(ROOT, "output", f"{ep['id']}.mp4")
@@ -78,7 +95,7 @@ def cmd_publish(a):
     today = json.load(open(TODAY, encoding="utf-8"))
     res = publisher.publish_reel(video_path=today["path"], video_url=a.video_url, caption=today["caption"])
     st = load_state()
-    st["posted"].append({"id": today["id"], "title": today["title"], "date": dt.date.today().isoformat(),
+    st["posted"].append({"id": today["id"], "title": today["title"], "date": today_tr(),
                          "media_id": res["media_id"], "permalink": res.get("permalink")})
     save_state(st)
     print(f"Paylaşıldı: {today['title']} -> {res.get('permalink')}")
