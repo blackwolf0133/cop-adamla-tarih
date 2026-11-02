@@ -88,6 +88,7 @@ jobs:
         id: uret
         env:
           FORCE: ${{ inputs.sadece_video && '1' || '' }}
+          VOICE_TEMPO: "1.3"   # kendi sesinin okuma hızı (1.0 = kayıttaki hız)
         run: |
           python daily.py render
           if grep -q "skip=true" "$GITHUB_OUTPUT"; then exit 0; fi
