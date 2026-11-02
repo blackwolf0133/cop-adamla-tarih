@@ -13,6 +13,15 @@ Her bölüm `episodes/NNN_kisa_ad.json` dosyasıdır. Program sıradaki (paylaş
 | `instagram_caption` | Paylaşım yazısı. **En fazla 5 etiket** (Instagram sınırı), sonuncusu `#çöpadamlatarih` |
 | `skip` | `true` ise bölüm atlanır |
 
+## Anlatım tonu: "karışık" (Kasım 2026'dan itibaren)
+Örnek alınan tarz: merak uyandıran, akıcı belgesel anlatımı + yer yer hafif espri.
+- **Kanca (ilk cümle):** Şaşırtıcı, neredeyse inanılmaz bir iddia. "Dur!" yerine doğrudan iddiayla da açılabilir: "100 koyunu ölüme götürmek için bir kurda değil, bir keçiye ihtiyacın var."
+- **Akış:** Kısa, net cümleler; sahneler arası duraksama az. Hedef ~170-180 kelime/dk, toplam 45-60 sn.
+- **Dönüm noktası:** Ortada merakı tazeleyen bir soru: "İşin en ilginç kısmı ne biliyor musun?"
+- **Espri:** Her bölümde 1-2 hafif espri yeter (abartı yok); görsel şakalar (pop yazıları) devam.
+- **Kapanış dersi:** Düşündüren, akılda kalan tek cümle ("Günün dersi: ..."). Ardından kısa takip çağrısı.
+- **Duygu (isteğe bağlı):** Sahneye `"emotion"` eklenebilir: `mutlu` `şaşkın` `sakin` `üzgün` `kızgın` (kendi sesinle okurken tonlamayı etkiler). Çoğu sahnede boş bırak; kanca ve dönüm noktasında `şaşkın`, dersde `sakin` iyi gider.
+
 ## Sahne yapısı (8-10 sahne, toplam 45-60 sn)
 1. **Giriş**: Tarih Hoca (`narrator`) – "Dur!" kancası + şaşırtıcı soru
 2. **Hikâye**: 5-7 sahne, her biri 1-2 cümle
