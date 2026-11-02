@@ -56,7 +56,9 @@ jobs:
         env:
           VOICE_KEY: ${{ secrets.VOICE_KEY }}
         run: |
-          if [ -n "$VOICE_KEY" ] && [ -f assets/voice/ref.wav.enc ]; then
+          # Kendi sesin, ancak önizlemeyi onayladıktan sonra assets/voice/aktif dosyası eklenince devreye girer.
+          # Deneme modunda (sadece video) her zaman denenir.
+          if [ -n "$VOICE_KEY" ] && [ -f assets/voice/ref.wav.enc ] && { [ -f assets/voice/aktif ] || [ "${{ inputs.sadece_video }}" = "true" ]; }; then
             openssl enc -d -aes-256-cbc -pbkdf2 -in assets/voice/ref.wav.enc -out /tmp/ref.wav -pass env:VOICE_KEY
             echo "TTS_ENGINE=pocket" >> "$GITHUB_ENV"
             echo "VOICE_REF=/tmp/ref.wav" >> "$GITHUB_ENV"
