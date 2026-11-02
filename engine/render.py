@@ -37,7 +37,48 @@ def _trim(a, thr=0.012):
     return a[max(0, idx[0] - 200): idx[-1] + 600]
 
 
-def tts(text, out_wav, voice_model, length_scale=1.0, fx=None):
+_POCKET = {"tts": None, "voice": None}
+
+
+def pocket_tts(text, out_wav, emotion=None):
+    """pocket-tts-turkish ile seslendirme. VOICE_REF verilmişse o kişinin sesi klonlanır
+    (kullanıcının kendi sesi), yoksa POCKET_VOICE hazır sesi kullanılır."""
+    from pocket_tts_turkish import TurkishTTS, save_wav
+    if _POCKET["tts"] is None:
+        _POCKET["tts"] = TurkishTTS.from_pretrained(device="cpu")
+        ref = os.environ.get("VOICE_REF", "")
+        if ref and os.path.exists(ref):
+            _POCKET["voice"] = _POCKET["tts"].voice_from_file(ref)
+            print("Ses: kullanıcının kendi sesi (klon)")
+        else:
+            _POCKET["voice"] = os.environ.get("POCKET_VOICE", "male_1")
+            print("Ses: hazır ses", _POCKET["voice"])
+    t = _POCKET["tts"]
+    kw = {"voice": _POCKET["voice"], "seed": 7}
+    if emotion:
+        kw["emotion"] = emotion
+    raw = out_wav + ".raw.wav"
+    save_wav(raw, t.generate(text, **kw), t.sample_rate)
+    tempo = float(os.environ.get("VOICE_TEMPO", "1.0"))
+    af = (f"atempo={tempo}," if abs(tempo - 1.0) > 0.01 else "") + \
+        "highpass=f=70,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=60,loudnorm=I=-16:TP=-1.5:LRA=6"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", af, "-ar", str(SR), "-ac", "1", out_wav], check=True)
+    os.remove(raw)
+
+
+def tts(text, out_wav, voice_model, length_scale=1.0, fx=None, emotion=None):
+    """Seslendirme. TTS_ENGINE=pocket ise kullanıcının klonlanmış sesi (ya da hazır pocket sesi),
+    değilse Piper. Pocket hata verirse Piper'a düşer, paylaşım aksamaz."""
+    if os.environ.get("TTS_ENGINE") == "pocket":
+        try:
+            return pocket_tts(text, out_wav, emotion)
+        except Exception as e:  # noqa: BLE001
+            print(f"::warning::Pocket TTS çalışmadı, Piper'a geçiliyor: {e}")
+            os.environ["TTS_ENGINE"] = "piper"
+    return piper_tts(text, out_wav, voice_model, length_scale, fx)
+
+
+def piper_tts(text, out_wav, voice_model, length_scale=1.0, fx=None):
     """Piper ile Türkçe seslendirme - sabit tonlu, titremesiz ayar.
     - Sayılar yazıya çevrilir ve cümle TEK seferde okunur (ton kopukluğu olmaz)
     - noise_scale / noise_w düşük: her cümle aynı tonda, dalgalanmasız
@@ -524,7 +565,7 @@ def render_episode(ep_path, out_mp4, voice_model, workdir="build", handle="@copa
         elif sc.get("audio"):  # sahneye özel kayıt
             a = _trim(load_voice_recording(os.path.join(base, sc["audio"])), 0.02)
         else:
-            tts(sc["say"], wav, voice_model, fx=ep.get("voice_fx", DEFAULT_VOICE_FX))
+            tts(sc["say"], wav, voice_model, fx=ep.get("voice_fx", DEFAULT_VOICE_FX), emotion=sc.get("emotion"))
             a = read_wav(wav)
         vd = len(a) / SR
         vdl = sc.get("voice_delay", 0.12)
