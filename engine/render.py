@@ -15,7 +15,7 @@ from . import props2 as P2
 
 FPS = 30
 SR = 22050
-SCENE_PAD = 0.45          # her sahnenin sesinden sonra bekleme (sn)
+SCENE_PAD = 0.35          # her sahnenin sesinden sonra bekleme (sn)
 PUNCH = 0.22              # sahne girişindeki zoom süresi
 
 
