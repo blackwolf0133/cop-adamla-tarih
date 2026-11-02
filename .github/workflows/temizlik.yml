@@ -18,3 +18,8 @@ jobs:
           gh release list --repo "${{ github.repository }}" --limit 100 --json tagName --jq '.[].tagName' \
             | grep -E '^(ses-testi|onizleme)' \
             | while read t; do gh release delete "$t" --cleanup-tag -y --repo "${{ github.repository }}"; echo "silindi: $t"; done || true
+      - uses: actions/checkout@v4
+      - name: Geçici dalları sil
+        run: |
+          git ls-remote --heads origin | awk '{print $2}' | sed 's#refs/heads/##' | grep -E '^(para-prototip|onizleme-)' \
+            | while read b; do git push origin --delete "$b"; echo "dal silindi: $b"; done || true
