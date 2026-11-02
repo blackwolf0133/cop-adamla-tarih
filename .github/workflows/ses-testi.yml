@@ -1,0 +1,40 @@
+# Ses klonlama testi: örnek cümleleri senin sesinle ve hazır seslerle okur, sonuçları geçici bir sürüme koyar.
+name: Ses testi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Kurulum
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install pocket-tts-turkish
+      - name: Ses kaydını çöz
+        env:
+          VOICE_KEY: ${{ secrets.VOICE_KEY }}
+        run: |
+          if [ -n "$VOICE_KEY" ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -in assets/voice/ref.wav.enc -out /tmp/ref.wav -pass env:VOICE_KEY
+          else
+            echo "::warning::VOICE_KEY yok, sadece hazır sesler denenecek"
+          fi
+      - name: Örnekleri üret
+        run: python tools/voice_test.py out
+      - name: Sonuçları geçici sürüme koy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f /tmp/ref.wav
+          gh release create "ses-testi-$(date +%Y%m%d%H%M)" out/*.mp3 --prerelease --title "Ses testi" --notes "Geçici ses testi" --repo "${{ github.repository }}"
