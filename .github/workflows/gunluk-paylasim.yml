@@ -86,6 +86,8 @@ jobs:
 
       - name: Videoyu üret
         id: uret
+        env:
+          FORCE: ${{ inputs.sadece_video && '1' || '' }}
         run: |
           python daily.py render
           if grep -q "skip=true" "$GITHUB_OUTPUT"; then exit 0; fi
