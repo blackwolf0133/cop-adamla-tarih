@@ -3,6 +3,10 @@ name: Ses testi
 
 on:
   workflow_dispatch:
+    inputs:
+      betik:
+        description: "Çalışacak test betiği"
+        default: "tools/voice_test.py"
 
 permissions:
   contents: write
@@ -31,7 +35,7 @@ jobs:
             echo "::warning::VOICE_KEY yok, sadece hazır sesler denenecek"
           fi
       - name: Örnekleri üret
-        run: python tools/voice_test.py out
+        run: python ${{ inputs.betik || 'tools/voice_test.py' }} out
       - name: Sonuçları geçici sürüme koy
         env:
           GH_TOKEN: ${{ github.token }}
