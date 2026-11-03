@@ -1,0 +1,35 @@
+# Görsel testi: açık lisanslı iki modelle aynı 5 sahneyi çizer, sonuçları artifact olarak bırakır.
+name: Görsel testi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ciz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        model: [vega, sdxl]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Önbellek (modeller)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-gorsel-${{ matrix.model }}-v1
+      - name: Kurulum
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install diffusers transformers accelerate peft safetensors
+      - name: Çiz
+        run: python tools/gorsel_test.py ${{ matrix.model }} out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gorsel-${{ matrix.model }}
+          path: out/
+          retention-days: 3
