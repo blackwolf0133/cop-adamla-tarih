@@ -23,23 +23,24 @@ pipe.fuse_lora()
 pipe.set_progress_bar_config(disable=True)
 print(f"model yüklendi: {time.time() - t0:.0f} sn")
 
-STYLE = ("storybook illustration, watercolor and colored pencil, hand-drawn ink outlines, warm cozy autumn colors, "
-         "soft golden light, cream paper texture, children's picture book art, gentle, highly detailed")
-NEG = "photo, photorealistic, 3d render, text, letters, words, watermark, signature, ugly, deformed, extra fingers, blurry, lowres"
-MAN = "a young man with short dark hair wearing a mustard yellow scarf and an olive green jacket"
-WOMAN = "a young woman with long brown hair wearing a red knitted beanie and a brown coat"
+# Not: CLIP 77 jeton sınırı var; sahne + kısa stil, karakterler kısa ve ayırt edici
+STYLE = "watercolor storybook illustration, ink outlines, warm autumn colors, soft light"
+NEG = ("photo, realistic, 3d, text, letters, watermark, deformed, extra fingers, blurry, "
+       "two women, two girls, hat instead of umbrella")
+MAN = "a young man (short black hair, mustard scarf, green jacket)"
+WOMAN = "a young woman (long brown hair, red beanie, brown coat)"
 
 SCENES = [
-    f"{MAN} sitting alone on a wooden park bench in the rain at dusk, head down, sad, wet autumn street, glowing street lamps",
-    "a crowd of people with umbrellas walking away down a rainy cobblestone street at dusk, an empty wooden bench in the foreground, lonely",
-    f"{WOMAN} walking towards the viewer holding a big umbrella on a rainy cobblestone street, warm street lamps, kind caring face",
-    f"{WOMAN} and {MAN} sitting side by side on a wooden park bench under one umbrella in the rain, quiet comfort, autumn leaves, street lamps",
-    f"{MAN} and {WOMAN} walking together up a grassy hill at sunset, smiling, autumn trees, golden warm light, clouds clearing",
+    f"rainy evening, {MAN} sitting alone on a park bench, head down, heavy rain, raindrops, wet street lamps",
+    "rainy evening, many people with umbrellas walking away down a wet cobblestone street, empty bench, raindrops",
+    f"rainy evening, {WOMAN} holding an open umbrella, walking towards the viewer, raindrops, street lamps",
+    f"rainy evening, a man and a woman sitting together on a park bench under one open umbrella, {MAN}, {WOMAN}, raindrops",
+    f"sunset after rain, a man and a woman walking side by side up a hill, smiling, {MAN}, {WOMAN}, golden light",
 ]
 
 for i, sc in enumerate(SCENES, 1):
     t = time.time()
-    img = pipe(prompt=f"{sc}, {STYLE}", negative_prompt=NEG, num_inference_steps=6, guidance_scale=1.5,
+    img = pipe(prompt=f"{sc}, {STYLE}", negative_prompt=NEG, num_inference_steps=6, guidance_scale=2.0,
                width=896, height=1024, generator=torch.Generator().manual_seed(1000 + i)).images[0]
     img.save(os.path.join(out, f"{which}_sahne{i}.png"))
     print(f"sahne {i}: {time.time() - t:.0f} sn", flush=True)
