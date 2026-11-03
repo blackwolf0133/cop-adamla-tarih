@@ -73,6 +73,13 @@ def cmd_render(_):
     if not q:
         print("::error::Sırada bölüm yok! episodes/ klasörüne yeni bölüm ekleyin.")
         sys.exit(1)
+    # GitHub zamanlayıcısı saatlerce gecikebiliyor: otomatik tetiklemede Türkiye saati 17:00-23:00
+    # dışındaysa paylaşma (gece yarısı paylaşımı olmasın); yedek alarm elle başlatır.
+    hour_tr = (dt.datetime.utcnow() + dt.timedelta(hours=3)).hour
+    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and not (17 <= hour_tr < 23):
+        print(f"Zamanlayıcı geç tetiklendi (TR saat {hour_tr}:xx), gece paylaşımı yapılmıyor.")
+        set_output("skip", "true")
+        return
     if os.environ.get("FORCE") != "1" and any(p.get("date") == today_tr() for p in load_state()["posted"]):
         print(f"Bugün ({today_tr()}) zaten paylaşım yapılmış, ikinci video üretilmiyor.")
         set_output("skip", "true")
