@@ -6,6 +6,7 @@ import os, re, sys, time, subprocess
 from huggingface_hub import list_repo_files, hf_hub_download
 
 which, sd, out = sys.argv[1], sys.argv[2], sys.argv[3]
+ONLY = int(sys.argv[4]) if len(sys.argv) > 4 else 0  # sadece bu sahne (paralel çizim)
 os.makedirs(out, exist_ok=True)
 
 SPECS = {
@@ -64,11 +65,13 @@ SCENES = [
 
 t0 = time.time()
 for i, sc in enumerate(SCENES, 1):
+    if ONLY and i != ONLY:
+        continue
     t = time.time()
     dst = os.path.join(out, f"{which}_sahne{i}.png")
     cmd = [sd, "--diffusion-model", paths["diffusion"], "--llm", paths["llm"], "--vae", paths["vae"],
            "-p", f"{sc} {STYLE}", "--cfg-scale", "1.0", "--steps", str(spec["steps"]),
-           "--sampling-method", "euler", "-W", "832", "-H", "960", "-s", str(100 + i),
+           "--sampling-method", "euler", "-W", "768", "-H", "896", "-s", str(100 + i),
            "-t", str(os.cpu_count() or 4), "-o", dst]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0 or not os.path.exists(dst):
