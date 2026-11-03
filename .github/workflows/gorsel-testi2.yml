@@ -1,0 +1,52 @@
+# Görsel testi 2: stable-diffusion.cpp (CPU) ile Z-Image-Turbo ve FLUX.2-klein-4B (Apache-2.0).
+name: Görsel testi 2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ciz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        model: [zimage, klein]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Önbellek (sd.cpp)
+        id: sdcache
+        uses: actions/cache@v4
+        with:
+          path: ~/sdbin
+          key: sdcpp-cpu-v1
+      - name: stable-diffusion.cpp derle
+        if: steps.sdcache.outputs.cache-hit != 'true'
+        run: |
+          git clone --recursive --depth 1 https://github.com/leejet/stable-diffusion.cpp /tmp/sd
+          cmake -S /tmp/sd -B /tmp/sd/build -DCMAKE_BUILD_TYPE=Release -DGGML_NATIVE=OFF -DGGML_AVX2=ON -DGGML_FMA=ON -DGGML_F16C=ON
+          cmake --build /tmp/sd/build --config Release -j4
+          mkdir -p ~/sdbin && cp /tmp/sd/build/bin/* ~/sdbin/
+          ls ~/sdbin
+      - name: Önbellek (modeller)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-sdcpp-${{ matrix.model }}-v1
+      - name: Kurulum
+        run: pip install huggingface_hub
+      - name: Çiz
+        run: python tools/gorsel_test2.py ${{ matrix.model }} ~/sdbin/sd-cli out
+      - name: Geçici sürüme koy
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls out/*.png >/dev/null 2>&1 || exit 0
+          gh release create "onizleme-gorsel-${{ matrix.model }}-$(date +%H%M%S)" out/*.png --prerelease --title "Görsel testi 2" --notes "Geçici" --repo "${{ github.repository }}"
