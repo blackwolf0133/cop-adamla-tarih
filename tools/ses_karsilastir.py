@@ -34,7 +34,7 @@ if which == "pocket":
             finish(f"0{i + 2}_pocket_hazir_{name}", [tts.generate(t, voice=name, seed=7, emotion="sakin") for t in T], tts.sample_rate)
         except Exception as e:  # noqa: BLE001
             print("yok:", name, e)
-else:
+elif which == "chatterbox":
     import torch
     _load = torch.load
     torch.load = lambda *a, **k: _load(*a, **{**k, "map_location": "cpu"})
@@ -61,3 +61,36 @@ else:
             run(f"1{3 + j}_chatterbox_ornek_{name}", ref)
         except Exception as e:  # noqa: BLE001
             print("örnek ses yok:", name, e)
+
+if which == "karikatur":
+    # Çöp Adamla Tarih: senin sesin (Chatterbox, 10 numara ayarı) + karikatür efekti
+    import torch
+    _load = torch.load
+    torch.load = lambda *a, **k: _load(*a, **{**k, "map_location": "cpu"})
+    from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+    m = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
+    LINES = ["Dur, kaydırma! Sana bir sır vereyim. Bir zamanlar gemiler karada yürüdü. Hem de tek bir gecede!",
+             "Yıl bin dört yüz elli üç. Yirmi bir yaşındaki Fatih Sultan Mehmet, İstanbul'u almaya kararlı."]
+    base = {}
+    for key, ex, cfg in (("dogal", 0.5, 0.5), ("canli", 0.7, 0.4)):
+        base[key] = [m.generate(t, language_id="tr", audio_prompt_path=ME, exaggeration=ex, cfg_weight=cfg).squeeze(0).numpy() for t in LINES]
+        finish(f"20_tarih_{key}_efektsiz", base[key], m.sr)
+    import wave
+    def cartoon(name, key, pitch, tempo, bright):
+        raw = f"/tmp/k_{name}.wav"
+        y = np.concatenate([np.concatenate([c.reshape(-1), np.zeros(int(m.sr * 0.6), np.float32)]) for c in base[key]])
+        with wave.open(raw, "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(m.sr)
+            w.writeframes((np.clip(y, -1, 1) * 32767).astype(np.int16).tobytes())
+        af = f"asetrate={int(m.sr * pitch)},aresample={m.sr},atempo={tempo / pitch:.3f}"
+        if bright:
+            af += ",equalizer=f=3500:t=q:w=1:g=4,equalizer=f=180:t=q:w=1:g=-3"
+        af += ",highpass=f=90,acompressor=threshold=-20dB:ratio=3:attack=5:release=80,loudnorm=I=-15:TP=-1.5:LRA=6"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", af, "-ar", "44100", "-b:a", "128k",
+                        os.path.join(out, name + ".mp3")], check=True)
+        print("hazır:", name, flush=True)
+    cartoon("21_karikatur_hafif", "dogal", 1.10, 1.12, False)
+    cartoon("22_karikatur_orta", "dogal", 1.18, 1.15, True)
+    cartoon("23_karikatur_belirgin", "dogal", 1.26, 1.18, True)
+    cartoon("24_karikatur_orta_canli", "canli", 1.18, 1.12, True)
+    cartoon("25_karikatur_belirgin_canli", "canli", 1.26, 1.15, True)

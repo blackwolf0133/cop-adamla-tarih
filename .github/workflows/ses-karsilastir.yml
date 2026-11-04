@@ -3,6 +3,10 @@ name: Ses karşılaştır
 
 on:
   workflow_dispatch:
+    inputs:
+      modlar:
+        description: 'Çalışacak modlar (JSON liste)'
+        default: '["pocket","chatterbox"]'
 
 permissions:
   contents: write
@@ -27,12 +31,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [pocket, chatterbox]
+        model: ${{ fromJSON(inputs.modlar || '["pocket","chatterbox"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Önbellek (ses modelleri)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-ses-${{ matrix.model }}-v1
       - name: Kurulum
         run: |
           sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
