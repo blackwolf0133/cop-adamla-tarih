@@ -1,0 +1,327 @@
+{
+  "id": "011",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Vinç Bozuldu, Seyit Onbaşı Durmadı!",
+  "year": "1915",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Bir asker 215 kiloluk top mermisini sırtladı 💪 Hem de üç kere!\n\n18 Mart 1915'te Çanakkale'de Rumeli Mecidiye Tabyası'nın mermi vinci bozulunca, Balıkesir Havranlı topçu Seyit Ali mermileri sırtında taşıyıp topa sürdü. Anlatılana göre bu mermilerden biri Ocean zırhlısını vurdu; bazı tarihçiler ise geminin mayına çarptığını söyler. Kesin olan şu: O gün düşman donanması boğazı geçemedi.\n\nSen hiç kendini aşacak kadar güçlü hissettin mi? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #çanakkale #seyitonbaşı #18mart #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Bir asker, 215 kiloluk bir top mermisini sırtladı. Hem de üç kere!",
+      "text": "Bir asker, 215 kiloluk bir top mermisini sırtladı. Hem de üç kere!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "215 KİLO!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "ÜÇ KERE?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "18 Mart 1915. Dev İngiliz ve Fransız gemileri Çanakkale Boğazı'nı geçmek için yola çıkar.",
+      "text": "18 Mart 1915. Dev İngiliz ve Fransız gemileri Çanakkale Boğazı'nı geçmek için yola çıkar.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.3,
+          "hat": null,
+          "pose": "point",
+          "face": "surprised",
+          "scale": 1.25,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "DEV DONANMA!",
+          "x": 0.6,
+          "y": 0.25,
+          "size": 96,
+          "delay": 2.5,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Rumeli Mecidiye Tabyası'nda topçular hazır. Aralarında Balıkesir Havranlı Seyit Ali var. Herkes ona Koca Seyit der.",
+      "text": "Rumeli Mecidiye Tabyası'nda topçular hazır. Aralarında Balıkesir Havranlı Seyit Ali var. Herkes ona Koca Seyit der.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.35,
+          "hat": null,
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KOCA SEYİT!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Ama atışlar sırasında tabyanın vinci bozulur. Dev mermiler yerden kalkmıyor!",
+      "text": "Ama atışlar sırasında tabyanın vinci bozulur. Dev mermiler yerden kalkmıyor!",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.35,
+          "hat": null,
+          "pose": "shock",
+          "face": "shock",
+          "scale": 1.25,
+          "y": 0.9,
+          "anim": "shake"
+        }
+      ],
+      "props": [
+        {
+          "type": "block",
+          "x": 0.7,
+          "y": 0.9,
+          "scale": 1.6
+        },
+        {
+          "type": "pop",
+          "text": "VİNÇ BOZULDU!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 96,
+          "f": 0.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Seyit mermiyi sırtına alır, merdivenleri tırmanır ve topa sürer. Bir, iki, üç!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Seyit mermiyi sırtına alır, merdivenleri tırmanır ve topa sürer. Bir, iki, üç!",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.25,
+          "hat": null,
+          "pose": "push",
+          "face": "effort",
+          "scale": 1.2,
+          "y": 0.9,
+          "anim": "walk",
+          "to_x": 0.5,
+          "move_dur": 5
+        }
+      ],
+      "props": [
+        {
+          "type": "block",
+          "x": 0.37,
+          "y": 0.9,
+          "scale": 1.4,
+          "to_x": 0.62,
+          "move_dur": 5
+        },
+        {
+          "type": "pop",
+          "text": "HEYYT!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.7,
+          "rot": 8
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Anlatılana göre bu mermilerden biri Ocean zırhlısını vurdu. Bazı tarihçiler geminin mayına çarptığını söyler. Kesin olan şu: Düşman boğazı geçemedi.",
+      "text": "Anlatılana göre bu mermilerden biri Ocean zırhlısını vurdu. Bazı tarihçiler geminin mayına çarptığını söyler. Kesin olan şu: Düşman boğazı geçemedi.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.3,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.25,
+          "y": 0.9,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.72,
+          "y": 0.6,
+          "text": "ÇANAKKALE"
+        },
+        {
+          "type": "pop",
+          "text": "GEÇİLEMEDİ!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.75,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Sonra fotoğrafı çekilecek, mermiyi yeniden kaldırması istenir. Kaldıramaz! Rivayete göre şöyle der: Savaş olursa yine kaldırırım.",
+      "text": "Sonra fotoğrafı çekilecek, mermiyi yeniden kaldırması istenir. Kaldıramaz! Rivayete göre şöyle der: Savaş olursa yine kaldırırım.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.35,
+          "hat": null,
+          "pose": "shrug",
+          "face": "happy",
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "bubble",
+          "text": "Savaş olursa yine kaldırırım!",
+          "x": 0.55,
+          "y": 0.13,
+          "tx": 0.38,
+          "ty": 0.3,
+          "f": 0.6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bazen güç kaslardan değil, yürekten gelir.",
+      "text": "Günün dersi: Bazen güç kaslardan değil, yürekten gelir.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "seyit",
+          "x": 0.45,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.35,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "flag",
+          "actor": "seyit",
+          "emblem": true
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

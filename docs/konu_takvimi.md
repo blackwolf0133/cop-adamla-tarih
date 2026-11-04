@@ -12,13 +12,13 @@ Durum: ✅ senaryosu yazıldı · ⬜ sırada
 | 006 | Hezarfen Ahmed Çelebi'nin uçuşu (1630'lar) | Galata'dan Üsküdar'a Uçan Adam | ✅ |
 | 007 | Büyük Emu Savaşı (1932) | Ordu Emulara Yenildi! | ✅ |
 | 008 | IV. Murad'ın kahve yasağı (1633) | Kahve İçmek Yasak! | ✅ |
-| 009 | Lale Devri ve lale soğanı çılgınlığı (Hollanda, 1637) | Bir Lale Soğanına Ev Verdiler! | ⬜ |
-| 010 | Kanuni'nin adı neden "Kanuni"? | Avrupa'ya Göre "Muhteşem", Bize Göre "Kanuni" | ⬜ |
-| 011 | Çanakkale – Seyit Onbaşı ve 215 kiloluk mermi (1915) | Vinç Bozuldu, Seyit Onbaşı Durmadı! | ⬜ |
-| 012 | Harezmi ve "algoritma" kelimesinin kökeni | Bilgisayarın Dedesi Bir Matematikçi | ⬜ |
-| 013 | Vikingler boynuzlu miğfer takmadı | Vikinglerin Boynuzu Yoktu! | ⬜ |
-| 014 | Kleopatra piramitlere aya inişten daha uzaktı | Kleopatra, Piramitlerden Çok Bize Yakın! | ⬜ |
-| 015 | Piri Reis haritası (1513) | 500 Yıllık Esrarengiz Harita | ⬜ |
+| 009 | Lale Devri ve lale soğanı çılgınlığı (Hollanda, 1637) | Bir Lale Soğanına Ev Verdiler! | ✅ |
+| 010 | Kanuni'nin adı neden "Kanuni"? | Avrupa'ya Göre "Muhteşem", Bize Göre "Kanuni" | ✅ |
+| 011 | Çanakkale – Seyit Onbaşı ve 215 kiloluk mermi (1915) | Vinç Bozuldu, Seyit Onbaşı Durmadı! | ✅ |
+| 012 | Harezmi ve "algoritma" kelimesinin kökeni | Bilgisayarın Dedesi Bir Matematikçi | ✅ |
+| 013 | Vikingler boynuzlu miğfer takmadı | Vikinglerin Boynuzu Yoktu! | ✅ |
+| 014 | Kleopatra piramitlere aya inişten daha uzaktı | Kleopatra, Piramitlerden Çok Bize Yakın! | ✅ |
+| 015 | Piri Reis haritası (1513) | 500 Yıllık Esrarengiz Harita | ✅ |
 | 016 | Mimar Sinan ve Selimiye | Ustalık Eserim Dediği Cami | ⬜ |
 | 017 | Kıbrıslı... değil: Evliya Çelebi'nin rüyası ve 50 yıllık seyahati | Bir Rüya Yüzünden 50 Yıl Gezdi! | ⬜ |
 | 018 | Roma'da idrar vergisi ("Para kokmaz") | Romalılar Tuvalete Vergi Koydu! | ⬜ |
