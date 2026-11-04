@@ -64,4 +64,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           rm -f /tmp/ref.wav
-          ls out/*.mp3 >/dev/null 2>&1 && gh release upload "${{ needs.hazirla.outputs.tag }}" out/*.mp3 --repo "${{ github.repository }}" || true
+          ls out/*.mp3 out/*.wav >/dev/null 2>&1; gh release upload "${{ needs.hazirla.outputs.tag }}" $(ls out/*.mp3 out/*.wav 2>/dev/null) --repo "${{ github.repository }}" || true
