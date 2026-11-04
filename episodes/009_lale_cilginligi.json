@@ -1,0 +1,339 @@
+{
+  "id": "009",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Bir Lale Soğanına Ev Verdiler!",
+  "year": "1637",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Bir zamanlar tek bir çiçek soğanı, bir evden daha pahalıydı 🌷😳\n\n1630'larda Hollanda'da lale çılgınlığı yaşandı. İnsanlar henüz topraktaki soğanların kâğıtlarını meyhanelerde alıp sattı. En nadir lale Semper Augustus'un 10 soğanına 12.000 gulden teklif edildiği anlatılır; bu, Amsterdam'da lüks bir evden fazlaydı. Şubat 1637'de Haarlem'de alıcı çıkmayınca fiyatlar çöktü. Lalenin Avrupa'ya yolculuğu ise Osmanlı bahçelerinden başlamıştı.\n\nSen bir çiçeğe ne kadar verirdin? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #lale #hollanda #tarihbilgisi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Bir zamanlar tek bir çiçek soğanı, koca bir evden daha pahalıydı. Şaka değil!",
+      "text": "Bir zamanlar tek bir çiçek soğanı, koca bir evden daha pahalıydı. Şaka değil!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "SOĞAN!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "EV FİYATINA?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Hikâye bizden başlıyor. 1500'lerde lale, Osmanlı bahçelerinin gözdesi. Avrupalı elçiler soğanları ülkelerine götürür.",
+      "text": "Hikâye bizden başlıyor. 1500'lerde lale, Osmanlı bahçelerinin gözdesi. Avrupalı elçiler soğanları ülkelerine götürür.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "osmanli",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.25
+        },
+        {
+          "id": "elci",
+          "x": 0.72,
+          "hat": null,
+          "pose": "point",
+          "face": "surprised",
+          "flip": true,
+          "scale": 1.2,
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "LALE!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 120,
+          "delay": 3.0,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Hollandalılar laleye âşık olur. En çok da alevli, çizgili desenlilere. Oysa o desenlerin sebebi bir virüsmüş!",
+      "text": "Hollandalılar laleye âşık olur. En çok da alevli, çizgili desenlilere. Oysa o desenlerin sebebi bir virüsmüş!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "hollandali",
+          "x": 0.35,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.25,
+          "y": 0.9,
+          "pose2": "shock",
+          "face2": "shock",
+          "switch": 0.7
+        }
+      ],
+      "props": [
+        {
+          "type": "fence",
+          "x1": 0.6,
+          "x2": 1.0,
+          "y": 0.9
+        },
+        {
+          "type": "pop",
+          "text": "VİRÜS!",
+          "x": 0.68,
+          "y": 0.25,
+          "size": 120,
+          "f": 0.8,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "1636'da çılgınlık başlar. İnsanlar meyhanelerde, daha topraktan çıkmamış soğanların kâğıtlarını alıp satar.",
+      "text": "1636'da çılgınlık başlar. İnsanlar meyhanelerde, daha topraktan çıkmamış soğanların kâğıtlarını alıp satar.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "tuccar1",
+          "x": 0.27,
+          "hat": null,
+          "pose": "point",
+          "face": "smug",
+          "holds": "scroll",
+          "scale": 1.15,
+          "talk": true
+        },
+        {
+          "id": "tuccar2",
+          "x": 0.72,
+          "hat": null,
+          "pose": "open",
+          "face": "happy",
+          "holds": "mug",
+          "flip": true,
+          "scale": 1.15
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.5,
+          "y": 0.93,
+          "delay": 2.0
+        },
+        {
+          "type": "pop",
+          "text": "KÂĞIT ÜSTÜNDE!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 92,
+          "delay": 3.0,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Anlatılana göre en nadir lalenin 10 soğanına 12 bin gulden teklif edilir. Amsterdam'da lüks bir evden fazla! Düşünsene, evini verip saksı alıyorsun.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Anlatılana göre en nadir lalenin 10 soğanına 12 bin gulden teklif edilir. Amsterdam'da lüks bir evden fazla! Düşünsene, evini verip saksı alıyorsun.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "hollandali",
+          "x": 0.35,
+          "hat": null,
+          "pose": "shock",
+          "face": "shock",
+          "anim": "shake",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.72,
+          "y": 0.93,
+          "delay": 3.0
+        },
+        {
+          "type": "pop",
+          "text": "12.000 GULDEN!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 92,
+          "f": 0.4,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Ve Şubat 1637'de Haarlem'de bir açık artırmada kimse alıcı çıkmaz. Fiyatlar bir anda çöker.",
+      "text": "Ve Şubat 1637'de Haarlem'de bir açık artırmada kimse alıcı çıkmaz. Fiyatlar bir anda çöker.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "tuccar1",
+          "x": 0.4,
+          "hat": null,
+          "pose": "sad",
+          "face": "sad",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ÇÖKÜŞ!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 130,
+          "f": 0.6,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Gerçi bugün bazı tarihçiler, hikâyenin biraz abartıldığını söylüyor. Ama Hollanda hâlâ dünyanın lale ülkesi.",
+      "text": "Gerçi bugün bazı tarihçiler, hikâyenin biraz abartıldığını söylüyor. Ama Hollanda hâlâ dünyanın lale ülkesi.",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "hollandali",
+          "x": 0.4,
+          "hat": null,
+          "pose": "shrug",
+          "face": "happy",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Herkes bir şeye koşuyorsa, önce dur ve düşün.",
+      "text": "Günün dersi: Herkes bir şeye koşuyorsa, önce dur ve düşün.",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "hollandali",
+          "x": 0.45,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "hollandali",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

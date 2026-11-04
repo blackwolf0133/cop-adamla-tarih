@@ -1,0 +1,316 @@
+{
+  "id": "012",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Bilgisayarın Dedesi Bir Matematikçi",
+  "year": "820'LER",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Telefonundaki her uygulama, 1200 yıl önce yaşamış bir bilginin adını taşıyor 📱🤯\n\nHarezmi 800'lerde Bağdat'taki Beytülhikme'de çalıştı. Denklemleri adım adım çözdüğü kitabındaki \"el-cebr\" kelimesi bugünkü \"cebir\" oldu. Hint rakamlarını anlatan kitabının Latince çevirisi \"Dixit Algorizmi\" (Algoritmi dedi ki) diye başlıyordu; \"algoritma\" kelimesi buradan geliyor. Bu kitap sıfırlı rakamların Avrupa'ya yayılmasına da yardım etti.\n\nMatematik mi seversin, tarih mi? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #harezmi #matematik #bilimtarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Telefonundaki her uygulama, 1200 yıl önce yaşamış bir adamın adını taşıyor.",
+      "text": "Telefonundaki her uygulama, 1200 yıl önce yaşamış bir adamın adını taşıyor.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "1200 YIL!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "KİMİN ADI?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 820'ler, Bağdat. Beytülhikme'de, yani Bilgelik Evi'nde, dünyanın dört bir yanından kitaplar çevriliyor.",
+      "text": "Yıl 820'ler, Bağdat. Beytülhikme'de, yani Bilgelik Evi'nde, dünyanın dört bir yanından kitaplar çevriliyor.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "katip",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "stand",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.2
+        },
+        {
+          "id": "katip2",
+          "x": 0.72,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "BİLGELİK EVİ!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 96,
+          "delay": 3.0,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Burada bir bilgin çalışıyor: Harezmi. Adını Orta Asya'daki memleketi Harezm'den alıyor.",
+      "text": "Burada bir bilgin çalışıyor: Harezmi. Adını Orta Asya'daki memleketi Harezm'den alıyor.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "harezmi",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35,
+          "pose2": "point",
+          "face2": "confident",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "harezmi",
+          "f": 0.6
+        }
+      ]
+    },
+    {
+      "say": "Harezmi, denklemleri adım adım çözmeyi bir kitapta anlatır. Kitabın adındaki el-cebr kelimesi, bugünkü cebir olur.",
+      "text": "Harezmi, denklemleri adım adım çözmeyi bir kitapta anlatır. Kitabın adındaki el-cebr kelimesi, bugünkü cebir olur.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "harezmi",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "holds": "scroll",
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "x + 3 = 5"
+        },
+        {
+          "type": "pop",
+          "text": "CEBİR!",
+          "x": 0.62,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.7,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Hint rakamlarını anlattığı kitap Latinceye çevrilir. İlk cümlesi: Algoritmi dedi ki.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Hint rakamlarını anlattığı kitap Latinceye çevrilir. İlk cümlesi: Algoritmi dedi ki.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "kesis",
+          "x": 0.4,
+          "hat": null,
+          "pose": "shock",
+          "face": "surprised",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ALGORİTMİ!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.6,
+          "rot": -6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Avrupalılar onun adını, adım adım hesap yöntemine verir: Algoritma! Aynı kitap, sıfırlı rakamların Avrupa'ya yayılmasına da yardım eder.",
+      "text": "Avrupalılar onun adını, adım adım hesap yöntemine verir: Algoritma! Aynı kitap, sıfırlı rakamların Avrupa'ya yayılmasına da yardım eder.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "kesis",
+          "x": 0.3,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "anim": "bounce",
+          "scale": 1.2
+        },
+        {
+          "id": "harezmi",
+          "x": 0.72,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "smug",
+          "flip": true,
+          "scale": 1.25
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ALGORİTMA!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.25,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Düşünsene, sıfırsız Romen rakamlarıyla çarpma yapıyorsun. Kafa duman!",
+      "text": "Düşünsene, sıfırsız Romen rakamlarıyla çarpma yapıyorsun. Kafa duman!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "kesis",
+          "x": 0.4,
+          "hat": null,
+          "pose": "shock",
+          "face": "shock",
+          "anim": "shake",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.72,
+          "y": 0.6,
+          "text": "MCMXC x XIV = ?"
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: İyi bir fikir, bin yıl sonra bile cebinde çalışır.",
+      "text": "Günün dersi: İyi bir fikir, bin yıl sonra bile cebinde çalışır.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "harezmi",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

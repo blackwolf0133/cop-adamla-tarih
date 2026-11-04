@@ -1,0 +1,303 @@
+{
+  "id": "013",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Vikinglerin Boynuzu Yoktu!",
+  "year": "800'LER",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Boynuzlu Viking miğferi mi? Bunu tarihe değil, bir operaya borçluyuz 🎭\n\nArkeologlar bugüne kadar boynuzlu tek bir Viking savaş miğferi bulmadı. En sağlam Viking miğferi, 1943'te Norveç'te bulunan yuvarlak ve sade Gjermundbu miğferidir. Boynuzlar 1876'da Wagner'in operası için kostüm tasarımcısı Carl Emil Doepler'in çizimleriyle ünlendi.\n\nSen de boynuzlu sanıyor muydun? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #vikingler #tarihbilgisi #efsane #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Vikingleri boynuzlu miğferle hayal ediyorsan, bunu tarihe değil, bir operaya borçlusun.",
+      "text": "Vikingleri boynuzlu miğferle hayal ediyorsan, bunu tarihe değil, bir operaya borçlusun.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "BOYNUZ?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "OPERA MI?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "800'lerden itibaren Vikingler İskandinavya'dan gemilerle yola çıkar. İngiltere'den Bizans'a kadar her yere uğrarlar.",
+      "text": "800'lerden itibaren Vikingler İskandinavya'dan gemilerle yola çıkar. İngiltere'den Bizans'a kadar her yere uğrarlar.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "viking",
+          "x": 0.2,
+          "hat": "helmet",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.3,
+          "anim": "walk",
+          "to_x": 0.45,
+          "move_dur": 4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "VİKİNGLER!",
+          "x": 0.6,
+          "y": 0.25,
+          "size": 110,
+          "delay": 2.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Hatta bazıları İstanbul'da Bizans imparatorunun muhafızı olur. Onlara Varank Muhafızları denir.",
+      "text": "Hatta bazıları İstanbul'da Bizans imparatorunun muhafızı olur. Onlara Varank Muhafızları denir.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "imparator",
+          "x": 0.3,
+          "hat": "crown",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.2
+        },
+        {
+          "id": "viking",
+          "x": 0.72,
+          "hat": "helmet",
+          "pose": "stand",
+          "face": "confident",
+          "flip": true,
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "VARANK!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Peki ya boynuzlar? Arkeologlar bugüne kadar boynuzlu tek bir Viking savaş miğferi bulmadı.",
+      "text": "Peki ya boynuzlar? Arkeologlar bugüne kadar boynuzlu tek bir Viking savaş miğferi bulmadı.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "arkeolog",
+          "x": 0.4,
+          "hat": "slouch",
+          "pose": "shrug",
+          "face": "surprised",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "SIFIR BOYNUZ!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 96,
+          "f": 0.6,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? En sağlam Viking miğferi, 1943'te Norveç'te bulunan Gjermundbu miğferi. Yuvarlak, sade ve boynuzsuz!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? En sağlam Viking miğferi, 1943'te Norveç'te bulunan Gjermundbu miğferi. Yuvarlak, sade ve boynuzsuz!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "viking",
+          "x": 0.4,
+          "hat": "helmet",
+          "pose": "hips",
+          "face": "smug",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "BOYNUZSUZ!",
+          "x": 0.62,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.7,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Boynuzlar 1876'da sahneye çıkar. Wagner'in operasında kostüm tasarımcısı Carl Emil Doepler, Viking kahramanlara boynuz takar. Ve moda tutar!",
+      "text": "Boynuzlar 1876'da sahneye çıkar. Wagner'in operasında kostüm tasarımcısı Carl Emil Doepler, Viking kahramanlara boynuz takar. Ve moda tutar!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "doepler",
+          "x": 0.35,
+          "hat": "tophat",
+          "pose": "point",
+          "face": "smug",
+          "holds": "scroll",
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "1876!",
+          "x": 0.68,
+          "y": 0.25,
+          "size": 130,
+          "f": 0.2,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Boynuzlu miğferler aslında Vikinglerden çok önce, törenlerde kullanılırdı. Savaşta mı? Boynuzun bir dala takılır, kalırsın!",
+      "text": "Boynuzlu miğferler aslında Vikinglerden çok önce, törenlerde kullanılırdı. Savaşta mı? Boynuzun bir dala takılır, kalırsın!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "viking",
+          "x": 0.4,
+          "hat": "helmet",
+          "pose": "shock",
+          "face": "shock",
+          "anim": "shake",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "palm",
+          "x": 0.78,
+          "y": 0.93,
+          "scale": 0.9
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bir şeyi çok sık görmen, onu doğru yapmaz.",
+      "text": "Günün dersi: Bir şeyi çok sık görmen, onu doğru yapmaz.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "viking",
+          "x": 0.45,
+          "hat": "helmet",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

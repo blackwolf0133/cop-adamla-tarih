@@ -1,0 +1,328 @@
+{
+  "id": "010",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Avrupa'ya Göre \"Muhteşem\", Bize Göre \"Kanuni\"",
+  "year": "1520",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Aynı padişaha Avrupa \"Muhteşem\" dedi, biz \"Kanuni\" 👑📜 Peki neden?\n\nI. Süleyman 1520'den 1566'ya kadar 46 yıl tahtta kaldı; bu Osmanlı'nın en uzun saltanatıdır. Avrupalılar onun gücüne ve sarayının ihtişamına bakıp \"Muhteşem\" dedi. Halkı ise dağınık kuralları toplatıp kanunnameler hazırlattığı için onu \"Kanuni\" diye andı. Üstelik \"Muhibbi\" mahlasıyla şiirler yazan bir şairdi!\n\nSence hangisi daha güzel bir lakap? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #kanunisultansüleyman #osmanlı #osmanlıtarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Aynı padişaha Avrupa Muhteşem dedi, biz Kanuni. Peki neden bir adama iki farklı isim?",
+      "text": "Aynı padişaha Avrupa Muhteşem dedi, biz Kanuni. Peki neden bir adama iki farklı isim?",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "MUHTEŞEM?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "KANUNİ?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1520. Süleyman tahta çıkar ve tam 46 yıl tahtta kalır. Osmanlı tarihinin en uzun saltanatı!",
+      "text": "Yıl 1520. Süleyman tahta çıkar ve tam 46 yıl tahtta kalır. Osmanlı tarihinin en uzun saltanatı!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "suleyman",
+          "x": 0.4,
+          "hat": "kavuk",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "46 YIL!",
+          "x": 0.72,
+          "y": 0.25,
+          "size": 120,
+          "delay": 3.0,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Ordusu Belgrad'dan Bağdat'a, Viyana kapılarına kadar uzanır. Avrupa onun gücüne şaşkın.",
+      "text": "Ordusu Belgrad'dan Bağdat'a, Viyana kapılarına kadar uzanır. Avrupa onun gücüne şaşkın.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "suleyman",
+          "x": 0.3,
+          "hat": "kavuk",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.2,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "horse",
+          "x": 0.68,
+          "y": 0.92,
+          "scale": 0.85,
+          "flip": true
+        },
+        {
+          "type": "tent",
+          "x": 0.88,
+          "y": 0.9,
+          "scale": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "VİYANA!",
+          "x": 0.55,
+          "y": 0.25,
+          "size": 110,
+          "delay": 2.8,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Sarayının ihtişamını gören Avrupalı elçiler, ona Muhteşem Süleyman der. Gözleri kamaşmış resmen!",
+      "text": "Sarayının ihtişamını gören Avrupalı elçiler, ona Muhteşem Süleyman der. Gözleri kamaşmış resmen!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "elci",
+          "x": 0.28,
+          "hat": null,
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 1.15,
+          "holds": "scroll"
+        },
+        {
+          "id": "suleyman",
+          "x": 0.72,
+          "hat": "kavuk",
+          "pose": "open",
+          "face": "smug",
+          "flip": true,
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.5,
+          "y": 0.93,
+          "delay": 1.5
+        },
+        {
+          "type": "pop",
+          "text": "MUHTEŞEM!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.4,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Kendi halkı onu savaşlarla değil, kanunlarla hatırlar.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Kendi halkı onu savaşlarla değil, kanunlarla hatırlar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "suleyman",
+          "x": 0.4,
+          "hat": "kavuk",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "suleyman",
+          "f": 0.5
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Dağınık kuralları toplatır, kanunnameler hazırlatır. Vergiden toprağa kadar her şey yazıya geçer. Yanında da Şeyhülislam Ebussuud Efendi.",
+      "text": "Dağınık kuralları toplatır, kanunnameler hazırlatır. Vergiden toprağa kadar her şey yazıya geçer. Yanında da Şeyhülislam Ebussuud Efendi.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "suleyman",
+          "x": 0.3,
+          "hat": "kavuk",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.25,
+          "talk": true
+        },
+        {
+          "id": "ebussuud",
+          "x": 0.72,
+          "hat": "sarik",
+          "pose": "stand",
+          "face": "happy",
+          "holds": "scroll",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KANUNNAME!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.3,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Bir sürpriz daha: Muhibbi mahlasıyla şiirler yazardı. Hem cihan padişahı, hem şair. Mesai dolu!",
+      "text": "Bir sürpriz daha: Muhibbi mahlasıyla şiirler yazardı. Hem cihan padişahı, hem şair. Mesai dolu!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "suleyman",
+          "x": 0.42,
+          "hat": "kavuk",
+          "pose": "point",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ŞAİR!",
+          "x": 0.7,
+          "y": 0.25,
+          "size": 120,
+          "f": 0.4,
+          "rot": 8
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Kılıçla kazanılan yer, ancak adaletle korunur.",
+      "text": "Günün dersi: Kılıçla kazanılan yer, ancak adaletle korunur.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "suleyman",
+          "x": 0.45,
+          "hat": "kavuk",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "id": "015",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "500 Yıllık Esrarengiz Harita",
+  "year": "1513",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "1929'da Topkapı Sarayı'nda unutulmuş bir harita bulundu. Üstünde 1513'te çizilmiş bir Amerika vardı! 🗺️\n\nOsmanlı denizcisi Piri Reis, 1513'te Gelibolu'da ceylan derisi üzerine bir dünya haritası çizdi. Yaklaşık 20 kaynaktan yararlandı; bunlardan biri bugün kayıp olan bir Kristof Kolomb haritasıydı. Haritanın yalnızca üçte biri bugüne ulaştı ve Topkapı Sarayı Müzesi'nde saklanıyor. \"Buzsuz Antarktika\" iddiası ise bilim insanlarına göre bir efsane.\n\nHaritalar mı, gemiler mi? Yorumlara yaz 👇\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #pirireis #osmanlı #harita #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "1929'da bir sarayda unutulmuş bir harita bulundu. Üstünde 1513'te çizilmiş bir Amerika vardı!",
+      "text": "1929'da bir sarayda unutulmuş bir harita bulundu. Üstünde 1513'te çizilmiş bir Amerika vardı!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "1929!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "AMERİKA?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Haritayı çizen Piri Reis. Gençliğini amcası Kemal Reis'le Akdeniz'de gemilerde geçiren bir Osmanlı denizcisi.",
+      "text": "Haritayı çizen Piri Reis. Gençliğini amcası Kemal Reis'le Akdeniz'de gemilerde geçiren bir Osmanlı denizcisi.",
+      "bg": "sea",
+      "actors": [],
+      "props": [
+        {
+          "type": "ship",
+          "x": 0.5,
+          "y": 0.87,
+          "scale": 0.85,
+          "anim": "bob"
+        },
+        {
+          "type": "pop",
+          "text": "PİRİ REİS!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 110,
+          "delay": 2.0,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "1513'te Gelibolu'da oturur ve bir dünya haritası çizer. Hem de ceylan derisi üzerine!",
+      "text": "1513'te Gelibolu'da oturur ve bir dünya haritası çizer. Hem de ceylan derisi üzerine!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "piri",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "holds": "scroll",
+          "scale": 1.35,
+          "pose2": "cheer",
+          "face2": "happy",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "CEYLAN DERİSİ!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 92,
+          "f": 0.7,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Haritayı yaklaşık 20 kaynaktan derler. Bunlardan biri, bugün kayıp olan bir Kristof Kolomb haritası!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Haritayı yaklaşık 20 kaynaktan derler. Bunlardan biri, bugün kayıp olan bir Kristof Kolomb haritası!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "piri",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "holds": "scroll",
+          "scale": 1.25,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.72,
+          "y": 0.6,
+          "text": "KOLOMB"
+        },
+        {
+          "type": "pop",
+          "text": "20 KAYNAK!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.35,
+          "rot": -6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Yani Kolomb'un kaybolan haritasının izleri, bugün bir Osmanlı haritasında yaşıyor.",
+      "text": "Yani Kolomb'un kaybolan haritasının izleri, bugün bir Osmanlı haritasında yaşıyor.",
+      "bg": "sea",
+      "actors": [],
+      "props": [
+        {
+          "type": "ship",
+          "x": 0.4,
+          "y": 0.87,
+          "scale": 0.7,
+          "anim": "bob"
+        },
+        {
+          "type": "pop",
+          "text": "KAYIP İZ!",
+          "x": 0.6,
+          "y": 0.25,
+          "size": 110,
+          "f": 0.4,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Haritanın sadece üçte biri bugüne ulaştı. Bazıları altta buzsuz Antarktika olduğunu, hatta uzaylıların çizdiğini iddia eder. Bilim insanlarına göre bu bir efsane. Çizen Piri Reis!",
+      "text": "Haritanın sadece üçte biri bugüne ulaştı. Bazıları altta buzsuz Antarktika olduğunu, hatta uzaylıların çizdiğini iddia eder. Bilim insanlarına göre bu bir efsane. Çizen Piri Reis!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "piri",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "smug",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "UZAYLI DEĞİL!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 96,
+          "f": 0.7,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Haritası bugün Topkapı Sarayı Müzesi'nde saklanıyor. Piri Reis denizciler için Kitab-ı Bahriye'yi de yazdı.",
+      "text": "Haritası bugün Topkapı Sarayı Müzesi'nde saklanıyor. Piri Reis denizciler için Kitab-ı Bahriye'yi de yazdı.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "piri",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "open",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "tower",
+          "x": 0.8,
+          "y": 0.93,
+          "scale": 0.8
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Herkesten bir parça öğrenen, yepyeni bir dünya çizer.",
+      "text": "Günün dersi: Herkesten bir parça öğrenen, yepyeni bir dünya çizer.",
+      "bg": "sea",
+      "actors": [],
+      "props": [
+        {
+          "type": "ship",
+          "x": 0.5,
+          "y": 0.87,
+          "scale": 0.85,
+          "anim": "bob"
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}
