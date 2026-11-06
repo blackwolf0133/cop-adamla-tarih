@@ -23,6 +23,10 @@ def finish(name, chunks, sr):
     print("hazır:", name, flush=True)
 
 
+if which in ("voxcpm", "trendyol"):
+    subprocess.run([sys.executable, "tools/voxcpm_test.py", which, out], check=True)
+    sys.exit(0)
+
 if which == "adana":
     subprocess.run([sys.executable, "tools/adana_skec.py", "tools/skec/001_diyet.json", out], check=True)
     sys.exit(0)
