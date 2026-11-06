@@ -27,7 +27,7 @@ jobs:
   uret:
     needs: hazirla
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
     strategy:
       fail-fast: false
       matrix:
@@ -45,7 +45,10 @@ jobs:
       - name: Kurulum
         run: |
           sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
-          if [ "${{ matrix.model }}" = "pocket" ]; then
+          if [ "${{ matrix.model }}" = "voxcpm" ] || [ "${{ matrix.model }}" = "trendyol" ]; then
+            pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+            pip install voxcpm soundfile huggingface_hub faster-whisper
+          elif [ "${{ matrix.model }}" = "pocket" ]; then
             pip install torch --index-url https://download.pytorch.org/whl/cpu
             pip install pocket-tts-turkish
           else
