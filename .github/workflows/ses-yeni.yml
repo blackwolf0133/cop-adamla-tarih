@@ -1,0 +1,76 @@
+# Yeni ses modellerini senin sesinle karşılaştırır (paylaşım yok). Sonuçlar geçici bir sürüme mp3 olarak konur.
+name: Ses modelleri karşılaştır
+
+on:
+  workflow_dispatch:
+    inputs:
+      modlar:
+        description: 'Çalışacak modeller (JSON liste)'
+        default: '["chatterbox","moss","orkhon","voxcpm"]'
+
+permissions:
+  contents: write
+
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.t.outputs.tag }}
+    steps:
+      - id: t
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="ses-modelleri-$(date +%m%d%H%M)"
+          gh release create "$tag" --prerelease --title "Ses modelleri karşılaştırma" \
+            --notes "Aynı 3 cümle, senin sesinle. 1 = şu anki ses (Chatterbox), 2 = MOSS-TTS-Nano, 3 = Orkhon-TTS (Türkçe F5), 4 = VoxCPM2." \
+            --repo "${{ github.repository }}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+  uret:
+    needs: hazirla
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        model: ${{ fromJSON(inputs.modlar) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Önbellek (ses modelleri)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-yeni-${{ matrix.model }}-v1
+      - name: Kurulum
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+          case "${{ matrix.model }}" in
+            chatterbox)
+              pip install chatterbox-tts huggingface_hub soundfile ;;
+            moss)
+              pip install torch==2.7.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cpu
+              pip install transformers==4.57.1 sentencepiece soundfile numpy onnxruntime fastapi uvicorn python-multipart huggingface_hub
+              git clone --depth 1 https://github.com/OpenMOSS/MOSS-TTS-Nano /tmp/moss ;;
+            orkhon)
+              pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+              pip install f5-tts faster-whisper soundfile huggingface_hub ;;
+            voxcpm)
+              pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+              pip install voxcpm soundfile huggingface_hub faster-whisper ;;
+          esac
+      - name: Ses kaydını çöz
+        env:
+          VOICE_KEY: ${{ secrets.VOICE_KEY }}
+        run: openssl enc -d -aes-256-cbc -pbkdf2 -in assets/voice/ref.wav.enc -out /tmp/ref.wav -pass env:VOICE_KEY
+      - name: Üret
+        run: python tools/ses_yeni.py ${{ matrix.model }} out
+      - name: Sürüme ekle
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f /tmp/ref.wav
+          ls out/ 2>/dev/null && gh release upload "${{ needs.hazirla.outputs.tag }}" out/* --repo "${{ github.repository }}" || true
