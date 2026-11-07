@@ -58,6 +58,8 @@ jobs:
               pip install torch==2.7.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cpu
               pip install f5-tts faster-whisper soundfile huggingface_hub "torch==2.7.0" "torchaudio==2.7.0"
               pip uninstall -y torchcodec || true ;;
+            azure)
+              pip install edge-tts soundfile numpy ;;
             voxcpm)
               pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
               pip install voxcpm soundfile huggingface_hub faster-whisper ;;
@@ -65,6 +67,7 @@ jobs:
       - name: Ses kaydını çöz
         env:
           VOICE_KEY: ${{ secrets.VOICE_KEY }}
+        if: matrix.model != 'azure'
         run: openssl enc -d -aes-256-cbc -pbkdf2 -in assets/voice/ref.wav.enc -out /tmp/ref.wav -pass env:VOICE_KEY
       - name: Üret
         run: python tools/ses_yeni.py ${{ matrix.model }} out

@@ -1,6 +1,6 @@
 """Ses modeli karşılaştırması (Kasım 2026): aynı 3 cümle, SENİN SESİNLE, farklı modeller.
 Hepsi ticari kullanıma açık lisanslı. Hiçbir şey paylaşmaz, sadece mp3 üretir.
-Kullanım: python tools/ses_yeni.py <chatterbox|moss|orkhon|voxcpm> <çıktı_klasörü>"""
+Kullanım: python tools/ses_yeni.py <chatterbox|moss|orkhon|voxcpm|azure> <çıktı_klasörü>"""
 import os, sys, subprocess, time, glob
 import numpy as np
 import soundfile as sf
@@ -15,9 +15,9 @@ T = [seslendirme_metni(t) for t in HAM]
 which, out = sys.argv[1], sys.argv[2]
 os.makedirs(out, exist_ok=True)
 ME = "/tmp/ref.wav"
-if not os.path.exists(ME):
+if which != "azure" and not os.path.exists(ME):
     sys.exit("Ses kaydı (/tmp/ref.wav) yok: VOICE_KEY secret'ı gerekli.")
-NO = {"chatterbox": "1_simdiki_chatterbox", "moss": "2_moss_tts_nano", "orkhon": "3_orkhon_tts", "voxcpm": "4_voxcpm2"}[which]
+NO = {"chatterbox": "1_simdiki_chatterbox", "moss": "2_moss_tts_nano", "orkhon": "3_orkhon_tts", "voxcpm": "4_voxcpm2", "azure": "5_microsoft"}[which]
 t0 = time.time()
 
 
@@ -106,5 +106,32 @@ elif which == "voxcpm":
     parts = [m.generate(text=t, cfg_value=2.0, inference_timesteps=10, prompt_wav_path=ME, prompt_text=ref_text,
                         reference_wav_path=ME) for t in T]
     bitir(parts, m.tts_model.sample_rate)
+
+elif which == "azure":
+    # Microsoft Azure sinir ağı sesleri. Örnekler için edge-tts (aynı sesler); kalıcı kullanımda resmi Azure anahtarı.
+    import asyncio, edge_tts
+    SESLER = [("tr-TR-AhmetNeural", "+0%", "ahmet"), ("tr-TR-AhmetNeural", "+10%", "ahmet_hizli"),
+              ("tr-TR-EmelNeural", "+0%", "emel"),
+              ("en-US-AndrewMultilingualNeural", "+0%", "andrew_cokdilli"),
+              ("en-US-BrianMultilingualNeural", "+0%", "brian_cokdilli"),
+              ("de-DE-FlorianMultilingualNeural", "+0%", "florian_cokdilli"),
+              ("fr-FR-RemyMultilingualNeural", "+0%", "remy_cokdilli"),
+              ("en-US-AvaMultilingualNeural", "+0%", "ava_cokdilli_kadin")]
+
+    async def uret(ses, hiz, t, yol):
+        await edge_tts.Communicate(t, ses, rate=hiz).save(yol)
+
+    for ses, hiz, ad in SESLER:
+        try:
+            parts, sr = [], 24000
+            for i, t in enumerate(T):
+                mp3, wav = f"/tmp/az_{ad}_{i}.mp3", f"/tmp/az_{ad}_{i}.wav"
+                asyncio.run(uret(ses, hiz, t, mp3))
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp3, "-ar", "24000", "-ac", "1", wav], check=True)
+                a, sr = oku(wav)
+                parts.append(a)
+            bitir(parts, sr, "_" + ad)
+        except Exception as e:  # noqa: BLE001
+            print("olmadı:", ses, e, flush=True)
 
 print("toplam", round(time.time() - t0), "sn")
