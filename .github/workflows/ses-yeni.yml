@@ -60,6 +60,8 @@ jobs:
               pip uninstall -y torchcodec || true ;;
             azure)
               pip install edge-tts soundfile numpy ;;
+            gemini)
+              pip install soundfile numpy ;;
             voxcpm)
               pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
               pip install voxcpm soundfile huggingface_hub faster-whisper ;;
@@ -67,9 +69,11 @@ jobs:
       - name: Ses kaydını çöz
         env:
           VOICE_KEY: ${{ secrets.VOICE_KEY }}
-        if: matrix.model != 'azure'
+        if: matrix.model != 'azure' && matrix.model != 'gemini'
         run: openssl enc -d -aes-256-cbc -pbkdf2 -in assets/voice/ref.wav.enc -out /tmp/ref.wav -pass env:VOICE_KEY
       - name: Üret
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python tools/ses_yeni.py ${{ matrix.model }} out
       - name: Sürüme ekle
         if: always()

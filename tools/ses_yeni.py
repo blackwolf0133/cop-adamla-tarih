@@ -1,6 +1,6 @@
 """Ses modeli karşılaştırması (Kasım 2026): aynı 3 cümle, SENİN SESİNLE, farklı modeller.
 Hepsi ticari kullanıma açık lisanslı. Hiçbir şey paylaşmaz, sadece mp3 üretir.
-Kullanım: python tools/ses_yeni.py <chatterbox|moss|orkhon|voxcpm|azure> <çıktı_klasörü>"""
+Kullanım: python tools/ses_yeni.py <chatterbox|moss|orkhon|voxcpm|azure|gemini> <çıktı_klasörü>"""
 import os, sys, subprocess, time, glob
 import numpy as np
 import soundfile as sf
@@ -15,9 +15,9 @@ T = [seslendirme_metni(t) for t in HAM]
 which, out = sys.argv[1], sys.argv[2]
 os.makedirs(out, exist_ok=True)
 ME = "/tmp/ref.wav"
-if which != "azure" and not os.path.exists(ME):
+if which not in ("azure", "gemini") and not os.path.exists(ME):
     sys.exit("Ses kaydı (/tmp/ref.wav) yok: VOICE_KEY secret'ı gerekli.")
-NO = {"chatterbox": "1_simdiki_chatterbox", "moss": "2_moss_tts_nano", "orkhon": "3_orkhon_tts", "voxcpm": "4_voxcpm2", "azure": "5_microsoft"}[which]
+NO = {"chatterbox": "1_simdiki_chatterbox", "moss": "2_moss_tts_nano", "orkhon": "3_orkhon_tts", "voxcpm": "4_voxcpm2", "azure": "5_microsoft", "gemini": "6_gemini"}[which]
 t0 = time.time()
 
 
@@ -133,5 +133,61 @@ elif which == "azure":
             bitir(parts, sr, "_" + ad)
         except Exception as e:  # noqa: BLE001
             print("olmadı:", ses, e, flush=True)
+
+elif which == "gemini":
+    # Google Gemini TTS: sese yazıyla ton talimatı verilebilir. GEMINI_API_KEY secret'ı gerekli.
+    import json, base64, urllib.request, urllib.error
+    KEY = os.environ["GEMINI_API_KEY"]
+    MODELLER = ["gemini-3.8-flash-lite-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]
+    DUYGU = [seslendirme_metni(t) for t in [
+        "Babalar sevgilerini pek söylemez.", "Sabah erkenden işe gitmelerinde saklıdır.",
+        "Bisikletini bıraktığında arkandan koşmalarında.", "Babalar sevgiyi söylemez, yaşatır."]]
+    TON = {
+        "heyecanli": ("Read this Turkish text aloud like an energetic, curious storyteller who hooks a "
+                      "social media audience in the first second. Natural, fluent Istanbul Turkish, lively pace:", T),
+        "duygusal": ("Read this Turkish text aloud slowly, warmly and softly, like a heartfelt, emotional "
+                     "narrator. Natural Istanbul Turkish, gentle pauses between lines:", DUYGU),
+    }
+    DENE = [("heyecanli", "Puck"), ("heyecanli", "Fenrir"), ("heyecanli", "Charon"), ("heyecanli", "Orus"),
+            ("heyecanli", "Achird"), ("heyecanli", "Zephyr"),
+            ("duygusal", "Charon"), ("duygusal", "Iapetus"), ("duygusal", "Sulafat"), ("duygusal", "Kore")]
+    model_ok = None
+
+    def istek(model, prompt, ses):
+        body = {"contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"responseModalities": ["AUDIO"],
+                                     "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": ses}}}}}
+        req = urllib.request.Request(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+            data=json.dumps(body).encode(), headers={"x-goog-api-key": KEY, "Content-Type": "application/json"})
+        r = json.load(urllib.request.urlopen(req, timeout=180))
+        return base64.b64decode(r["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
+
+    for ton, ses in DENE:
+        talimat, satirlar = TON[ton]
+        prompt = talimat + "\n\n" + "\n".join(satirlar)
+        pcm = None
+        for model in ([model_ok] if model_ok else MODELLER):
+            for deneme in range(4):
+                try:
+                    pcm = istek(model, prompt, ses)
+                    model_ok = model
+                    break
+                except urllib.error.HTTPError as e:
+                    msg = e.read().decode()[:300]
+                    print(f"{model} {ses}: HTTP {e.code} {msg}", flush=True)
+                    if e.code == 429:
+                        time.sleep(30 * (deneme + 1))
+                        continue
+                    break
+            if pcm:
+                break
+        if not pcm:
+            print("olmadı:", ton, ses, flush=True)
+            continue
+        a = np.frombuffer(pcm, dtype="<i2").astype(np.float32) / 32768
+        bitir([a], 24000, f"_{ton}_{ses.lower()}")
+        time.sleep(7)
+    print("kullanılan model:", model_ok)
 
 print("toplam", round(time.time() - t0), "sn")
