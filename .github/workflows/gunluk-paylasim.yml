@@ -66,6 +66,17 @@ jobs:
             echo "::warning::VOICE_KEY yok, Piper sesi kullanılacak"
           fi
 
+      - name: Gemini sesi (Puck)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          # assets/voice/gemini dosyası varsa (onaydan sonra) her gün, deneme modunda her zaman Gemini sesi kullanılır.
+          # Gemini çalışmazsa motor otomatik olarak senin klon sesine, o da olmazsa Piper'a düşer.
+          if [ -n "$GEMINI_API_KEY" ] && { [ -f assets/voice/gemini ] || [ "${{ inputs.sadece_video }}" = "true" ]; }; then
+            echo "TTS_ENGINE=gemini" >> "$GITHUB_ENV"
+            echo "Gemini (Puck) sesiyle seslendirilecek."
+          fi
+
       - name: Ses modeli (önbellek)
         uses: actions/cache@v4
         with:
@@ -87,6 +98,8 @@ jobs:
         id: uret
         env:
           FORCE: ${{ inputs.sadece_video && '1' || '' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_VOICE: "Puck"
           CB_TEMPO: "1.0"   # Chatterbox okuma hızı (1.1 = biraz daha hızlı)
         run: |
           python daily.py render

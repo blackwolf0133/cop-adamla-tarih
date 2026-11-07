@@ -99,11 +99,70 @@ def chatterbox_tts(text, out_wav, emotion=None):
     os.remove(raw)
 
 
+
+_GEM_TON = {"şaşkın": " Sound genuinely surprised and amazed.", "sakin": " Sound calm and thoughtful.",
+            "mutlu": " Sound happy and playful.", "üzgün": " Sound a little sad.", "kızgın": " Sound annoyed."}
+
+
+def gemini_tts(text, out_wav, emotion=None):
+    """Google Gemini TTS (GEMINI_API_KEY). Ses: GEMINI_VOICE (varsayılan Puck), ton yazıyla verilir."""
+    import base64, time, urllib.error, urllib.request
+    key = os.environ["GEMINI_API_KEY"]
+    voice = os.environ.get("GEMINI_VOICE", "Puck")
+    models = os.environ.get("GEMINI_TTS_MODELS",
+                            "gemini-3.8-flash-lite-tts,gemini-3.1-flash-tts-preview,gemini-2.5-flash-preview-tts").split(",")
+    prompt = ("Read this Turkish text aloud like an energetic, curious storyteller who hooks a social media "
+              "audience in the first second. Natural, fluent Istanbul Turkish, lively pace."
+              + _GEM_TON.get(emotion or "", "") + "\n\n" + text)
+    body = json.dumps({"contents": [{"parts": [{"text": prompt}]}],
+                       "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
+                           "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}).encode()
+    pcm, last = None, None
+    for model in models:
+        for attempt in range(5):
+            try:
+                req = urllib.request.Request(
+                    f"https://generativelanguage.googleapis.com/v1beta/models/{model.strip()}:generateContent",
+                    data=body, headers={"x-goog-api-key": key, "Content-Type": "application/json"})
+                r = json.load(urllib.request.urlopen(req, timeout=180))
+                pcm = base64.b64decode(r["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
+                break
+            except urllib.error.HTTPError as e:
+                last = f"{model}: HTTP {e.code} {e.read().decode()[:200]}"
+                if e.code in (429, 500, 503):
+                    time.sleep(20 * (attempt + 1))
+                    continue
+                break
+            except (KeyError, IndexError, TimeoutError, urllib.error.URLError) as e:
+                last = f"{model}: {e}"
+                time.sleep(5)
+        if pcm:
+            break
+    if not pcm:
+        raise RuntimeError(last)
+    raw = out_wav + ".raw.pcm"
+    open(raw, "wb").write(pcm)
+    tempo = float(os.environ.get("GEMINI_TEMPO", "1.0"))
+    trim = ("silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+            "silenceremove=start_periods=1:start_threshold=-45dB,areverse,")
+    af = trim + (f"atempo={tempo}," if abs(tempo - 1.0) > 0.01 else "") + \
+        "highpass=f=70,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=60,loudnorm=I=-16:TP=-1.5:LRA=6"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", raw,
+                    "-af", af, "-ar", str(SR), "-ac", "1", out_wav], check=True)
+    os.remove(raw)
+
+
 def tts(text, out_wav, voice_model, length_scale=1.0, fx=None, emotion=None):
     """Seslendirme. TTS_ENGINE=chatterbox: kullanıcının sesi (Chatterbox klon); pocket: eski klon;
     değilse Piper. Hata olursa Piper'a düşer, paylaşım aksamaz."""
     from .numbers import seslendirme_metni
     text = seslendirme_metni(text)  # rakam / Roma rakamı / sıra sayısı -> yazı (tüm motorlar için)
+    if os.environ.get("TTS_ENGINE") == "gemini":
+        try:
+            return gemini_tts(text, out_wav, emotion)
+        except Exception as e:  # noqa: BLE001
+            print(f"::warning::Gemini sesi çalışmadı, yedek sese geçiliyor: {e}")
+            os.environ["TTS_ENGINE"] = "chatterbox" if os.path.exists(os.environ.get("VOICE_REF", "/yok")) else "piper"
     if os.environ.get("TTS_ENGINE") == "chatterbox":
         try:
             return chatterbox_tts(text, out_wav, emotion)
