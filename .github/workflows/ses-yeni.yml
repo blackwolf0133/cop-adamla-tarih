@@ -55,8 +55,9 @@ jobs:
               pip install transformers==4.57.1 sentencepiece soundfile numpy onnxruntime fastapi uvicorn python-multipart huggingface_hub
               git clone --depth 1 https://github.com/OpenMOSS/MOSS-TTS-Nano /tmp/moss ;;
             orkhon)
-              pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
-              pip install f5-tts faster-whisper soundfile huggingface_hub ;;
+              pip install torch==2.7.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cpu
+              pip install f5-tts faster-whisper soundfile huggingface_hub "torch==2.7.0" "torchaudio==2.7.0"
+              pip uninstall -y torchcodec || true ;;
             voxcpm)
               pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
               pip install voxcpm soundfile huggingface_hub faster-whisper ;;
