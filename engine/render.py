@@ -102,6 +102,8 @@ def chatterbox_tts(text, out_wav, emotion=None):
 def tts(text, out_wav, voice_model, length_scale=1.0, fx=None, emotion=None):
     """Seslendirme. TTS_ENGINE=chatterbox: kullanıcının sesi (Chatterbox klon); pocket: eski klon;
     değilse Piper. Hata olursa Piper'a düşer, paylaşım aksamaz."""
+    from .numbers import seslendirme_metni
+    text = seslendirme_metni(text)  # rakam / Roma rakamı / sıra sayısı -> yazı (tüm motorlar için)
     if os.environ.get("TTS_ENGINE") == "chatterbox":
         try:
             return chatterbox_tts(text, out_wav, emotion)
