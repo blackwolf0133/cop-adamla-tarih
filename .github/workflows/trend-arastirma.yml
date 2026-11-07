@@ -1,0 +1,64 @@
+# last30days (github.com/mvanhorn/last30days-skill, MIT) ile son 30 günün trendlerini araştırır.
+# Hiçbir şey paylaşmaz; sonuçlar günlüğe ve geçici bir sürüme (.md) yazılır.
+# İsteğe bağlı: SCRAPECREATORS_API_KEY secret'ı eklenirse Instagram ve TikTok da taranır.
+name: Trend araştırma
+
+on:
+  workflow_dispatch:
+    inputs:
+      konular:
+        description: 'Konular (JSON liste)'
+        default: '["history shorts reels storytelling hooks", "Türk tarihi reels", "motivational quote reels", "money proverbs personal finance reels"]'
+
+permissions:
+  contents: write
+
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.t.outputs.tag }}
+    steps:
+      - id: t
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="trend-$(date +%m%d%H%M)"
+          gh release create "$tag" --prerelease --title "Trend araştırma" --notes "last30days çıktıları" --repo "${{ github.repository }}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+  arastir:
+    needs: hazirla
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        konu: ${{ fromJSON(inputs.konular) }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: last30days kur (sabit sürüm)
+        run: |
+          git clone -q https://github.com/mvanhorn/last30days-skill /tmp/l30
+          git -C /tmp/l30 checkout -q 71dc2a1529f23dfe7b0d0e3b3e11d4a7e8afd428
+          pip install -q yt-dlp
+      - name: Araştır
+        env:
+          SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
+          KONU: ${{ matrix.konu }}
+        run: |
+          mkdir -p out
+          ad=$(echo "$KONU" | tr ' ' '_' | tr -cd '[:alnum:]_çğıöşüÇĞİÖŞÜ')
+          S=/tmp/l30/skills/last30days/scripts/last30days.py
+          python "$S" --diagnose || true
+          python "$S" "$KONU" --auto-resolve --no-browser-cookies --emit=md --output "out/${ad}.md" || echo "::warning::$KONU tamamlanamadı"
+          echo "=====TREND_BASLA $KONU====="
+          cat "out/${ad}.md" 2>/dev/null || true
+          echo "=====TREND_BITTI====="
+      - name: Sürüme ekle
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ls out/*.md >/dev/null 2>&1 && gh release upload "${{ needs.hazirla.outputs.tag }}" out/*.md --repo "${{ github.repository }}" || true
