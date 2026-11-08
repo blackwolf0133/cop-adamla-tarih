@@ -1,0 +1,25 @@
+# Gemini ses API'sine tek bir istek atar, sonucu ve kota bilgisini gösterir. Hiçbir şey paylaşmaz.
+name: Gemini test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Tek istek
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          for m in gemini-3.8-flash-lite-tts gemini-3.1-flash-tts-preview gemini-2.5-flash-preview-tts; do
+            echo "== $m"
+            start=$(date +%s)
+            code=$(curl -s -o r.json -w "%{http_code}" --max-time 90 \
+              "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent" \
+              -H "x-goog-api-key: $GEMINI_API_KEY" -H "Content-Type: application/json" \
+              -d '{"contents":[{"parts":[{"text":"Say: Merhaba, bu bir deneme."}]}],"generationConfig":{"responseModalities":["AUDIO"],"speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":"Puck"}}}}}')
+            echo "HTTP $code, $(( $(date +%s) - start )) sn, $(wc -c < r.json) bayt"
+            [ "$code" = "200" ] || head -c 700 r.json; echo
+          done
