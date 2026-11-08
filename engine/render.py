@@ -100,6 +100,8 @@ def chatterbox_tts(text, out_wav, emotion=None):
 
 
 
+GEMINI_TON = ("Read this Turkish text aloud like an energetic, curious storyteller who hooks a social media "
+              "audience in the first second. Natural, fluent Istanbul Turkish, lively pace.")
 _GEM = {"model": None, "dead": set()}
 
 
@@ -679,6 +681,28 @@ def render_episode(ep_path, out_mp4, voice_model, workdir="build", handle="@copa
     recorded = None
     if ep.get("narration"):  # tüm bölüm tek kayıt (sahneler arası duraklamalı)
         recorded = split_by_pauses(load_voice_recording(os.path.join(base, ep["narration"])), len(ep["scenes"]))
+    if recorded is None and os.environ.get("TTS_ENGINE") == "gemini" \
+            and not any(sc.get("audio") for sc in ep["scenes"]):
+        # Gemini: bölüm başına TEK istek, sonra duraklamalardan sahnelere böl (tutarlı ses, kotaya sığar)
+        try:
+            from . import gemini_ses
+            from .numbers import seslendirme_metni
+            metinler = [seslendirme_metni(sc["say"]) for sc in ep["scenes"]]
+            a24, _ = gemini_ses.seslendir(metinler, GEMINI_TON)
+            raw = os.path.join(workdir, "gemini.pcm")
+            (np.clip(a24, -1, 1) * 32767).astype("<i2").tofile(raw)
+            tempo = float(os.environ.get("GEMINI_TEMPO", "1.0"))
+            af = (f"atempo={tempo}," if abs(tempo - 1) > 0.01 else "") + \
+                "highpass=f=70,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=60,loudnorm=I=-16:TP=-1.5:LRA=6"
+            pcm = subprocess.run(["ffmpeg", "-v", "error", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", raw,
+                                  "-af", af, "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
+                                 capture_output=True, check=True).stdout
+            a = np.frombuffer(pcm, dtype=np.int16).astype(np.float32) / 32768
+            recorded = [_trim(p, 0.02) for p in gemini_ses.bol(a, SR, metinler)]
+        except Exception as e:  # noqa: BLE001
+            print(f"::warning::Gemini sesi alınamadı, bölümün tamamı yedek sesle okunacak: {e}", flush=True)
+            os.environ["TTS_ENGINE"] = "chatterbox" if os.path.exists(os.environ.get("VOICE_REF", "/yok")) \
+                or os.environ.get("CB_REF") else "piper"
     for i, sc in enumerate(ep["scenes"]):
         wav = os.path.join(workdir, f"s{i:02d}.wav")
         if recorded is not None:
