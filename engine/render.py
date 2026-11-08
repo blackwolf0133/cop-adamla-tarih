@@ -100,8 +100,8 @@ def chatterbox_tts(text, out_wav, emotion=None):
 
 
 
-GEMINI_TON = ("Read this Turkish text aloud like an energetic, curious storyteller who hooks a social media "
-              "audience in the first second. Natural, fluent Istanbul Turkish, lively pace.")
+GEMINI_TON = ("Sosyal medyada izleyiciyi ilk saniyede yakalayan, enerjik ve meraklı bir Türk hikâye anlatıcısı "
+              "gibi oku. Canlı tempo, heyecanlı ama doğal.")
 _GEM = {"model": None, "dead": set()}
 
 

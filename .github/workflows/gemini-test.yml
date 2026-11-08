@@ -1,25 +1,46 @@
-# Gemini ses API'sine tek bir istek atar, sonucu ve kota bilgisini gösterir. Hiçbir şey paylaşmaz.
+# Gemini sesini, sıradaki bölümün metniyle (üretimdeki kodla) sadece ses olarak dener. Hiçbir şey paylaşmaz.
 name: Gemini test
 
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
-      - name: Tek istek
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Ses üret
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_VOICE: "Puck"
+          PYTHONUNBUFFERED: "1"
         run: |
-          for m in gemini-3.8-flash-lite-tts gemini-3.1-flash-tts-preview gemini-2.5-flash-preview-tts; do
-            echo "== $m"
-            start=$(date +%s)
-            code=$(curl -s -o r.json -w "%{http_code}" --max-time 90 \
-              "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent" \
-              -H "x-goog-api-key: $GEMINI_API_KEY" -H "Content-Type: application/json" \
-              -d '{"contents":[{"parts":[{"text":"Say: Merhaba, bu bir deneme."}]}],"generationConfig":{"responseModalities":["AUDIO"],"speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":"Puck"}}}}}')
-            echo "HTTP $code, $(( $(date +%s) - start )) sn, $(wc -c < r.json) bayt"
-            [ "$code" = "200" ] || head -c 700 r.json; echo
-          done
+          sudo apt-get install -y -q ffmpeg >/dev/null
+          pip install -q numpy
+          python - <<'PY'
+          import json, glob, subprocess, numpy as np
+          from engine import gemini_ses
+          from engine.numbers import seslendirme_metni
+          import re
+          src = open("engine/render.py", encoding="utf-8").read()
+          ton = eval(re.search(r"GEMINI_TON = (\(.*?\))\n", src, re.S).group(1))
+          ep = json.load(open(sorted(glob.glob("episodes/009_*.json"))[0], encoding="utf-8"))
+          metinler = [seslendirme_metni(s["say"]) for s in ep["scenes"]]
+          a, model = gemini_ses.seslendir(metinler, ton)
+          parcalar = gemini_ses.bol(a, 24000, metinler)
+          print("parça süreleri:", [round(len(p) / 24000, 1) for p in parcalar])
+          (np.clip(a, -1, 1) * 32767).astype("<i2").tofile("ses.pcm")
+          subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", "ses.pcm",
+                          "-b:a", "160k", "puck_009.mp3"], check=True)
+          PY
+      - name: Sürüme koy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "ses-test-$(date +%m%d%H%M)" puck_009.mp3 --prerelease --title "Gemini ses testi" --notes "Paylaşılmadı." --repo "${{ github.repository }}"
