@@ -100,6 +100,19 @@ def chatterbox_tts(text, out_wav, emotion=None):
 
 
 
+_GEM = {"model": None, "dead": set()}
+
+
+def _gem_models():
+    """Önce bu bölümde çalışmış model, sonra sıradakiler; kotası dolanlar atlanır."""
+    order = os.environ.get("GEMINI_TTS_MODELS",
+                           "gemini-3.8-flash-lite-tts,gemini-3.1-flash-tts-preview,gemini-2.5-flash-preview-tts").split(",")
+    order = [m.strip() for m in order if m.strip()]
+    if _GEM["model"]:
+        order = [_GEM["model"]] + [m for m in order if m != _GEM["model"]]
+    return [m for m in order if m not in _GEM["dead"]]
+
+
 _GEM_TON = {"şaşkın": " Sound genuinely surprised and amazed.", "sakin": " Sound calm and thoughtful.",
             "mutlu": " Sound happy and playful.", "üzgün": " Sound a little sad.", "kızgın": " Sound annoyed."}
 
@@ -109,8 +122,6 @@ def gemini_tts(text, out_wav, emotion=None):
     import base64, time, urllib.error, urllib.request
     key = os.environ["GEMINI_API_KEY"]
     voice = os.environ.get("GEMINI_VOICE", "Puck")
-    models = os.environ.get("GEMINI_TTS_MODELS",
-                            "gemini-3.8-flash-lite-tts,gemini-3.1-flash-tts-preview,gemini-2.5-flash-preview-tts").split(",")
     prompt = ("Read this Turkish text aloud like an energetic, curious storyteller who hooks a social media "
               "audience in the first second. Natural, fluent Istanbul Turkish, lively pace."
               + _GEM_TON.get(emotion or "", "") + "\n\n" + text)
@@ -118,24 +129,34 @@ def gemini_tts(text, out_wav, emotion=None):
                        "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                            "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}).encode()
     pcm, last = None, None
-    for model in models:
-        for attempt in range(5):
+    for model in _gem_models():
+        for attempt in range(3):
             try:
                 req = urllib.request.Request(
-                    f"https://generativelanguage.googleapis.com/v1beta/models/{model.strip()}:generateContent",
+                    f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
                     data=body, headers={"x-goog-api-key": key, "Content-Type": "application/json"})
-                r = json.load(urllib.request.urlopen(req, timeout=180))
+                r = json.load(urllib.request.urlopen(req, timeout=90))
                 pcm = base64.b64decode(r["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
+                if _GEM["model"] != model:
+                    print(f"Gemini sesi: {model}", flush=True)
+                _GEM["model"] = model          # bölümün geri kalanı aynı modelle (tutarlı ses)
                 break
             except urllib.error.HTTPError as e:
-                last = f"{model}: HTTP {e.code} {e.read().decode()[:200]}"
+                msg = e.read().decode()[:300]
+                last = f"{model}: HTTP {e.code} {msg}"
+                print(f"::warning::{last}", flush=True)
+                if e.code == 429 and "quota" in msg.lower() and "minute" not in msg.lower():
+                    _GEM["dead"].add(model)    # günlük kota dolu: bu çalıştırmada bir daha deneme
+                    break
                 if e.code in (429, 500, 503):
-                    time.sleep(20 * (attempt + 1))
+                    time.sleep(10 * (attempt + 1))
                     continue
+                _GEM["dead"].add(model)
                 break
             except (KeyError, IndexError, TimeoutError, urllib.error.URLError) as e:
                 last = f"{model}: {e}"
-                time.sleep(5)
+                print(f"::warning::{last}", flush=True)
+                time.sleep(3)
         if pcm:
             break
     if not pcm:
