@@ -43,6 +43,7 @@ jobs:
       - name: Python paketleri
         run: |
           pip install -r requirements.txt
+          pip install faster-whisper || echo "::warning::faster-whisper kurulamadı, okunuş kontrolü atlanacak"
           pip install chatterbox-tts huggingface_hub || echo "::warning::chatterbox kurulamadı, Piper kullanılacak"
 
       - name: Ses modeli önbelleği (senin sesin için)
