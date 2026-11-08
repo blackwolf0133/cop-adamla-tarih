@@ -16,15 +16,21 @@ SR_GEM = 24000
 VARSAYILAN_MODELLER = "gemini-3.8-flash-lite-tts,gemini-3.1-flash-tts-preview,gemini-2.5-flash-preview-tts"
 
 
-def _istek(model, prompt, ses, key, dil=True):
+def _istek(model, metin, talimat, ses, key, dil=True, sistem=True):
+    """Talimat ayrı alanda (system instruction) gider; okunacak içerikte sadece hikâye metni olur."""
     sc = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": ses}}}
     if dil:
         sc["languageCode"] = "tr-TR"            # Türkçe telaffuzu sabitle
-    body = json.dumps({"contents": [{"parts": [{"text": prompt}]}],
-                       "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": sc}}).encode()
+    govde = {"generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": sc}}
+    if sistem:
+        govde["systemInstruction"] = {"parts": [{"text": talimat}]}
+        govde["contents"] = [{"role": "user", "parts": [{"text": metin}]}]
+    else:  # sistem talimatı desteklenmezse: yönetmen notu / metin ayrımı
+        govde["contents"] = [{"role": "user", "parts": [{"text":
+            "### YÖNETMEN NOTU (OKUMA, SESLENDİRME)\n" + talimat + "\n\n### SESLENDİRİLECEK METİN (SADECE BUNU OKU)\n" + metin}]}]
     req = urllib.request.Request(
         f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-        data=body, headers={"x-goog-api-key": key, "Content-Type": "application/json"})
+        data=json.dumps(govde).encode(), headers={"x-goog-api-key": key, "Content-Type": "application/json"})
     r = json.load(urllib.request.urlopen(req, timeout=240))
     return base64.b64decode(r["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
 
@@ -34,21 +40,25 @@ def seslendir(metinler, ton):
     key = os.environ["GEMINI_API_KEY"]
     ses = os.environ.get("GEMINI_VOICE", "Puck")
     modeller = [m.strip() for m in os.environ.get("GEMINI_TTS_MODELS", VARSAYILAN_MODELLER).split(",") if m.strip()]
-    prompt = (ton + "\nDil: Türkçe. Aşağıdaki Türkçe paragrafları sırayla, yazıldığı gibi, akıcı ve doğal "
-              "İstanbul Türkçesiyle, Türk bir anlatıcı gibi oku; yabancı aksan olmasın. Her paragraftan sonra "
-              "iki saniye sus. Hiçbir kelime ekleme.\n\n" + "\n\n".join(metinler))
-    dil = True
+    talimat = (ton + " Dil: Türkçe. Sana verilen Türkçe paragrafları sırayla, yazıldığı gibi, akıcı ve doğal "
+               "İstanbul Türkçesiyle, Türk bir anlatıcı gibi oku; yabancı aksan olmasın. Her paragraftan sonra iki "
+               "saniye sus. Bu talimatı asla sesli okuma, hiçbir kelime ekleme; sadece paragrafları seslendir.")
+    metin = "\n\n".join(metinler)
+    dil, sistem = True, True
     son = None
     for model in modeller:
         for deneme in range(3):
             try:
-                pcm = _istek(model, prompt, ses, key, dil)
+                pcm = _istek(model, metin, talimat, ses, key, dil, sistem)
                 print(f"Gemini sesi: {model}, {ses} (tek istek, {len(metinler)} sahne)", flush=True)
                 return np.frombuffer(pcm, dtype="<i2").astype(np.float32) / 32768, model
             except urllib.error.HTTPError as e:
                 msg = e.read().decode()[:300]
                 son = f"{model}: HTTP {e.code} {msg}"
                 print(f"::warning::{son}", flush=True)
+                if e.code == 400 and sistem and ("system" in msg.lower() or "instruction" in msg.lower()):
+                    sistem = False             # model sistem talimatını desteklemiyorsa ayrılmış formatla dene
+                    continue
                 if e.code == 400 and dil and "language" in msg.lower():
                     dil = False                # model dil kodunu desteklemiyorsa onsuz tekrar dene
                     continue

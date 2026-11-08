@@ -23,7 +23,7 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: |
           sudo apt-get install -y -q ffmpeg >/dev/null
-          pip install -q numpy
+          pip install -q numpy faster-whisper
           python - <<'PY'
           import json, glob, subprocess, numpy as np
           from engine import gemini_ses
@@ -39,6 +39,11 @@ jobs:
           (np.clip(a, -1, 1) * 32767).astype("<i2").tofile("ses.pcm")
           subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", "ses.pcm",
                           "-b:a", "160k", "puck_009.mp3"], check=True)
+          from faster_whisper import WhisperModel
+          segs, _ = WhisperModel("small", device="cpu", compute_type="int8").transcribe("puck_009.mp3", language="tr")
+          yazi = " ".join(s.text.strip() for s in segs)
+          print("YAZIYA DÖKÜM:", yazi)
+          print("BEKLENEN BAŞLANGIÇ:", metinler[0])
           PY
       - name: Sürüme koy
         env:
