@@ -1,0 +1,35 @@
+# Instagram'a YAYINLAMADAN yükleme testi (Meta videoyu işleyebiliyor mu?). Hiçbir şey paylaşılmaz.
+name: Yükleme testi
+on:
+  workflow_dispatch:
+    inputs:
+      etiket:
+        description: "Videonun bulunduğu sürüm (ör. video-009-202611081647)"
+        required: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Videoyu al ve yeniden kodla
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sudo apt-get install -y -q ffmpeg >/dev/null
+          pip install -q -r requirements.txt || true
+          gh release download "${{ inputs.etiket }}" -D v --repo "${{ github.repository }}"
+          f=$(ls v/*.mp4); ffprobe -v error -show_entries stream=codec_name,sample_rate,channels:format=duration "$f"
+          ffmpeg -v error -y -i "$f" -c:v copy -c:a aac -ar 48000 -ac 2 -b:a 128k -movflags +faststart v/yeni.mp4
+      - name: Yükle (yayınlamadan)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_MODE: ${{ vars.IG_MODE }}
+        run: |
+          f=$(ls v/0*.mp4)
+          python tools/yukleme_testi.py "$f" || true
+          python tools/yukleme_testi.py v/yeni.mp4 || true
