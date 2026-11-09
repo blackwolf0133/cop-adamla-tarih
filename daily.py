@@ -97,10 +97,29 @@ def cmd_render(_):
         print(f"::warning::Bu bölümden sonra sırada {len(q) - 1} bölüm kalacak.")
 
 
+
+def paylas_tekrarli(publisher, video_path, video_url, caption, deneme=3):
+    """Meta videoyu arada bir işleyemiyor (ProcessingFailedError). Hata yayınlamadan ÖNCEKİ aşamadaysa
+    1-2 dk bekleyip YENİ bir yükleme kaydıyla tekrar dener; 2. denemede videoyu doğrudan yükler.
+    media_publish aşamasındaki hatalar tekrar denenmez (çift paylaşım olmasın)."""
+    import time
+    for n in range(deneme):
+        url = video_url if (n != 1 or not video_path) else None
+        try:
+            return publisher.publish_reel(video_path=video_path, video_url=url, caption=caption)
+        except publisher.PublishError as e:
+            if "media_publish" in str(e) or n == deneme - 1:
+                raise
+            bekle = 60 * (n + 1)
+            print(f"::warning::Paylaşım denemesi {n + 1} olmadı, {bekle} sn sonra yeni kayıtla tekrar: {str(e)[:200]}",
+                  flush=True)
+            time.sleep(bekle)
+
+
 def cmd_publish(a):
     import publisher
     today = json.load(open(TODAY, encoding="utf-8"))
-    res = publisher.publish_reel(video_path=today["path"], video_url=a.video_url, caption=today["caption"])
+    res = paylas_tekrarli(publisher, today["path"], a.video_url, today["caption"])
     st = load_state()
     st["posted"].append({"id": today["id"], "title": today["title"], "date": today_tr(),
                          "media_id": res["media_id"], "permalink": res.get("permalink")})
