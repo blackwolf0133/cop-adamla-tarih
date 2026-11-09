@@ -53,3 +53,15 @@ Zamanlama: `delay` (sn) ya da `f` (konuşmanın oranı 0-1); `until`/`until_f` i
 - Efsane/tek kaynaklı hikâyelerde bunu söyle ("Efsaneye göre", "Evliya Çelebi'ye göre").
 - Kıyafet/eşya döneme uygun olsun (fes 1829 öncesi yok, ay-yıldızlı bayrak Selçuklu'da yok).
 - Şiddet sahnesi çizme; savaşlar şaka, şaşkınlık ve kaçışla anlatılır.
+
+## Haftalık trend raporu (last30days)
+Her pazartesi blackwolf0133/cop-adamla-tarih deposundaki "Trend araştırma" iş akışı son 30 günün trendlerini 6 kanal için tarar
+(YouTube, Reddit vb.; SCRAPECREATORS anahtarı varsa Instagram ve TikTok da). Yeni bölüm yazmadan önce en yeni raporu oku:
+
+```bash
+TAG=$(gh api "repos/blackwolf0133/cop-adamla-tarih/releases?per_page=20" --jq '[.[]|select(.tag_name|startswith("trend-"))][0].tag_name')
+ID=$(gh api "repos/blackwolf0133/cop-adamla-tarih/releases/tags/$TAG" --jq '.assets[]|select(.name=="cop.md").id')
+gh api -H "Accept: application/octet-stream" "repos/blackwolf0133/cop-adamla-tarih/releases/assets/$ID" > /tmp/trend.md
+```
+Bu kanalın dosyası: **cop.md**. Rapordaki tutan kanca kalıplarını, konu açılarını ve formatları kendi kurallarımıza uyarlayarak kullan;
+başka içerik üreticilerinin metnini, videosunu ya da hikâyesini kopyalama. Rapor yoksa ya da eskiyse (14 günden eski) bu adımı atla.
