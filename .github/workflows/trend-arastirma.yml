@@ -1,14 +1,18 @@
-# last30days (github.com/mvanhorn/last30days-skill, MIT) ile son 30 günün trendlerini araştırır.
-# Hiçbir şey paylaşmaz; sonuçlar günlüğe ve geçici bir sürüme (.md) yazılır.
-# İsteğe bağlı: SCRAPECREATORS_API_KEY secret'ı eklenirse Instagram ve TikTok da taranır.
+# last30days (github.com/mvanhorn/last30days-skill, MIT) ile son 30 günün trendlerini araştırır — 6 KANALIN HEPSİ İÇİN.
+# Hiçbir şey paylaşmaz; sonuçlar günlüğe ve "trend-<tarih>" sürümüne (.md) yazılır. Her pazartesi otomatik çalışır;
+# haftalık senaristler (Çöp, Para, Bir Satır, Son Mola, Kayıp Vakalar, Kıssadan Hisse) en yeni raporu okur.
+# SCRAPECREATORS_API_KEY secret'ı (yalnızca bu depoda) eklenirse Instagram ve TikTok da taranır; yoksa YouTube/Reddit vb.
+# Dosya adları sabittir: cop.md, para.md, birsatir.md, sonmola.md, kayip.md, kissa.md
 name: Trend araştırma
 
 on:
+  schedule:
+    - cron: "17 6 * * 1"   # pazartesi 09:17 Türkiye
   workflow_dispatch:
     inputs:
       konular:
-        description: 'Konular (JSON liste)'
-        default: '["history shorts reels storytelling hooks", "Türk tarihi reels", "motivational quote reels", "money proverbs personal finance reels"]'
+        description: 'Kanal=konu çiftleri (JSON liste, "ad|konu")'
+        default: ''
 
 permissions:
   contents: write
@@ -23,7 +27,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          tag="trend-$(date +%m%d%H%M)"
+          tag="trend-$(date +%Y%m%d-%H%M)"
           gh release create "$tag" --prerelease --title "Trend araştırma" --notes "last30days çıktıları" --repo "${{ github.repository }}"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
   arastir:
@@ -34,7 +38,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        konu: ${{ fromJSON(inputs.konular) }}
+        konu: ${{ fromJSON(inputs.konular || '["cop|history facts storytelling reels hooks","para|money proverbs personal finance reels","birsatir|emotional quote reels for mom dad family","sonmola|horror mystery mini series short videos cliffhanger","kayip|unsolved mysteries disappearances reels","kissa|fable parable animated story reels with moral"]') }}
     steps:
       - uses: actions/setup-python@v5
         with:
@@ -47,10 +51,11 @@ jobs:
       - name: Araştır
         env:
           SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
-          KONU: ${{ matrix.konu }}
+          CIFT: ${{ matrix.konu }}
         run: |
           mkdir -p out
-          ad=$(echo "$KONU" | tr ' ' '_' | tr -cd '[:alnum:]_çğıöşüÇĞİÖŞÜ')
+          ad="${CIFT%%|*}"; KONU="${CIFT#*|}"
+          [ "$ad" = "$CIFT" ] && ad=$(echo "$KONU" | tr ' ' '_' | tr -cd '[:alnum:]_')
           S=/tmp/l30/skills/last30days/scripts/last30days.py
           python "$S" --diagnose || true
           python "$S" "$KONU" --auto-resolve --no-browser-cookies --emit=md --output "out/${ad}.md" || echo "::warning::$KONU tamamlanamadı"
