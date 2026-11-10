@@ -26,5 +26,5 @@ for q in [x.strip() for x in sys.argv[1].split("|") if x.strip()]:
         out = []
         walk(r, out)
         print(json.dumps({"q": q, "path": path, "hata": r.get("hata") if isinstance(r, dict) else None,
-                          "anahtarlar": list(r.keys())[:8] if isinstance(r, dict) else None, "sonuc": out[:40]}, ensure_ascii=False))
+                          "kredi": r.get("credits_remaining") if isinstance(r, dict) else None, "sonuc": out[:40]}, ensure_ascii=False))
 print("=====ARA_BITTI=====")
