@@ -38,7 +38,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        konu: ${{ fromJSON(inputs.konular || '["cop|history facts storytelling reels hooks","para|money proverbs personal finance reels","birsatir|emotional quote reels for mom dad family","sonmola|horror mystery mini series short videos cliffhanger","kayip|unsolved mysteries disappearances reels","kissa|fable parable animated story reels with moral"]') }}
+        konu: ${{ fromJSON(inputs.konular || '["cop|history facts storytelling reels hooks","para|money proverbs personal finance reels","birsatir|emotional quote reels for mom dad family","sonmola|horror mystery mini series short videos cliffhanger","kayip|unsolved mysteries disappearances reels","kissa|fable parable animated story reels with moral","dukkan|how much does a small business owner make per month reels"]') }}
     steps:
       - uses: actions/setup-python@v5
         with:
