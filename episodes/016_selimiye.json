@@ -1,0 +1,321 @@
+{
+  "id": "016",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "80 Yaşında \"Ancak Şimdi Usta Oldum\" Dedi!",
+  "year": "1575",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Süleymaniye Camii'ni yapan adam, kendine sadece \"kalfa\" dedi 🕌🤯\n\nMimar Sinan, Şehzade Camii için \"çıraklık eserim\", Süleymaniye için \"kalfalık eserim\" der. Ustalık eserim dediği yapı ise 80 yaşını geçmişken Edirne'de bitirdiği Selimiye'dir (1568-1575). Kubbesi 31 metreyi aşar; minareleri yaklaşık 71 metredir ve cami 2011'den beri UNESCO Dünya Mirası listesinde.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #mimarsinan #selimiye #osmanlı #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Süleymaniye Camii'ni yapan adam, kendine sadece kalfa dedi. Peki usta olduğu eser hangisi?",
+      "text": "Süleymaniye Camii'ni yapan adam, kendine sadece kalfa dedi. Peki usta olduğu eser hangisi?",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "KALFA?!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "SÜLEYMANİYE!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Mimar Sinan, Osmanlı'nın baş mimarı. Yaklaşık 50 yılda yüzlerce eser yapar: camiler, köprüler, hamamlar.",
+      "text": "Mimar Sinan, Osmanlı'nın baş mimarı. Yaklaşık 50 yılda yüzlerce eser yapar: camiler, köprüler, hamamlar.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "tower",
+          "x": 0.8,
+          "y": 0.93,
+          "scale": 0.8
+        },
+        {
+          "type": "pop",
+          "text": "YÜZLERCE ESER!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 92,
+          "delay": 2.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Kendi eserlerini de not verir gibi sıralar. İstanbul'daki Şehzade Camii için: Çıraklık eserim.",
+      "text": "Kendi eserlerini de not verir gibi sıralar. İstanbul'daki Şehzade Camii için: Çıraklık eserim.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ÇIRAK!",
+          "x": 0.65,
+          "y": 0.25,
+          "size": 120,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Dev Süleymaniye için ise: Kalfalık eserim. Yani hâlâ öğreniyorum!",
+      "text": "Dev Süleymaniye için ise: Kalfalık eserim. Yani hâlâ öğreniyorum!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "shrug",
+          "face": "smug",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KALFA!",
+          "x": 0.65,
+          "y": 0.25,
+          "size": 120,
+          "f": 0.4,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Usta olduğunu söylemesi için 80 yaşını geçmesi gerekir. Biz o yaşta kumandayı zor buluyoruz, o Edirne'de Selimiye'yi diker!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Usta olduğunu söylemesi için 80 yaşını geçmesi gerekir. Biz o yaşta kumandayı zor buluyoruz, o Edirne'de Selimiye'yi diker!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.35,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "80 YAŞINDA!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.25,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Hedefi büyük: Ayasofya'nın kubbesini aşmak. Selimiye'nin kubbesi 31 metreyi geçer, minareleri ise yaklaşık 71 metre!",
+      "text": "Hedefi büyük: Ayasofya'nın kubbesini aşmak. Selimiye'nin kubbesi 31 metreyi geçer, minareleri ise yaklaşık 71 metre!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "holds": "scroll",
+          "scale": 1.25,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "ruler",
+          "x": 0.72,
+          "y_base": 0.93,
+          "y_top": 0.3,
+          "labels": [
+            [
+              0.95,
+              "71 m"
+            ],
+            [
+              0.45,
+              "31 m"
+            ]
+          ]
+        },
+        {
+          "type": "pop",
+          "text": "AYASOFYA'YI AŞ!",
+          "x": 0.5,
+          "y": 0.18,
+          "size": 88,
+          "f": 0.2,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "1575'te cami tamamlanır. Sinan'ın yorumu kısa: Ustalık eserim.",
+      "text": "1575'te cami tamamlanır. Sinan'ın yorumu kısa: Ustalık eserim.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.42,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "USTALIK!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.6,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Gerçek usta, kendine en son usta diyen kişidir.",
+      "text": "Günün dersi: Gerçek usta, kendine en son usta diyen kişidir.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "sinan",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "sinan",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

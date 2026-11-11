@@ -1,0 +1,314 @@
+{
+  "id": "018",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Romalılar Tuvalete Vergi Koydu!",
+  "year": "MS 70",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Romalılar çamaşırlarını çişle yıkadı. İmparator da buna vergi koydu! 🚽💰\n\nAntik Roma'da çamaşırcılar ve deri ustaları, içindeki amonyak yüzünden idrarı temizlik için kullanırdı. İmparator Vespasianus MS 70 civarında halka açık tuvaletlerden satılan idrara vergi koydu. Oğlu Titus itiraz edince bir altın para uzatıp \"Kokuyor mu?\" diye sordu; \"Para kokmaz\" sözü buradan gelir.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #antikroma #roma #ilginçbilgiler #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Romalılar çamaşırlarını çişle yıkadı. Ve imparator buna vergi koydu!",
+      "text": "Romalılar çamaşırlarını çişle yıkadı. Ve imparator buna vergi koydu!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "ÇİŞ?!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "VERGİ!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Antik Roma'da çamaşırcılar halka açık tuvaletlerden idrar toplar. İçindeki amonyak, lekeleri söker!",
+      "text": "Antik Roma'da çamaşırcılar halka açık tuvaletlerden idrar toplar. İçindeki amonyak, lekeleri söker!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "camasirci",
+          "x": 0.35,
+          "hat": null,
+          "pose": "push",
+          "face": "effort",
+          "holds": "mug",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "AMONYAK!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Yani Roma'da çiş, satılan bir maldı. Deri ustaları da bayılarak alıyordu.",
+      "text": "Yani Roma'da çiş, satılan bir maldı. Deri ustaları da bayılarak alıyordu.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "camasirci",
+          "x": 0.28,
+          "hat": null,
+          "pose": "open",
+          "face": "happy",
+          "holds": "mug",
+          "scale": 1.15
+        },
+        {
+          "id": "usta",
+          "x": 0.72,
+          "hat": null,
+          "pose": "point",
+          "face": "smug",
+          "flip": true,
+          "scale": 1.15
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.5,
+          "y": 0.93,
+          "delay": 1.5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 70 civarı. İmparator Vespasianus'un hazinesi boş. Aklına parlak bir fikir gelir: Bu ticarete vergi!",
+      "text": "Yıl 70 civarı. İmparator Vespasianus'un hazinesi boş. Aklına parlak bir fikir gelir: Bu ticarete vergi!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "vespasian",
+          "x": 0.4,
+          "hat": "crown",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35,
+          "pose2": "point",
+          "face2": "smug",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "vespasian",
+          "f": 0.55
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Oğlu Titus itiraz eder: Bu iğrenç! İmparator bir altın para çıkarır, burnuna uzatır: Kokuyor mu?",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Oğlu Titus itiraz eder: Bu iğrenç! İmparator bir altın para çıkarır, burnuna uzatır: Kokuyor mu?",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "vespasian",
+          "x": 0.3,
+          "hat": "crown",
+          "pose": "point",
+          "face": "smug",
+          "scale": 1.25,
+          "talk": true
+        },
+        {
+          "id": "titus",
+          "x": 0.72,
+          "hat": null,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.5,
+          "y": 0.93
+        },
+        {
+          "type": "pop",
+          "text": "İĞRENÇ!",
+          "x": 0.7,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.25,
+          "rot": 8
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Titus: Hayır. Vespasianus: Ama çişten geldi! Para kokmaz sözü işte buradan çıkar.",
+      "text": "Titus: Hayır. Vespasianus: Ama çişten geldi! Para kokmaz sözü işte buradan çıkar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "titus",
+          "x": 0.4,
+          "hat": null,
+          "pose": "shrug",
+          "face": "surprised",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "PARA KOKMAZ!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.6,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Bugün bile Fransa'da eski sokak tuvaletlerine onun adı verilir: Vespasienne. Pek gurur verici bir miras değil!",
+      "text": "Bugün bile Fransa'da eski sokak tuvaletlerine onun adı verilir: Vespasienne. Pek gurur verici bir miras değil!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "vespasian",
+          "x": 0.4,
+          "hat": "crown",
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.93,
+          "text": "WC"
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Herkesin burun kıvırdığı yerde bazen bir fırsat saklıdır.",
+      "text": "Günün dersi: Herkesin burun kıvırdığı yerde bazen bir fırsat saklıdır.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "vespasian",
+          "x": 0.45,
+          "hat": "crown",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.4
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.75,
+          "y": 0.93
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

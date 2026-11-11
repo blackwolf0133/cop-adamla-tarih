@@ -1,0 +1,322 @@
+{
+  "id": "021",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Piramitlerden 7000 Yıl Yaşlı Tapınak",
+  "year": "MÖ 9600",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Piramitlerden 7000 yıl önce, daha tarla bile yokken, insanlar Urfa'da dev taş sütunlar dikti 🪨🤯\n\nŞanlıurfa'daki Göbeklitepe yaklaşık 11.600 yıl önce, tarım, çanak çömlek ve yazı ortada yokken avcı-toplayıcılar tarafından yapıldı. 1963'te bulunan taşlar önce ortaçağ mezarlığı sanıldı; 1995'te kazılara başlayan Alman arkeolog Klaus Schmidt yapının çok daha eski olduğunu gösterdi. T biçimli dev dikmelerde tilki, yaban domuzu ve akbaba kabartmaları var.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #göbeklitepe #şanlıurfa #arkeoloji #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Piramitlerden 7000 yıl önce, daha tarla bile yokken, insanlar Urfa'da dev taş sütunlar dikti!",
+      "text": "Piramitlerden 7000 yıl önce, daha tarla bile yokken, insanlar Urfa'da dev taş sütunlar dikti!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "7000 YIL!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "TARLA YOK?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Şanlıurfa'da bir tepe: Göbeklitepe. 1963'te araştırmacılar buradaki kırık taşları görür ve ortaçağ mezarlığı sanar.",
+      "text": "Şanlıurfa'da bir tepe: Göbeklitepe. 1963'te araştırmacılar buradaki kırık taşları görür ve ortaçağ mezarlığı sanar.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "arastirmaci",
+          "x": 0.35,
+          "hat": "slouch",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.25,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "MEZARLIK?",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "delay": 3.0,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "1995'te Alman arkeolog Klaus Schmidt gelir, kazmaya başlar ve gözlerine inanamaz.",
+      "text": "1995'te Alman arkeolog Klaus Schmidt gelir, kazmaya başlar ve gözlerine inanamaz.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "schmidt",
+          "x": 0.35,
+          "hat": "slouch",
+          "pose": "push",
+          "face": "effort",
+          "scale": 1.25,
+          "y": 0.9,
+          "pose2": "shock",
+          "face2": "shock",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "block",
+          "x": 0.72,
+          "y": 0.9,
+          "scale": 1.2
+        },
+        {
+          "type": "pop",
+          "text": "VAY!",
+          "x": 0.65,
+          "y": 0.25,
+          "size": 130,
+          "f": 0.65,
+          "rot": 8
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Yapı yaklaşık 11.600 yıllık! Henüz tarım yok, çömlek yok, yazı yok. Yapanlar avcı-toplayıcılar!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Yapı yaklaşık 11.600 yıllık! Henüz tarım yok, çömlek yok, yazı yok. Yapanlar avcı-toplayıcılar!",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "avci",
+          "x": 0.35,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pyramid",
+          "x": 0.78,
+          "y": 0.9,
+          "scale": 0.5
+        },
+        {
+          "type": "pop",
+          "text": "11.600 YIL!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.25,
+          "rot": -6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Tonlarca ağırlıkta, T biçimli dev taşlar dikerler. Üstlerinde tilki, yaban domuzu, akbaba kabartmaları var. Tekerlek bile yokken! Bel fıtığı garanti.",
+      "text": "Tonlarca ağırlıkta, T biçimli dev taşlar dikerler. Üstlerinde tilki, yaban domuzu, akbaba kabartmaları var. Tekerlek bile yokken! Bel fıtığı garanti.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "avci",
+          "x": 0.25,
+          "hat": null,
+          "pose": "push",
+          "face": "effort",
+          "scale": 1.2,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "block",
+          "x": 0.55,
+          "y": 0.9,
+          "scale": 1.3
+        },
+        {
+          "type": "block",
+          "x": 0.8,
+          "y": 0.9,
+          "scale": 1.1
+        }
+      ]
+    },
+    {
+      "say": "Önce tarla, sonra tapınak sanıyorduk. Bazı bilim insanlarına göre sıra tam tersi olabilir: Önce tapınak, sonra tarla!",
+      "text": "Önce tarla, sonra tapınak sanıyorduk. Bazı bilim insanlarına göre sıra tam tersi olabilir: Önce tapınak, sonra tarla!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "schmidt",
+          "x": 0.4,
+          "hat": "slouch",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.35,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "fence",
+          "x1": 0.65,
+          "x2": 1.0,
+          "y": 0.9
+        },
+        {
+          "type": "pop",
+          "text": "TERSİ!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.75,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Göbeklitepe bugün UNESCO Dünya Mirası ve dünyanın en eski anıtsal yapılarından biri.",
+      "text": "Göbeklitepe bugün UNESCO Dünya Mirası ve dünyanın en eski anıtsal yapılarından biri.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "avci",
+          "x": 0.4,
+          "hat": null,
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bildiğimizi sandığımız tarih, bir kazma darbesiyle değişebilir.",
+      "text": "Günün dersi: Bildiğimizi sandığımız tarih, bir kazma darbesiyle değişebilir.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "schmidt",
+          "x": 0.45,
+          "hat": "slouch",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "schmidt",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

@@ -19,13 +19,13 @@ Durum: ✅ senaryosu yazıldı · ⬜ sırada
 | 013 | Vikingler boynuzlu miğfer takmadı | Vikinglerin Boynuzu Yoktu! | ✅ |
 | 014 | Kleopatra piramitlere aya inişten daha uzaktı | Kleopatra, Piramitlerden Çok Bize Yakın! | ✅ |
 | 015 | Piri Reis haritası (1513) | 500 Yıllık Esrarengiz Harita | ✅ |
-| 016 | Mimar Sinan ve Selimiye | Ustalık Eserim Dediği Cami | ⬜ |
-| 017 | Kıbrıslı... değil: Evliya Çelebi'nin rüyası ve 50 yıllık seyahati | Bir Rüya Yüzünden 50 Yıl Gezdi! | ⬜ |
-| 018 | Roma'da idrar vergisi ("Para kokmaz") | Romalılar Tuvalete Vergi Koydu! | ⬜ |
-| 019 | Büyük İskender ve Gordion düğümü (Ankara yakınları) | Çözülmeyen Düğümü Kılıçla Çözdü | ⬜ |
-| 020 | Cem Sultan'ın sürgün hayatı | Avrupa'da Rehin Kalan Şehzade | ⬜ |
-| 021 | Göbeklitepe – piramitlerden 7000 yıl eski | Tarihi Baştan Yazdıran Tepe | ⬜ |
-| 022 | Ali Kuşçu ve Ay haritası | Ay'da Adı Olan Türk Bilgin | ⬜ |
+| 016 | Mimar Sinan ve Selimiye (1575) | 80 Yaşında "Ancak Şimdi Usta Oldum" Dedi! | ✅ |
+| 017 | Evliya Çelebi'nin rüyası ve 40 yılı aşkın seyahati (1630) | Bir Dil Sürçmesi, 40 Yıllık Yolculuk! | ✅ |
+| 018 | Roma'da idrar vergisi ("Para kokmaz", MS ~70) | Romalılar Tuvalete Vergi Koydu! | ✅ |
+| 019 | Büyük İskender ve Gordion düğümü (MÖ 333, Ankara yakınları) | Çözülmeyen Düğümü Böyle Çözdü! | ✅ |
+| 020 | Cem Sultan'ın sürgün hayatı (1482-1495) | Avrupa'da Rehin Kalan Şehzade | ✅ |
+| 021 | Göbeklitepe – piramitlerden 7000 yıl eski | Piramitlerden 7000 Yıl Yaşlı Tapınak | ✅ |
+| 022 | Ali Kuşçu: Kopernik'ten önce "Dünya dönebilir" | Kopernik'ten Önce "Dünya Dönebilir" Dedi! | ✅ |
 | 023 | İlk Türk kadın pilot Sabiha Gökçen | Göklerin İlk Kadın Savaş Pilotu | ⬜ |
 | 024 | Pompeii ve Vezüv (MS 79) | Bir Günde Kaybolan Şehir | ⬜ |
 | 025 | Matbaa ve İbrahim Müteferrika (1727) | İlk Türk Matbaası | ⬜ |
@@ -35,4 +35,5 @@ Durum: ✅ senaryosu yazıldı · ⬜ sırada
 | 029 | Kurtuluş Savaşı – Sakarya (1921) | 22 Gün 22 Gece Süren Savaş | ⬜ |
 | 030 | Soyadı Kanunu (1934) | Herkes Bir Günde Soyadı Seçti! | ⬜ |
 
-> 017 başlığı: Evliya Çelebi'nin rüyasında Peygamber'den "şefaat" yerine yanlışlıkla "seyahat" istemesi anlatısı.
+> 017: Evliya Çelebi'nin rüyasında Peygamber'den "şefaat" yerine yanlışlıkla "seyahat" istemesi anlatısı (kendi anlatımı).
+> 022: Ali Kuşçu'nun adını taşıyan bir Ay krateri doğrulanamadığı için bölüm Dünya'nın dönüşü tartışmasına odaklandı.

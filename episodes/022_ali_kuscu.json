@@ -1,0 +1,290 @@
+{
+  "id": "022",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Kopernik'ten Önce \"Dünya Dönebilir\" Dedi!",
+  "year": "1470'LER",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Kopernik'ten 70 yıl önce bir Türk bilgin yazdı: Dünya'nın döndüğünü hiçbir gözlem çürütemez 🌍🔭\n\nAli Kuşçu Semerkant'ta doğdu; adını, babasının hükümdar Uluğ Bey'in doğancısı yani kuşçusu olmasından aldı. Uluğ Bey'in rasathanesinde çalıştı, sonra Fatih Sultan Mehmet'in davetiyle İstanbul'a geldi ve 1474'te burada öldü. Gökbilim üzerine yazdığı eserde, Dünya'nın dönüşünün gözlemle çürütülemeyeceğini savundu.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #alikuşçu #bilimtarihi #astronomi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Kopernik'ten 70 yıl önce bir Türk bilgin şunu yazdı: Dünya dönüyor olabilir!",
+      "text": "Kopernik'ten 70 yıl önce bir Türk bilgin şunu yazdı: Dünya dönüyor olabilir!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "KOPERNİK?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "70 YIL ÖNCE!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1400'lerin başı, Semerkant. Ali'nin babası hükümdar Uluğ Bey'in doğancısıdır, yani kuşçusu. Soyadı hazır!",
+      "text": "1400'lerin başı, Semerkant. Ali'nin babası hükümdar Uluğ Bey'in doğancısıdır, yani kuşçusu. Soyadı hazır!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "ali",
+          "x": 0.38,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "happy",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KUŞÇU!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "delay": 3.0,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Uluğ Bey hem hükümdar hem gökbilimci. Semerkant'ta dev bir rasathane kurar. Genç Ali de yıldızları ölçenler arasında.",
+      "text": "Uluğ Bey hem hükümdar hem gökbilimci. Semerkant'ta dev bir rasathane kurar. Genç Ali de yıldızları ölçenler arasında.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "ali",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "holds": "scroll",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "RASATHANE!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.4,
+          "rot": -6
+        }
+      ],
+      "night": true
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? O dönem herkes, Dünya kıpırdamaz der. Ali Kuşçu ise yazar: Dünya'nın döndüğünü hiçbir gözlem çürütemez!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? O dönem herkes, Dünya kıpırdamaz der. Ali Kuşçu ise yazar: Dünya'nın döndüğünü hiçbir gözlem çürütemez!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "ali",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.3,
+          "talk": true,
+          "pose2": "hips",
+          "face2": "smug",
+          "switch": 0.7
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "DÖNEBİLİR!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.6,
+          "rot": 6
+        }
+      ],
+      "night": true,
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Ünü yayılır. Fatih Sultan Mehmet onu İstanbul'a davet eder ve büyük bir maaşla Ayasofya'da ders verdirir.",
+      "text": "Ünü yayılır. Fatih Sultan Mehmet onu İstanbul'a davet eder ve büyük bir maaşla Ayasofya'da ders verdirir.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "fatih",
+          "x": 0.3,
+          "hat": "kavuk",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.2
+        },
+        {
+          "id": "ali",
+          "x": 0.72,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.5,
+          "y": 0.93,
+          "delay": 2.5
+        }
+      ]
+    },
+    {
+      "say": "Ali Kuşçu 1474'te İstanbul'da ölür. Kopernik'in ünlü kitabı ise ancak 1543'te çıkar.",
+      "text": "Ali Kuşçu 1474'te İstanbul'da ölür. Kopernik'in ünlü kitabı ise ancak 1543'te çıkar.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "ali",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "confident",
+          "holds": "scroll",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "tower",
+          "x": 0.8,
+          "y": 0.93,
+          "scale": 0.8
+        },
+        {
+          "type": "pop",
+          "text": "1543!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.6,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Herkesin doğru bildiğini sorgulamak, bilimin ilk adımıdır.",
+      "text": "Günün dersi: Herkesin doğru bildiğini sorgulamak, bilimin ilk adımıdır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "ali",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "ali",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "night": true,
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

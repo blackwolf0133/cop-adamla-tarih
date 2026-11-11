@@ -1,0 +1,310 @@
+{
+  "id": "020",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Avrupa'da Rehin Kalan Şehzade",
+  "year": "1482",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Bir padişah, kardeşi uzakta kalsın diye her yıl 40 bin altın ödedi 💰👑\n\nFatih'in 1481'de ölümünden sonra oğulları Bayezid ile Cem taht için karşı karşıya geldi. Kaybeden Cem, 1482'de Rodos şövalyelerine sığındı ama misafir değil rehin oldu. II. Bayezid şövalyelere, Cem'i tutsunlar diye yılda 40 bin duka altını ödedi. Cem yaklaşık 13 yıl Fransa ve Roma'da elden ele dolaştı, 1495'te İtalya'da 35 yaşında öldü; naaşı Bursa'ya getirildi.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #cemsultan #osmanlı #osmanlıtarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Bir padişah, kardeşi uzakta kalsın diye her yıl düşmanına 40 bin altın ödedi!",
+      "text": "Bir padişah, kardeşi uzakta kalsın diye her yıl düşmanına 40 bin altın ödedi!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "40 BİN!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "HER YIL?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1481. Fatih Sultan Mehmet ölür. İki oğlu, Bayezid ve Cem, aynı tahtı ister.",
+      "text": "Yıl 1481. Fatih Sultan Mehmet ölür. İki oğlu, Bayezid ve Cem, aynı tahtı ister.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "bayezid",
+          "x": 0.28,
+          "hat": "kavuk",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.2
+        },
+        {
+          "id": "cem",
+          "x": 0.72,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "TEK TAHT!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 110,
+          "delay": 2.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Taht yarışını Bayezid kazanır. Cem 1482'de gemiyle Rodos'a, şövalyelere sığınır.",
+      "text": "Taht yarışını Bayezid kazanır. Cem 1482'de gemiyle Rodos'a, şövalyelere sığınır.",
+      "bg": "sea",
+      "actors": [],
+      "props": [
+        {
+          "type": "ship",
+          "x": 0.3,
+          "y": 0.87,
+          "scale": 0.8,
+          "anim": "bob",
+          "to_x": 0.65,
+          "move_dur": 4.0
+        },
+        {
+          "type": "pop",
+          "text": "RODOS!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Misafir olduğunu sanır. Ama aslında rehindir! Bayezid şövalyelere yılda 40 bin duka altını öder: Kardeşim orada kalsın.",
+      "text": "Misafir olduğunu sanır. Ama aslında rehindir! Bayezid şövalyelere yılda 40 bin duka altını öder: Kardeşim orada kalsın.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "cem",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "shock",
+          "face": "shock",
+          "scale": 1.2
+        },
+        {
+          "id": "bayezid",
+          "x": 0.72,
+          "hat": "kavuk",
+          "pose": "point",
+          "face": "smug",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.5,
+          "y": 0.93,
+          "delay": 2.5
+        },
+        {
+          "type": "pop",
+          "text": "REHİN!",
+          "x": 0.3,
+          "y": 0.2,
+          "size": 120,
+          "f": 0.3,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Cem, Avrupa'da bir koz gibi elden ele geçer. Önce Fransa'daki kaleler, sonra Roma'da Papa'nın sarayı.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Cem, Avrupa'da bir koz gibi elden ele geçer. Önce Fransa'daki kaleler, sonra Roma'da Papa'nın sarayı.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "cem",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "shrug",
+          "face": "surprised",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ELDEN ELE!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.3,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Krallar onu Osmanlı'ya karşı kullanmayı hayal eder. Cem ise gurbette şiirler yazar.",
+      "text": "Krallar onu Osmanlı'ya karşı kullanmayı hayal eder. Cem ise gurbette şiirler yazar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "cem",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "sad",
+          "holds": "scroll",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "GURBET...",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Yaklaşık 13 yıl sonra, 1495'te İtalya'da 35 yaşında ölür. Naaşı yıllar sonra Bursa'ya getirilir.",
+      "text": "Yaklaşık 13 yıl sonra, 1495'te İtalya'da 35 yaşında ölür. Naaşı yıllar sonra Bursa'ya getirilir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "cem",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.3
+        }
+      ],
+      "props": []
+    },
+    {
+      "say": "Günün dersi: Altından da olsa kafes, kafestir.",
+      "text": "Günün dersi: Altından da olsa kafes, kafestir.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "cem",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.75,
+          "y": 0.93
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

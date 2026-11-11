@@ -1,0 +1,330 @@
+{
+  "id": "019",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Çözülmeyen Düğümü Böyle Çözdü!",
+  "year": "MÖ 333",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Bu düğümü çözen Asya'nın kralı olacaktı. İskender çözmedi... ikiye böldü! 🪢⚔️\n\nEfsaneye göre Ankara Polatlı yakınlarındaki Gordion'da, Frig kralı Gordias'ın öküz arabası ucu görünmeyen bir düğümle bağlıydı. MÖ 333'te gelen Büyük İskender düğümü kılıcıyla kesti; başka bir anlatıya göre ise arabanın çivisini çekip düğümü gevşetti. Gordion bugün UNESCO Dünya Mirası listesinde.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #büyükiskender #gordion #antiktarih #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Bu düğümü çözen, Asya'nın kralı olacaktı. Büyük İskender çözmedi... ikiye böldü!",
+      "text": "Bu düğümü çözen, Asya'nın kralı olacaktı. Büyük İskender çözmedi... ikiye böldü!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "DÜĞÜM!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "İKİYE Mİ?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yer: Bugünkü Ankara, Polatlı yakınları. Frigya'nın başkenti Gordion. Dokunduğunu altına çeviren efsanevi Kral Midas'ın şehri!",
+      "text": "Yer: Bugünkü Ankara, Polatlı yakınları. Frigya'nın başkenti Gordion. Dokunduğunu altına çeviren efsanevi Kral Midas'ın şehri!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "midas",
+          "x": 0.35,
+          "hat": "crown",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.7,
+          "y": 0.9
+        },
+        {
+          "type": "pop",
+          "text": "GORDİON!",
+          "x": 0.5,
+          "y": 0.22,
+          "size": 110,
+          "delay": 2.0,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Efsaneye göre şehirde bir öküz arabası durur. Arabanın oku öyle karmaşık bir düğümle bağlıdır ki, ucu bile görünmez.",
+      "text": "Efsaneye göre şehirde bir öküz arabası durur. Arabanın oku öyle karmaşık bir düğümle bağlıdır ki, ucu bile görünmez.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "koylu",
+          "x": 0.25,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "scale": 1.15
+        }
+      ],
+      "props": [
+        {
+          "type": "chain",
+          "x1": 0.45,
+          "x2": 0.95,
+          "y": 0.75,
+          "anim": "shake"
+        },
+        {
+          "type": "pop",
+          "text": "UCU YOK!",
+          "x": 0.65,
+          "y": 0.25,
+          "size": 110,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Kehanet açık: Bu düğümü çözen, bütün Asya'ya hükmedecek. Yüzyıllar boyunca herkes dener, kimse çözemez.",
+      "text": "Kehanet açık: Bu düğümü çözen, bütün Asya'ya hükmedecek. Yüzyıllar boyunca herkes dener, kimse çözemez.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "koylu",
+          "x": 0.3,
+          "hat": null,
+          "pose": "push",
+          "face": "effort",
+          "scale": 1.2,
+          "pose2": "sad",
+          "face2": "sad",
+          "switch": 0.6
+        }
+      ],
+      "props": [
+        {
+          "type": "chain",
+          "x1": 0.5,
+          "x2": 1.0,
+          "y": 0.75
+        },
+        {
+          "type": "pop",
+          "text": "ASYA!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.2,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? MÖ 333'te 23 yaşındaki İskender gelir. Biraz uğraşır, sonra kılıcını çeker ve düğümü ikiye böler! Kural kitabında kesmek yasak yazmıyordu ki.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? MÖ 333'te 23 yaşındaki İskender gelir. Biraz uğraşır, sonra kılıcını çeker ve düğümü ikiye böler! Kural kitabında kesmek yasak yazmıyordu ki.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "iskender",
+          "x": 0.3,
+          "hat": "greek",
+          "pose": "think",
+          "face": "think",
+          "holds": "sword",
+          "scale": 1.25,
+          "pose2": "cheer",
+          "face2": "smug",
+          "switch": 0.55
+        }
+      ],
+      "props": [
+        {
+          "type": "chain",
+          "x1": 0.55,
+          "x2": 1.0,
+          "y": 0.75
+        },
+        {
+          "type": "pop",
+          "text": "ŞAK!",
+          "x": 0.7,
+          "y": 0.25,
+          "size": 130,
+          "f": 0.58,
+          "rot": 8
+        },
+        {
+          "type": "sfx",
+          "name": "whoosh",
+          "f": 0.55
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Ama bir başka anlatıya göre kesmedi. Arabanın okundaki çiviyi çekti, düğüm de kendiliğinden gevşedi.",
+      "text": "Ama bir başka anlatıya göre kesmedi. Arabanın okundaki çiviyi çekti, düğüm de kendiliğinden gevşedi.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "iskender",
+          "x": 0.4,
+          "hat": "greek",
+          "pose": "shrug",
+          "face": "smug",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ÇİVİ!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.4,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Hangisi doğru, bilmiyoruz. Ama İskender gerçekten Hindistan'a kadar uzanır. Gordion ise bugün UNESCO Dünya Mirası.",
+      "text": "Hangisi doğru, bilmiyoruz. Ama İskender gerçekten Hindistan'a kadar uzanır. Gordion ise bugün UNESCO Dünya Mirası.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "iskender",
+          "x": 0.3,
+          "hat": "greek",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.2,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "horse",
+          "x": 0.68,
+          "y": 0.92,
+          "scale": 0.85,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Zor bir soruya bazen kimsenin bakmadığı yerden bakmak gerekir.",
+      "text": "Günün dersi: Zor bir soruya bazen kimsenin bakmadığı yerden bakmak gerekir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "iskender",
+          "x": 0.45,
+          "hat": "greek",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "iskender",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}

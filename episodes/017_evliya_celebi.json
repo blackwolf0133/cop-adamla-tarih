@@ -1,0 +1,296 @@
+{
+  "id": "017",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Bir Dil Sürçmesi, 40 Yıllık Yolculuk!",
+  "year": "1630",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Bir dil sürçmesi, bir adamı 40 yıl yollara düşürdü 🗺️😅\n\nEvliya Çelebi'nin kendi anlattığına göre 1630'da, 20 yaşlarındayken rüyasında Peygamber'i gördü; \"şefaat\" isteyecekken heyecandan \"seyahat\" dedi. Sonra 40 yıldan fazla Anadolu'dan Balkanlar'a, Viyana'dan Mısır'a gezdi ve gördüklerini 10 ciltlik Seyahatname'ye yazdı. Hezarfen'in uçuşunu bize anlatan da odur!\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #evliyaçelebi #seyahatname #osmanlı #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Bir dil sürçmesi, bir adamı 40 yıl yollara düşürdü. Hem de tek bir kelime!",
+      "text": "Bir dil sürçmesi, bir adamı 40 yıl yollara düşürdü. Hem de tek bir kelime!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TEK KELİME!",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "40 YIL?!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1630. İstanbul'da 20 yaşlarında bir genç, Evliya. Kendi anlattığına göre bir gece rüyasında Peygamber'i görür.",
+      "text": "Yıl 1630. İstanbul'da 20 yaşlarında bir genç, Evliya. Kendi anlattığına göre bir gece rüyasında Peygamber'i görür.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "evliya",
+          "x": 0.38,
+          "hat": "sarik",
+          "pose": "relax",
+          "face": "sleepy",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "RÜYA...",
+          "x": 0.6,
+          "y": 0.25,
+          "size": 110,
+          "delay": 2.5,
+          "rot": -6
+        }
+      ],
+      "night": true
+    },
+    {
+      "say": "Ondan şefaat isteyecektir. Ama heyecandan ağzından başka bir kelime çıkar: Seyahat!",
+      "text": "Ondan şefaat isteyecektir. Ama heyecandan ağzından başka bir kelime çıkar: Seyahat!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "evliya",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.35,
+          "pose2": "shock",
+          "face2": "shock",
+          "switch": 0.65
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ŞEFAAT?",
+          "x": 0.3,
+          "y": 0.2,
+          "size": 96,
+          "f": 0.15,
+          "rot": -8
+        },
+        {
+          "type": "pop",
+          "text": "SEYAHAT!",
+          "x": 0.65,
+          "y": 0.25,
+          "size": 120,
+          "f": 0.7,
+          "rot": 6
+        }
+      ],
+      "night": true
+    },
+    {
+      "say": "Anlatıya göre ikisi de kabul olur. Ve Evliya yola çıkar. Anadolu, Kafkasya, Balkanlar, Viyana, Mısır...",
+      "text": "Anlatıya göre ikisi de kabul olur. Ve Evliya yola çıkar. Anadolu, Kafkasya, Balkanlar, Viyana, Mısır...",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "evliya",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "happy",
+          "anim": "walk",
+          "to_x": 0.55,
+          "scale": 1.25,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "palm",
+          "x": 0.82,
+          "y": 0.9,
+          "scale": 0.9
+        },
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? 40 yıldan fazla gezer ve her şeyi yazar. Sonuç: 10 ciltlik Seyahatname! Galata'dan uçan Hezarfen'i bize anlatan da o.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? 40 yıldan fazla gezer ve her şeyi yazar. Sonuç: 10 ciltlik Seyahatname! Galata'dan uçan Hezarfen'i bize anlatan da o.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "evliya",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "tower",
+          "x": 0.8,
+          "y": 0.93,
+          "scale": 0.8
+        },
+        {
+          "type": "pop",
+          "text": "10 CİLT!",
+          "x": 0.55,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.35,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Bazen biraz abartır, bazen hikâyeyi süsler. Ama 17. yüzyılı en canlı anlatan kaynaklardan biri onun kitabı.",
+      "text": "Bazen biraz abartır, bazen hikâyeyi süsler. Ama 17. yüzyılı en canlı anlatan kaynaklardan biri onun kitabı.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "evliya",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "shrug",
+          "face": "smug",
+          "holds": "scroll",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "BİRAZ ABARTI!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 92,
+          "f": 0.2,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bazen bir hata, hayatının yolunu çizer.",
+      "text": "Günün dersi: Bazen bir hata, hayatının yolunu çizer.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "evliya",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "evliya",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "text": "İşte böyle! Yarın yepyeni bir hikâye var. Takip et, kaçırma!",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.35,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.72,
+          "rot": -5
+        }
+      ]
+    }
+  ]
+}
