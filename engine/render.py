@@ -670,6 +670,81 @@ def draw_year_tag(ctx, year):
 # Ana akış
 # --------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------
+# 0. saniye kanca yazısı + ilk 0,8 sn zoom (13 Kasım): sessiz izleyen ilk karede anlasın
+# --------------------------------------------------------------------------
+KANCA_SURE, ZOOM_SURE = 2.8, 0.8
+
+
+def kanca_metni(ep):
+    import re
+    t = (ep.get("kanca_yazi") or "").strip()
+    if not t:
+        t = ((ep.get("instagram_caption") or ep.get("caption") or "").strip().split("\n") or [""])[0]
+    t = "".join(ch for ch in t if ord(ch) < 0x2190 or ch in "…’‘“”–—").strip()
+    t = " ".join(t.split())
+    if len(t) > 45:
+        m = re.match(r"(.+?[.?!…])(\s|$)", t)
+        if m and len(m.group(1)) >= 12:
+            t = m.group(1)
+    w = t.split()
+    if len(w) > 12:
+        t = " ".join(w[:11]) + "…"
+    return t
+
+
+def _kanca_satirlar(ctx, txt, maxw):
+    out, cur = [], ""
+    for w in txt.split():
+        s = (cur + " " + w).strip()
+        if D.text_width(ctx, s) > maxw and cur:
+            out.append(cur)
+            cur = w
+        else:
+            cur = s
+    if cur:
+        out.append(cur)
+    return out
+
+
+def draw_kanca_yazi(ctx, txt, t, bitis):
+    if not txt or t >= bitis:
+        return
+    a = min(1.0, (bitis - t) / 0.3)
+    size = 76
+    while True:
+        D.set_font(ctx, D.CAPTION_FONT, size, bold=True)
+        lines = _kanca_satirlar(ctx, txt, PW - 140)
+        if len(lines) <= 3 or size <= 50:
+            break
+        size -= 4
+    lh = size * 1.25
+    bw = max(D.text_width(ctx, ln) for ln in lines) + 80
+    bh = lh * len(lines) + 50
+    x0, y0 = PX + PW / 2 - bw / 2, PY + PH * 0.18 - bh / 2
+    ctx.rectangle(x0, y0, bw, bh)
+    ctx.set_source_rgba(0.03, 0.03, 0.05, 0.84 * a)
+    ctx.fill()
+    for i, ln in enumerate(lines):
+        ctx.set_source_rgba(1, 1, 1, a)
+        ctx.move_to(PX + PW / 2 - D.text_width(ctx, ln) / 2, y0 + 25 + lh * i + size * 0.95)
+        ctx.show_text(ln)
+
+
+def zoom_bas(ctx, t):
+    if t >= ZOOM_SURE:
+        return False
+    z = 1.14 - 0.14 * (1 - (1 - t / ZOOM_SURE) ** 3)
+    ctx.save()
+    ctx.rectangle(PX, PY, PW, PH)
+    ctx.clip()
+    cx, cy = PX + PW / 2, PY + PH / 2
+    ctx.translate(cx, cy)
+    ctx.scale(z, z)
+    ctx.translate(-cx, -cy)
+    return True
+
+
 def render_episode(ep_path, out_mp4, voice_model, workdir="build", handle="@copadamlatarih"):
     ep = json.load(open(ep_path, encoding="utf-8"))
     os.makedirs(workdir, exist_ok=True)
@@ -804,6 +879,8 @@ def render_episode(ep_path, out_mp4, voice_model, workdir="build", handle="@copa
         stdin=subprocess.PIPE)
 
     nframes = int(total * FPS)
+    _ktxt = kanca_metni(ep)
+    _kbit = max(2.2, min(KANCA_SURE, timeline[0][1]))
     for fi in range(nframes):
         t = fi / FPS
         idx = 0
@@ -814,14 +891,22 @@ def render_episode(ep_path, out_mp4, voice_model, workdir="build", handle="@copa
         st = t - s0
         ctx.set_source_surface(header)
         ctx.paint()
-        draw_scene(ctx, ep["scenes"][idx], st, dur, vd)
+        _z = zoom_bas(ctx, t)
+        # ilk sahnede çizimler 0,45 sn ileriden başlar: ilk karede boş panel olmasın
+        draw_scene(ctx, ep["scenes"][idx], st + (0.45 if idx == 0 else 0.0), dur, vd)
+        if _z:
+            ctx.restore()
         if ep.get("year"):
             draw_year_tag(ctx, ep["year"])
         # İlerleme çubuğu
         ctx.rectangle(PX, PY + PH + 16, PW * (t / total), 10)
         ctx.set_source_rgb(*D.RED)
         ctx.fill()
-        draw_caption(ctx, chunks_per_scene[idx], st - ep["scenes"][idx].get("voice_delay", 0.12))
+        if t < _kbit - 0.3:
+            draw_kanca_yazi(ctx, _ktxt, t, _kbit)
+        else:
+            draw_kanca_yazi(ctx, _ktxt, t, _kbit)
+            draw_caption(ctx, chunks_per_scene[idx], st - ep["scenes"][idx].get("voice_delay", 0.12))
         # Kanal adı
         D.set_font(ctx, D.HAND_FONT, 44)
         ctx.set_source_rgba(*D.INK_DAY, 0.55)
