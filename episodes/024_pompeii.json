@@ -1,0 +1,298 @@
+{
+  "id": "024",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Pompeii'yi Lav Yok Etmedi!",
+  "year": "MS 79",
+  "kanca_yazi": "Pompeii'yi lav yok etmedi!",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Pompeii'yi lav yok etti sanıyorsan yanılıyorsun 🌋\n\nMS 79'da Vezüv patladığında Pompeii'ye lav ulaşmadı; şehir önce süngertaşı ve kül yağmuruna, sonra kızgın gaz ve kül bulutlarına gömüldü. Felaketin tarihi uzun süre 24 Ağustos sanıldı, ancak 2018'de bulunan bir kömür yazısı patlamanın Ekim'de olmuş olabileceğini gösterdi. Şehirde kazılar 1748'de başladı.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #pompeii #vezüv #antikroma #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Pompeii'yi lav yok etti, değil mi? Hayır! Lav şehre hiç ulaşmadı.",
+      "text": "Pompeii'yi lav yok etti, değil mi? Hayır! Lav şehre hiç ulaşmadı.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "LAV?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "HİÇ ULAŞMADI!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "MS 79, İtalya. Pompeii, Vezüv Dağı'nın eteğinde hareketli bir Roma şehridir. Fırınlar, hamamlar, duvar yazıları...",
+      "text": "MS 79, İtalya. Pompeii, Vezüv Dağı'nın eteğinde hareketli bir Roma şehridir. Fırınlar, hamamlar, duvar yazıları...",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "romali",
+          "x": 0.35,
+          "hat": null,
+          "pose": "relax",
+          "face": "happy",
+          "holds": "cup",
+          "scale": 1.25
+        },
+        {
+          "id": "firinci",
+          "x": 0.7,
+          "hat": null,
+          "pose": "point",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.15,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "say": "Çoğu Romalı, Vezüv'ün bir yanardağ olduğunun farkında bile değildir. Yamaçlarında üzüm yetiştirirler!",
+      "text": "Çoğu Romalı, Vezüv'ün bir yanardağ olduğunun farkında bile değildir. Yamaçlarında üzüm yetiştirirler!",
+      "bg": "farm",
+      "actors": [
+        {
+          "id": "romali",
+          "x": 0.4,
+          "hat": null,
+          "pose": "hips",
+          "face": "smug",
+          "holds": "mug",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ŞARAP VAKTİ!",
+          "x": 0.62,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Sonra dağ uyanır. Gökten lav değil, kül ve süngertaşı yağar. Ardından kızgın bir gaz ve kül bulutu iner.",
+      "text": "Sonra dağ uyanır. Gökten lav değil, kül ve süngertaşı yağar. Ardından kızgın bir gaz ve kül bulutu iner.",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "romali",
+          "x": 0.25,
+          "hat": null,
+          "pose": "shock",
+          "face": "shock",
+          "anim": "walk",
+          "scale": 1.15,
+          "to_x": 0.85,
+          "move_dur": 4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KÜL!",
+          "x": 0.3,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.25,
+          "rot": -8
+        },
+        {
+          "type": "pop",
+          "text": "KAÇ!",
+          "x": 0.7,
+          "y": 0.24,
+          "size": 110,
+          "f": 0.65,
+          "rot": 6
+        }
+      ],
+      "night": true
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Tarihi bile tartışmalı! Okullarda 24 Ağustos denir. Ama 2018'de bulunan kömürle yazılmış bir not, felaketin Ekim'de olabileceğini gösterir.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Tarihi bile tartışmalı! Okullarda 24 Ağustos denir. Ama 2018'de bulunan kömürle yazılmış bir not, felaketin Ekim'de olabileceğini gösterir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "arkeolog",
+          "x": 0.35,
+          "hat": "slouch",
+          "pose": "think",
+          "face": "think",
+          "holds": "scroll",
+          "scale": 1.3,
+          "pose2": "shock",
+          "face2": "surprised",
+          "switch": 0.7
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "AĞUSTOS? EKİM?"
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Şehir yaklaşık 1700 yıl külün altında unutulur. Kazılar 1748'de başlar. Bugün Pompeii dev bir açık hava müzesidir.",
+      "text": "Şehir yaklaşık 1700 yıl külün altında unutulur. Kazılar 1748'de başlar. Bugün Pompeii dev bir açık hava müzesidir.",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "arkeolog",
+          "x": 0.4,
+          "hat": "slouch",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.3,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "1748!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.45,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Sakin görünen her dağ, aslında uyuyan bir dev olabilir.",
+      "text": "Günün dersi: Sakin görünen her dağ, aslında uyuyan bir dev olabilir.",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "romali",
+          "x": 0.45,
+          "hat": null,
+          "pose": "shrug",
+          "face": "sleepy",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu Pompeii'yi hâlâ lav yuttu sanan arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu Pompeii'yi hâlâ lav yuttu sanan arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

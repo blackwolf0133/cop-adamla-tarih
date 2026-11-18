@@ -1,0 +1,293 @@
+{
+  "id": "026",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Firavunun Laneti Neden Tutmadı?",
+  "year": "1922",
+  "kanca_yazi": "Firavunun laneti neden tutmadı?",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Lanetli mezarı açan adam, 16 yıl daha yaşadı 🏺\n\nHoward Carter Tutankamon'un mezarını Kasım 1922'de buldu. Kazının destekçisi Lord Carnarvon 1923'te enfekte olmuş bir sivrisinek ısırığı yüzünden ölünce gazeteler \"firavunun laneti\" hikâyesini yaydı. Carter ise 1939'a kadar yaşadı. 2002'de yayımlanan bir araştırma, mezara girenlerin ortalama 70 yaşına kadar yaşadığını buldu.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #tutankamon #antikmısır #firavun #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Firavunun laneti mi? Mezarı açan adam, tam 16 yıl daha yaşadı!",
+      "text": "Firavunun laneti mi? Mezarı açan adam, tam 16 yıl daha yaşadı!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "LANET?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "16 YIL DAHA!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Kasım 1922, Mısır. Howard Carter, Kral Tutankamon'un neredeyse el değmemiş mezarını bulur. İçerisi altın dolu!",
+      "text": "Kasım 1922, Mısır. Howard Carter, Kral Tutankamon'un neredeyse el değmemiş mezarını bulur. İçerisi altın dolu!",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "carter",
+          "x": 0.35,
+          "hat": "slouch",
+          "pose": "shock",
+          "face": "surprised",
+          "holds": "torch",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.7,
+          "y": 0.9,
+          "delay": 2.5
+        },
+        {
+          "type": "pop",
+          "text": "ALTIN!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.75,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Kazıyı parayla destekleyen Lord Carnarvon birkaç ay sonra ölür. Gazeteler hemen yazar: Firavunun laneti!",
+      "text": "Kazıyı parayla destekleyen Lord Carnarvon birkaç ay sonra ölür. Gazeteler hemen yazar: Firavunun laneti!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "muhabir",
+          "x": 0.4,
+          "hat": "tophat",
+          "pose": "point",
+          "face": "shock",
+          "holds": "scroll",
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "LANET!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 130,
+          "f": 0.6,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Ölüm sebebi lanet değil, bir sivrisinek ısırığıydı. Carnarvon tıraş olurken ısırığı kesmiş, yara mikrop kapmıştı.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Ölüm sebebi lanet değil, bir sivrisinek ısırığıydı. Carnarvon tıraş olurken ısırığı kesmiş, yara mikrop kapmıştı.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "doktor",
+          "x": 0.4,
+          "hat": null,
+          "pose": "shrug",
+          "face": "smug",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "SİVRİSİNEK!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.4,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Mezarda korkunç bir lanet yazısı da bulunmadı. O kısmı gazeteler süsledi.",
+      "text": "Mezarda korkunç bir lanet yazısı da bulunmadı. O kısmı gazeteler süsledi.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "carter",
+          "x": 0.4,
+          "hat": "slouch",
+          "pose": "hips",
+          "face": "smug",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pyramid",
+          "x": 0.78,
+          "y": 0.88,
+          "scale": 0.7,
+          "progress": 1.0
+        },
+        {
+          "type": "ban",
+          "x": 0.7,
+          "y": 0.3,
+          "f": 0.3
+        }
+      ]
+    },
+    {
+      "say": "2002'de bir araştırmacı mezara giren 25 kişiyi inceledi. Ortalama 70 yaşına kadar yaşamışlar. Carter da 1939'a kadar!",
+      "text": "2002'de bir araştırmacı mezara giren 25 kişiyi inceledi. Ortalama 70 yaşına kadar yaşamışlar. Carter da 1939'a kadar!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "carter",
+          "x": 0.4,
+          "hat": "slouch",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.3,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "ORT. 70 YAŞ"
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Korkutucu bir hikâye, sıkıcı bir gerçekten hep daha hızlı yayılır.",
+      "text": "Günün dersi: Korkutucu bir hikâye, sıkıcı bir gerçekten hep daha hızlı yayılır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "carter",
+          "x": 0.45,
+          "hat": "slouch",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "carter",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu her şeyi lanete bağlayan arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu her şeyi lanete bağlayan arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

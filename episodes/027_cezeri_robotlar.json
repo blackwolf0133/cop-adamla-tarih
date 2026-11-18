@@ -1,0 +1,305 @@
+{
+  "id": "027",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "800 Yıl Önceki Robotlar",
+  "year": "1206",
+  "kanca_yazi": "800 yıl önce Diyarbakır'da robotlar vardı",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Robotlar modern çağın icadı değil; 800 yıl önce Diyarbakır'da mekanik hizmetçiler vardı 🤖\n\nEl Cezeri, Artuklu hükümdarlarının hizmetinde 25 yılı aşkın süre çalıştı. 1206'da tamamladığı kitapta yaklaşık 50 düzeneği çizimleriyle anlattı: el yıkayanlara su döküp havlu uzatan mekanik hizmetçi, su üstünde çalan mekanik müzisyenler ve ünlü fil saati bunlardan bazıları.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #cezeri #robot #bilimtarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Robotlar modern çağın icadı mı? 800 yıl önce Diyarbakır'da zaten vardı!",
+      "text": "Robotlar modern çağın icadı mı? 800 yıl önce Diyarbakır'da zaten vardı!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "ROBOT?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "800 YIL ÖNCE!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1200'ler, Artuklu sarayı. Mühendis El Cezeri, 25 yılı aşkın süre saray için makineler yapar.",
+      "text": "1200'ler, Artuklu sarayı. Mühendis El Cezeri, 25 yılı aşkın süre saray için makineler yapar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "cezeri",
+          "x": 0.38,
+          "hat": "sarik",
+          "pose": "point",
+          "face": "confident",
+          "holds": "scroll",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "MÜHENDİS!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.55,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Biri elini yıkamak ister. Mekanik bir hizmetçi çıkar, su döker, sonra havlu uzatır. Bahşiş de istemez!",
+      "text": "Biri elini yıkamak ister. Mekanik bir hizmetçi çıkar, su döker, sonra havlu uzatır. Bahşiş de istemez!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "misafir",
+          "x": 0.3,
+          "hat": "sarik",
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 1.2
+        },
+        {
+          "id": "robot",
+          "x": 0.7,
+          "hat": null,
+          "pose": "push",
+          "face": "neutral",
+          "holds": "cup",
+          "flip": true,
+          "scale": 1.15
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "HAVLU?",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.55,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Bir de su üstünde çalan mekanik müzisyenler yapar. Davulcu, flütçü, hepsi otomatik. Eğlencenin yıldızı Cezeri!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Bir de su üstünde çalan mekanik müzisyenler yapar. Davulcu, flütçü, hepsi otomatik. Eğlencenin yıldızı Cezeri!",
+      "bg": "sea",
+      "actors": [
+        {
+          "id": "cezeri",
+          "x": 0.25,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.1,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "ship",
+          "x": 0.65,
+          "y": 0.75,
+          "scale": 0.8
+        },
+        {
+          "type": "pop",
+          "text": "DUM TEK!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.5,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "En ünlüsü ise fil saati. Filin sırtındaki kule, her yarım saatte bir ses çıkarıp vakti haber verir.",
+      "text": "En ünlüsü ise fil saati. Filin sırtındaki kule, her yarım saatte bir ses çıkarıp vakti haber verir.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "cezeri",
+          "x": 0.35,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "smug",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "tower",
+          "x": 0.75,
+          "y": 0.93,
+          "scale": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "DING!",
+          "x": 0.75,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.7,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "1206'da yaklaşık 50 düzeneği çizimleriyle bir kitapta toplar. Bugün robotiğin öncülerinden sayılır.",
+      "text": "1206'da yaklaşık 50 düzeneği çizimleriyle bir kitapta toplar. Bugün robotiğin öncülerinden sayılır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "cezeri",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "open",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "50 MAKİNE!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 100,
+          "f": 0.4,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bugünün teknolojisi, dünün hayalperestlerinin omuzlarında yükselir.",
+      "text": "Günün dersi: Bugünün teknolojisi, dünün hayalperestlerinin omuzlarında yükselir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "cezeri",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "cezeri",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu robot meraklısı bir arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu robot meraklısı bir arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

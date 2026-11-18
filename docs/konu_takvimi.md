@@ -26,14 +26,15 @@ Durum: ✅ senaryosu yazıldı · ⬜ sırada
 | 020 | Cem Sultan'ın sürgün hayatı (1482-1495) | Avrupa'da Rehin Kalan Şehzade | ✅ |
 | 021 | Göbeklitepe – piramitlerden 7000 yıl eski | Piramitlerden 7000 Yıl Yaşlı Tapınak | ✅ |
 | 022 | Ali Kuşçu: Kopernik'ten önce "Dünya dönebilir" | Kopernik'ten Önce "Dünya Dönebilir" Dedi! | ✅ |
-| 023 | İlk Türk kadın pilot Sabiha Gökçen | Göklerin İlk Kadın Savaş Pilotu | ⬜ |
-| 024 | Pompeii ve Vezüv (MS 79) | Bir Günde Kaybolan Şehir | ⬜ |
-| 025 | Matbaa ve İbrahim Müteferrika (1727) | İlk Türk Matbaası | ⬜ |
-| 026 | Kral Tut'un laneti efsanesi | Firavunun Laneti Gerçek mi? | ⬜ |
-| 027 | Cezeri'nin robotları (1206) | 800 Yıl Önceki Robotlar | ⬜ |
-| 028 | Uzay yarışı ve köpek Layka (1957) | Uzaya Çıkan İlk Canlı Bir Köpekti | ⬜ |
-| 029 | Kurtuluş Savaşı – Sakarya (1921) | 22 Gün 22 Gece Süren Savaş | ⬜ |
+| 023 | İlk Türk kadın pilot Sabiha Gökçen | Soyadı Bile Göklerden Geliyordu! | ✅ |
+| 024 | Pompeii ve Vezüv (MS 79) | Pompeii'yi Lav Yok Etmedi! | ✅ |
+| 025 | Matbaa ve İbrahim Müteferrika (1727) | Matbaa İstanbul'a Sandığından Önce Geldi! | ✅ |
+| 026 | Kral Tut'un laneti efsanesi | Firavunun Laneti Neden Tutmadı? | ✅ |
+| 027 | Cezeri'nin robotları (1206) | 800 Yıl Önceki Robotlar | ✅ |
+| 028 | Uzay yarışı ve köpek Layka (1957) | Uzaya İlk Çıkan Canlı Kimdi? (ilk: meyve sinekleri, 1947) | ✅ |
+| 029 | Kurtuluş Savaşı – Sakarya (1921) | 22 Gün 22 Gece Süren Savaş | ✅ |
 | 030 | Soyadı Kanunu (1934) | Herkes Bir Günde Soyadı Seçti! | ⬜ |
 
 > 017: Evliya Çelebi'nin rüyasında Peygamber'den "şefaat" yerine yanlışlıkla "seyahat" istemesi anlatısı (kendi anlatımı).
 > 022: Ali Kuşçu'nun adını taşıyan bir Ay krateri doğrulanamadığı için bölüm Dünya'nın dönüşü tartışmasına odaklandı.
+> 023-029 (18 Kasım): "kanca_yazi" alanı ve son cümlede gönderme (DM) sebebi eklendi. 023'te 1937 Dersim harekâtı anlatılmadı (şiddet kuralı). 024'te Ekim tarihi 2018 kömür yazısına dayanıyor, "olabilir" diye anlatıldı.

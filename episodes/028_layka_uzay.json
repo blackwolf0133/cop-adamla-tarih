@@ -1,0 +1,282 @@
+{
+  "id": "028",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Uzaya İlk Çıkan Canlı Kimdi?",
+  "year": "1957",
+  "kanca_yazi": "Uzaya ilk çıkan canlı köpek değildi!",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Uzaya ilk çıkan canlı Layka değildi; meyve sinekleriydi 🚀\n\n1947'de ABD, bir V-2 roketiyle meyve sineklerini uzaya gönderdi ve sinekler canlı geri döndü. Moskova sokaklarından bulunan köpek Layka ise 3 Kasım 1957'de Sputnik 2 ile Dünya yörüngesine çıkan ilk hayvan oldu. 2002'de açıklanan bilgilere göre Layka, uçuştan birkaç saat sonra aşırı sıcaktan öldü.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #layka #uzay #uzayyarışı #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Uzaya çıkan ilk canlı Layka mıydı? Hayır! Meyve sinekleriydi.",
+      "text": "Uzaya çıkan ilk canlı Layka mıydı? Hayır! Meyve sinekleriydi.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "LAYKA?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "SİNEKLER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1947. Amerikalılar bir rokete meyve sinekleri koyar. Sinekler uzaya çıkar ve sağ salim geri döner.",
+      "text": "1947. Amerikalılar bir rokete meyve sinekleri koyar. Sinekler uzaya çıkar ve sağ salim geri döner.",
+      "bg": "desert",
+      "actors": [
+        {
+          "id": "bilimci",
+          "x": 0.35,
+          "hat": null,
+          "pose": "point",
+          "face": "happy",
+          "scale": 1.3,
+          "y": 0.9
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "VIIIN!",
+          "x": 0.6,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.2,
+          "rot": -8
+        },
+        {
+          "type": "pop",
+          "text": "BIZZ!",
+          "x": 0.7,
+          "y": 0.3,
+          "size": 90,
+          "f": 0.7,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "10 yıl sonra uzay yarışı kızışır. Sovyetler, Moskova sokaklarında bulunan küçük bir köpeği seçer: Layka.",
+      "text": "10 yıl sonra uzay yarışı kızışır. Sovyetler, Moskova sokaklarında bulunan küçük bir köpeği seçer: Layka.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "sovyet",
+          "x": 0.35,
+          "hat": null,
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "LAYKA"
+        },
+        {
+          "type": "pop",
+          "text": "HAV!",
+          "x": 0.7,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.75,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "3 Kasım 1957. Layka, Sputnik 2 ile Dünya yörüngesine çıkan ilk hayvan olur. Bütün dünya onu konuşur.",
+      "text": "3 Kasım 1957. Layka, Sputnik 2 ile Dünya yörüngesine çıkan ilk hayvan olur. Bütün dünya onu konuşur.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "sovyet",
+          "x": 0.4,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.3,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "YÖRÜNGE!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.4,
+          "rot": -6
+        }
+      ],
+      "night": true
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Bu yolculuğun dönüşü hiç planlanmamıştı. Gerçek 2002'de açıklandı: Layka birkaç saat içinde aşırı sıcaktan ölmüştü.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Bu yolculuğun dönüşü hiç planlanmamıştı. Gerçek 2002'de açıklandı: Layka birkaç saat içinde aşırı sıcaktan ölmüştü.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "sovyet",
+          "x": 0.4,
+          "hat": null,
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.3
+        }
+      ],
+      "props": [],
+      "night": true,
+      "emotion": "üzgün"
+    },
+    {
+      "say": "Onun yolculuğu insanlı uçuşlara yol açtı. Bugün Moskova'da Layka için bir anıt var.",
+      "text": "Onun yolculuğu insanlı uçuşlara yol açtı. Bugün Moskova'da Layka için bir anıt var.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "sovyet",
+          "x": 0.4,
+          "hat": null,
+          "pose": "stand",
+          "face": "neutral",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.72,
+          "y": 0.6,
+          "text": "LAYKA ANITI"
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Büyük adımların arkasında, bedelini sessizce ödeyenler vardır.",
+      "text": "Günün dersi: Büyük adımların arkasında, bedelini sessizce ödeyenler vardır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "sovyet",
+          "x": 0.45,
+          "hat": null,
+          "pose": "think",
+          "face": "sad",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "night": true,
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu köpek seven bir arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu köpek seven bir arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

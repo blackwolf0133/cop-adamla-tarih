@@ -1,0 +1,297 @@
+{
+  "id": "025",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Matbaa İstanbul'a Sandığından Önce Geldi!",
+  "year": "1727",
+  "kanca_yazi": "İstanbul'un ilk matbaası 1727'de değildi!",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "İstanbul'daki ilk matbaa 1727'de kurulmadı; 230 yılı aşkın süre önce zaten vardı 📜\n\n1492'de İspanya'dan sürülen Yahudiler İstanbul'a sığındı ve 1490'larda İbranice kitap basan bir matbaa kurdu. Ardından Ermeni ve Rum matbaaları geldi. Arap harfli ilk Türkçe kitap ise İbrahim Müteferrika'nın 1727'de izin alıp kurduğu matbaada 1729'da basılan Vankulu Lügatı oldu. Müteferrika hayatı boyunca 17 eser bastı.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #matbaa #ibrahimmüteferrika #osmanlı #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "İstanbul'un ilk matbaası 1727'de kurulmadı. 230 yılı aşkın süre önce şehirde zaten matbaa vardı!",
+      "text": "İstanbul'un ilk matbaası 1727'de kurulmadı. 230 yılı aşkın süre önce şehirde zaten matbaa vardı!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "1727?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "230 YIL ÖNCE!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1492. İspanya'dan sürülen Yahudiler Osmanlı'ya sığınır. Yanlarında yeni bir icat getirirler: matbaa!",
+      "text": "1492. İspanya'dan sürülen Yahudiler Osmanlı'ya sığınır. Yanlarında yeni bir icat getirirler: matbaa!",
+      "bg": "sea",
+      "actors": [
+        {
+          "id": "muhacir",
+          "x": 0.3,
+          "hat": null,
+          "pose": "point",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "ship",
+          "x": 0.72,
+          "y": 0.75,
+          "scale": 0.8
+        },
+        {
+          "type": "pop",
+          "text": "MATBAA!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.7,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Kısa sürede İstanbul'da İbranice kitaplar basılır. Sonra Ermeniler ve Rumlar da kendi matbaalarını kurar.",
+      "text": "Kısa sürede İstanbul'da İbranice kitaplar basılır. Sonra Ermeniler ve Rumlar da kendi matbaalarını kurar.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "muhacir",
+          "x": 0.3,
+          "hat": null,
+          "pose": "open",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.15
+        },
+        {
+          "id": "komsu",
+          "x": 0.7,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true,
+          "holds": "scroll",
+          "scale": 1.15
+        }
+      ],
+      "props": []
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Arap harfli ilk Türkçe kitap için 1729'u beklemek gerekir. Bu işi yapan da Macaristan doğumlu bir Osmanlı: İbrahim Müteferrika!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Arap harfli ilk Türkçe kitap için 1729'u beklemek gerekir. Bu işi yapan da Macaristan doğumlu bir Osmanlı: İbrahim Müteferrika!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "ibrahim",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "MÜTEFERRİKA!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 95,
+          "f": 0.75,
+          "rot": -6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "1727'de padişahtan izin alır. Ama bir şart vardır: Dini kitap basmak yasak! Hattatlar da işsiz kalırız diye huzursuzdur.",
+      "text": "1727'de padişahtan izin alır. Ama bir şart vardır: Dini kitap basmak yasak! Hattatlar da işsiz kalırız diye huzursuzdur.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "padisah",
+          "x": 0.28,
+          "hat": "kavuk",
+          "pose": "point",
+          "face": "neutral",
+          "scale": 1.2,
+          "talk": true
+        },
+        {
+          "id": "ibrahim",
+          "x": 0.72,
+          "hat": "sarik",
+          "pose": "shrug",
+          "face": "think",
+          "flip": true,
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "ban",
+          "x": 0.5,
+          "y": 0.3,
+          "f": 0.45
+        }
+      ]
+    },
+    {
+      "say": "İlk kitabı koca bir sözlüktür: Vankulu Lügatı. Müteferrika hayatı boyunca 17 eser basar, haritalar bile!",
+      "text": "İlk kitabı koca bir sözlüktür: Vankulu Lügatı. Müteferrika hayatı boyunca 17 eser basar, haritalar bile!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "ibrahim",
+          "x": 0.4,
+          "hat": "sarik",
+          "pose": "cheer",
+          "face": "happy",
+          "holds": "scroll",
+          "scale": 1.35,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "17 ESER!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Yeni bir fikre geç kapı açan, yarışa geriden başlar.",
+      "text": "Günün dersi: Yeni bir fikre geç kapı açan, yarışa geriden başlar.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "ibrahim",
+          "x": 0.45,
+          "hat": "sarik",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "ibrahim",
+          "delay": 1.0
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu kitap kurdu arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu kitap kurdu arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

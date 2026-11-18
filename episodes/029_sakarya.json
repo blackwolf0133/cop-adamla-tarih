@@ -1,0 +1,304 @@
+{
+  "id": "029",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "22 Gün 22 Gece Süren Savaş",
+  "year": "1921",
+  "kanca_yazi": "Kaburgası kırık, 22 gün savaşı yönetti",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Kaburgası kırık bir başkomutan, 22 gün 22 gece süren savaşı yönetti 🇹🇷\n\nSakarya Meydan Muharebesi 23 Ağustos - 13 Eylül 1921 arasında sürdü. Mustafa Kemal savaştan kısa süre önce attan düşüp kaburgası kırılmasına rağmen orduyu cepheden yönetti. \"Hattı müdafaa yoktur, sathı müdafaa vardır\" emri bu savaşta verildi. Zaferin ardından TBMM ona Gazi unvanını ve mareşal rütbesini verdi.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #sakarya #kurtuluşsavaşı #atatürk #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Kaburgası kırık bir başkomutan, 22 gün 22 gece süren bir savaşı yönetti.",
+      "text": "Kaburgası kırık bir başkomutan, 22 gün 22 gece süren bir savaşı yönetti.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "KABURGA?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "22 GÜN!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1921 yazı. Yunan ordusu Ankara'ya doğru ilerler. Meclis'te herkes aynı şeyi sorar: Ankara düşer mi?",
+      "text": "1921 yazı. Yunan ordusu Ankara'ya doğru ilerler. Meclis'te herkes aynı şeyi sorar: Ankara düşer mi?",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "vekil",
+          "x": 0.3,
+          "hat": "fez",
+          "pose": "shock",
+          "face": "shock",
+          "scale": 1.15,
+          "anim": "shake"
+        },
+        {
+          "id": "vekil2",
+          "x": 0.7,
+          "hat": "fez",
+          "pose": "think",
+          "face": "think",
+          "flip": true,
+          "scale": 1.15
+        }
+      ],
+      "props": [
+        {
+          "type": "bubble",
+          "text": "Ankara düşer mi?",
+          "x": 0.4,
+          "y": 0.13,
+          "tx": 0.32,
+          "ty": 0.32,
+          "f": 0.6
+        }
+      ]
+    },
+    {
+      "say": "Başkomutan Mustafa Kemal'dir. Ama savaştan hemen önce attan düşer ve kaburgası kırılır.",
+      "text": "Başkomutan Mustafa Kemal'dir. Ama savaştan hemen önce attan düşer ve kaburgası kırılır.",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "mk",
+          "x": 0.35,
+          "hat": null,
+          "pose": "sad",
+          "face": "effort",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "horse",
+          "x": 0.72,
+          "y": 0.92,
+          "scale": 0.8,
+          "flip": true
+        },
+        {
+          "type": "pop",
+          "text": "AH!",
+          "x": 0.4,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.75,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Doktorlar dinlen der. O ise cepheye gider ve ağrıya rağmen orduyu bizzat yönetir.",
+      "text": "Doktorlar dinlen der. O ise cepheye gider ve ağrıya rağmen orduyu bizzat yönetir.",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "mk",
+          "x": 0.4,
+          "hat": null,
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "tent",
+          "x": 0.8,
+          "y": 0.9,
+          "scale": 0.7
+        },
+        {
+          "type": "pop",
+          "text": "CEPHEYE!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 110,
+          "f": 0.5,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Ünlü emri şudur: Hattı müdafaa yoktur, sathı müdafaa vardır. Yani savunulacak tek bir çizgi yok, bütün vatan var!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Ünlü emri şudur: Hattı müdafaa yoktur, sathı müdafaa vardır. Yani savunulacak tek bir çizgi yok, bütün vatan var!",
+      "bg": "battlefield",
+      "actors": [
+        {
+          "id": "mk",
+          "x": 0.4,
+          "hat": null,
+          "pose": "open",
+          "face": "confident",
+          "scale": 1.35,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "BÜTÜN VATAN!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.8,
+          "rot": -6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "23 Ağustos'ta başlayan savaş 13 Eylül'de zaferle biter. Meclis ona Gazi unvanını ve mareşal rütbesini verir.",
+      "text": "23 Ağustos'ta başlayan savaş 13 Eylül'de zaferle biter. Meclis ona Gazi unvanını ve mareşal rütbesini verir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "mk",
+          "x": 0.4,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "flag",
+          "actor": "mk",
+          "emblem": true
+        },
+        {
+          "type": "pop",
+          "text": "GAZİ!",
+          "x": 0.65,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.7,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Canın yandığında bile pes etmezsen, zafer seni bulur.",
+      "text": "Günün dersi: Canın yandığında bile pes etmezsen, zafer seni bulur.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "mk",
+          "x": 0.45,
+          "hat": null,
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu hiç pes etmeyen bir arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu hiç pes etmeyen bir arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}
