@@ -1,0 +1,299 @@
+{
+  "id": "036",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Sahafta Bulunan Hazine",
+  "year": "1072",
+  "kanca_yazi": "Bu hazine sahafta satılıyordu!",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Türkçenin en eski sözlüğünün bilinen tek nüshası, bir sahaf dükkânında satılıyordu 📜🔍\n\nKaşgarlı Mahmud, Divanü Lügati't-Türk'ü 1072-1074 yılları arasında Bağdat'ta, Araplara Türkçe öğretmek için yazdı. Eserde bir dünya haritası bile var. Yüzyıllar sonra Birinci Dünya Savaşı yıllarında Ali Emîrî Efendi, kitabı İstanbul'daki sahaflarda borç parayla satın aldı. Bugün Millet Kütüphanesi'nde.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #divanulugatitturk #kaşgarlımahmud #türkçe #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Türkçenin en eski sözlüğünün bilinen tek nüshası, bir sahaf dükkânında satılıyordu!",
+      "text": "Türkçenin en eski sözlüğünün bilinen tek nüshası, bir sahaf dükkânında satılıyordu!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "SAHAFTA?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "TEK NÜSHA!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Yıl 1072. Kaşgarlı Mahmud Bağdat'ta oturur ve Araplara Türkçe öğretmek için dev bir eser yazmaya başlar.",
+      "text": "Yıl 1072. Kaşgarlı Mahmud Bağdat'ta oturur ve Araplara Türkçe öğretmek için dev bir eser yazmaya başlar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "kasgarli",
+          "x": 0.35,
+          "hat": "selcuk",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.25,
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "1072!",
+          "x": 0.7,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.3,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Adı Divanü Lügati't-Türk. İçinde binlerce kelime, atasözleri, şiirler, hatta bir dünya haritası var!",
+      "text": "Adı Divanü Lügati't-Türk. İçinde binlerce kelime, atasözleri, şiirler, hatta bir dünya haritası var!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "kasgarli",
+          "x": 0.35,
+          "hat": "selcuk",
+          "pose": "open",
+          "face": "happy",
+          "scale": 1.25,
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "HARİTA BİLE!",
+          "x": 0.65,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.75,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Ama zamanla kitap ortadan kaybolur. Yüzyıllar boyunca kimse nerede olduğunu bilmez.",
+      "text": "Ama zamanla kitap ortadan kaybolur. Yüzyıllar boyunca kimse nerede olduğunu bilmez.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "kasgarli",
+          "x": 0.45,
+          "hat": "selcuk",
+          "pose": "shrug",
+          "face": "sad",
+          "scale": 1.25
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KAYIP!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 120,
+          "f": 0.5,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Birinci Dünya Savaşı yılları, İstanbul. Kitap kurdu Ali Emîrî Efendi sahafları dolaşırken eski bir el yazmasına rastlar.",
+      "text": "Birinci Dünya Savaşı yılları, İstanbul. Kitap kurdu Ali Emîrî Efendi sahafları dolaşırken eski bir el yazmasına rastlar.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "aliemiri",
+          "x": 0.35,
+          "hat": "fez",
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 1.25,
+          "holds": "scroll"
+        }
+      ],
+      "props": [],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Cebinde yeterli para yoktur. Borç alır ve kitabı kapar! Ve o kitap, bugün bilinen tek nüsha çıkar.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Cebinde yeterli para yoktur. Borç alır ve kitabı kapar! Ve o kitap, bugün bilinen tek nüsha çıkar.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "aliemiri",
+          "x": 0.3,
+          "hat": "fez",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.2,
+          "anim": "bounce",
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "coins",
+          "x": 0.7,
+          "y": 0.93,
+          "f": 0.3
+        },
+        {
+          "type": "pop",
+          "text": "TEK NÜSHA!",
+          "x": 0.55,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.75,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Bugün İstanbul'daki Millet Kütüphanesi'nde saklanıyor. Düşünsene, bir hazine az kalsın kâğıt fiyatına gidiyordu.",
+      "text": "Bugün İstanbul'daki Millet Kütüphanesi'nde saklanıyor. Düşünsene, bir hazine az kalsın kâğıt fiyatına gidiyordu.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "aliemiri",
+          "x": 0.4,
+          "hat": "fez",
+          "pose": "hips",
+          "face": "smug",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "MİLLET KÜTÜPHANESİ"
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Eski bir kitabı küçümseme, içinde koca bir dünya saklı olabilir.",
+      "text": "Günün dersi: Eski bir kitabı küçümseme, içinde koca bir dünya saklı olabilir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "aliemiri",
+          "x": 0.45,
+          "hat": "fez",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu sahaflarda saatlerce dolaşan arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu sahaflarda saatlerce dolaşan arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

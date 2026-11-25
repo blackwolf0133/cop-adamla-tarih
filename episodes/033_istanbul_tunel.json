@@ -1,0 +1,304 @@
+{
+  "id": "033",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Dünyanın İkinci Metrosu İstanbul'da!",
+  "year": "1875",
+  "kanca_yazi": "Dünyanın 2. metrosu hangi şehirde?",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Dünyanın ikinci en eski metrosu İstanbul'da ve 1875'ten beri çalışıyor 🚋🤯\n\nKaraköy ile Beyoğlu arasındaki Tünel, 17 Ocak 1875'te açıldı. Fransız mühendis Eugène-Henri Gavand'ın fikriydi. Yaklaşık 573 metrelik hat, 60 metreden fazla yükseklik farkını bir buçuk dakikada çıkıyor. Ondan önceki tek yeraltı treni Londra'daydı (1863).\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #istanbul #tünel #metro #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Dünyanın ikinci en eski metrosu Paris'te ya da New York'ta değil. İstanbul'da, hem de 1875'ten beri çalışıyor!",
+      "text": "Dünyanın ikinci en eski metrosu Paris'te ya da New York'ta değil. İstanbul'da, hem de 1875'ten beri çalışıyor!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "PARİS?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "İSTANBUL!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1860'lar, İstanbul. Karaköy'den Beyoğlu'na dik bir yokuş var. Her gün binlerce kişi, nefes nefese bu yokuşu tırmanıyor.",
+      "text": "1860'lar, İstanbul. Karaköy'den Beyoğlu'na dik bir yokuş var. Her gün binlerce kişi, nefes nefese bu yokuşu tırmanıyor.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "hamal",
+          "x": 0.3,
+          "hat": "fez",
+          "pose": "push",
+          "face": "effort",
+          "scale": 1.1,
+          "anim": "walk",
+          "to_x": 0.5,
+          "move_dur": 5
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "OF!",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "f": 0.6,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Fransız mühendis Eugène-Henri Gavand bu manzarayı görür ve aklına bir fikir gelir: Yokuşun altına bir tren!",
+      "text": "Fransız mühendis Eugène-Henri Gavand bu manzarayı görür ve aklına bir fikir gelir: Yokuşun altına bir tren!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "gavand",
+          "x": 0.4,
+          "hat": "tophat",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.25
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "gavand",
+          "f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "YERALTI TRENİ!",
+          "x": 0.5,
+          "y": 0.18,
+          "size": 92,
+          "f": 0.75,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1869'da izni alır. Kazılar yıllar sürer. Ve 17 Ocak 1875'te Tünel açılır. Sadece yaklaşık 573 metre ama 60 metreden fazla yükseliyor!",
+      "text": "1869'da izni alır. Kazılar yıllar sürer. Ve 17 Ocak 1875'te Tünel açılır. Sadece yaklaşık 573 metre ama 60 metreden fazla yükseliyor!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "gavand",
+          "x": 0.3,
+          "hat": "tophat",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.15,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "ruler",
+          "x": 0.68,
+          "y_top": 0.25,
+          "labels": [
+            [
+              0.2,
+              "61 m yukarı"
+            ]
+          ]
+        },
+        {
+          "type": "pop",
+          "text": "1875!",
+          "x": 0.3,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.5,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Ondan önce yeraltı treni olan tek şehir Londra. Yani İstanbul, yeraltı treninde dünyanın ikincisi!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Ondan önce yeraltı treni olan tek şehir Londra. Yani İstanbul, yeraltı treninde dünyanın ikincisi!",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "yolcu",
+          "x": 0.38,
+          "hat": "fez",
+          "pose": "open",
+          "face": "surprised",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "1. LONDRA  2. İSTANBUL"
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Anlatılana göre ilk zamanlar bazı İstanbullular karanlık tünele binmeye çekinir. Bugün ise yolculuk bir buçuk dakika, yokuş derdi yok.",
+      "text": "Anlatılana göre ilk zamanlar bazı İstanbullular karanlık tünele binmeye çekinir. Bugün ise yolculuk bir buçuk dakika, yokuş derdi yok.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "yolcu",
+          "x": 0.3,
+          "hat": "fez",
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 1.1,
+          "pose2": "relax",
+          "face2": "happy",
+          "switch": 0.6
+        },
+        {
+          "id": "yolcu2",
+          "x": 0.7,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.05
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "1,5 DAKİKA!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.75,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Herkesin şikâyet ettiği yerde, bir fikir saklıdır.",
+      "text": "Günün dersi: Herkesin şikâyet ettiği yerde, bir fikir saklıdır.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "gavand",
+          "x": 0.45,
+          "hat": "tophat",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu her gün yokuş çıkan arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu her gün yokuş çıkan arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

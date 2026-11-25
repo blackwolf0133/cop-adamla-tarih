@@ -1,0 +1,331 @@
+{
+  "id": "032",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Mona Lisa'yı Ünlü Yapan Hırsız",
+  "year": "1911",
+  "kanca_yazi": "Mona Lisa'yı bir hırsız ünlü yaptı",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Mona Lisa'yı dünyanın en ünlü tablosu yapan şey bir hırsızlıktı 🖼️🕵️\n\n21 Ağustos 1911'de Louvre'da çalışmış bir işçi olan Vincenzo Peruggia tabloyu müzeden kaçırdı. Gazeteler aylarca bunu yazdı, polis Picasso'yu bile sorguladı. Tablo iki yılı aşkın süre bir sandıkta saklandı ve Aralık 1913'te Floransa'da bulundu.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #monalisa #louvre #sanattarihi #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Mona Lisa'yı dünyanın en ünlü tablosu yapan şey bir hırsızlıktı.",
+      "text": "Mona Lisa'yı dünyanın en ünlü tablosu yapan şey bir hırsızlıktı.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "HIRSIZLIK?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "ÜNLÜ OLDU!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1911, Paris. Mona Lisa, Louvre'da sessiz sedasız asılı. Sanatçılar bilir, ama halk pek tanımaz.",
+      "text": "1911, Paris. Mona Lisa, Louvre'da sessiz sedasız asılı. Sanatçılar bilir, ama halk pek tanımaz.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "ziyaretci",
+          "x": 0.65,
+          "hat": "tophat",
+          "pose": "relax",
+          "face": "sleepy",
+          "flip": true,
+          "scale": 1.15
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.3,
+          "y": 0.6,
+          "text": "MONA LİSA"
+        }
+      ]
+    },
+    {
+      "say": "21 Ağustos'ta tablo yok olur. Hırsız, müzede daha önce çalışmış bir işçi: Vincenzo Peruggia. Tabloyu önlüğünün altına saklayıp çıkar.",
+      "text": "21 Ağustos'ta tablo yok olur. Hırsız, müzede daha önce çalışmış bir işçi: Vincenzo Peruggia. Tabloyu önlüğünün altına saklayıp çıkar.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "peruggia",
+          "x": 0.35,
+          "hat": null,
+          "pose": "push",
+          "face": "smug",
+          "scale": 1.2,
+          "anim": "walk",
+          "to_x": 0.8,
+          "move_dur": 4
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KAYIP!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 120,
+          "f": 0.45,
+          "rot": -8
+        }
+      ]
+    },
+    {
+      "say": "Gazeteler aylarca bunu yazar. Polis o kadar çaresizdir ki genç ressam Picasso'yu bile sorgular!",
+      "text": "Gazeteler aylarca bunu yazar. Polis o kadar çaresizdir ki genç ressam Picasso'yu bile sorgular!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "polis",
+          "x": 0.3,
+          "hat": null,
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.2,
+          "talk": true
+        },
+        {
+          "id": "picasso",
+          "x": 0.72,
+          "hat": null,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true,
+          "scale": 1.1,
+          "anim": "shake"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "PİCASSO MU?!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 96,
+          "f": 0.7,
+          "rot": 6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Müze açılınca binlerce kişi, boş duvara bakmak için sıraya girer. Evet, boş duvara!",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Müze açılınca binlerce kişi, boş duvara bakmak için sıraya girer. Evet, boş duvara!",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "z1",
+          "x": 0.3,
+          "hat": "tophat",
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 1.05
+        },
+        {
+          "id": "z2",
+          "x": 0.65,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "flip": true,
+          "scale": 1.05
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "BOŞ DUVAR!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.65,
+          "rot": -5
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Tablo iki yıldan fazla, Peruggia'nın odasında, çift dipli bir sandıkta saklanır. 1913'te Floransa'da satmaya çalışınca yakalanır.",
+      "text": "Tablo iki yıldan fazla, Peruggia'nın odasında, çift dipli bir sandıkta saklanır. 1913'te Floransa'da satmaya çalışınca yakalanır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "peruggia",
+          "x": 0.4,
+          "hat": null,
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "YAKALANDI!",
+          "x": 0.6,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.75,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Mona Lisa Louvre'a döner. Ama artık sıradan bir tablo değil, dünyanın en ünlü yüzü.",
+      "text": "Mona Lisa Louvre'a döner. Ama artık sıradan bir tablo değil, dünyanın en ünlü yüzü.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "ziyaretci",
+          "x": 0.65,
+          "hat": "tophat",
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.15,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.3,
+          "y": 0.6,
+          "text": "MONA LİSA"
+        },
+        {
+          "type": "pop",
+          "text": "DÜNYA ÜNLÜSÜ!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 96,
+          "f": 0.6,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bazen bir şeyin değerini, ancak kaybedince anlarız.",
+      "text": "Günün dersi: Bazen bir şeyin değerini, ancak kaybedince anlarız.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "ziyaretci",
+          "x": 0.45,
+          "hat": "tophat",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu müzede hep sıkılan arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu müzede hep sıkılan arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

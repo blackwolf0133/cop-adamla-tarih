@@ -1,0 +1,309 @@
+{
+  "id": "031",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Çin Seddi Uzaydan Görünmez!",
+  "year": "2003",
+  "kanca_yazi": "Çin Seddi uzaydan görünür mü?",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Çin Seddi uzaydan çıplak gözle görünür, değil mi? Değil! 🧱🚀\n\nSur binlerce kilometre uzun ama genişliği çoğu yerde birkaç metre ve rengi toprağa çok benziyor. 2003'te uzaya çıkan ilk Çinli astronot Yang Liwei dönüşte \"Seddi görmedim\" dedi. Efsane ise insanlar uzaya çıkmadan çok önce yayılmıştı.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #çinseddi #uzay #efsane #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Çin Seddi uzaydan çıplak gözle görünür, değil mi? Değil! Bunu söyleyen de bir Çinli astronottu.",
+      "text": "Çin Seddi uzaydan çıplak gözle görünür, değil mi? Değil! Bunu söyleyen de bir Çinli astronottu.",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "UZAYDAN?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "GÖRÜNMEZ!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Çin Seddi gerçekten dev. Bütün kollarıyla binlerce kilometre uzanıyor. Ama genişliği çoğu yerde sadece birkaç metre.",
+      "text": "Çin Seddi gerçekten dev. Bütün kollarıyla binlerce kilometre uzanıyor. Ama genişliği çoğu yerde sadece birkaç metre.",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "isci",
+          "x": 0.25,
+          "hat": null,
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.1
+        }
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "x": 0.7,
+          "w": 0.55,
+          "h": 0.3
+        },
+        {
+          "type": "pop",
+          "text": "UZUN AMA İNCE!",
+          "x": 0.5,
+          "y": 0.18,
+          "size": 96,
+          "f": 0.7,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Uzay istasyonu yaklaşık 400 kilometre yukarıda. Oradan seddi aramak, kilometrelerce uzaktan bir saç teli aramaya benziyor. Üstelik rengi toprakla aynı!",
+      "text": "Uzay istasyonu yaklaşık 400 kilometre yukarıda. Oradan seddi aramak, kilometrelerce uzaktan bir saç teli aramaya benziyor. Üstelik rengi toprakla aynı!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "astronot",
+          "x": 0.35,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "scale": 1.25,
+          "y": 0.6,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "400 KM!",
+          "x": 0.7,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.25,
+          "rot": 6
+        },
+        {
+          "type": "pop",
+          "text": "SAÇ TELİ?",
+          "x": 0.62,
+          "y": 0.42,
+          "size": 90,
+          "f": 0.65,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "2003'te Çin'in ilk astronotu Yang Liwei uzaya çıkar. Dönüşte herkes aynı soruyu sorar. Cevabı: Seddi görmedim!",
+      "text": "2003'te Çin'in ilk astronotu Yang Liwei uzaya çıkar. Dönüşte herkes aynı soruyu sorar. Cevabı: Seddi görmedim!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "yang",
+          "x": 0.38,
+          "hat": null,
+          "pose": "shrug",
+          "face": "happy",
+          "scale": 1.3,
+          "talk": true
+        }
+      ],
+      "props": [
+        {
+          "type": "bubble",
+          "text": "Görmedim!",
+          "x": 0.42,
+          "y": 0.13,
+          "tx": 0.38,
+          "ty": 0.32,
+          "f": 0.75
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Efsane, astronotlardan önce uzaya çıkmıştı! İnsanlar daha roket bile yokken, 1930'larda Ay'dan bile görünür diye yazıyordu.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Efsane, astronotlardan önce uzaya çıkmıştı! İnsanlar daha roket bile yokken, 1930'larda Ay'dan bile görünür diye yazıyordu.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "gazeteci",
+          "x": 0.35,
+          "hat": "tophat",
+          "pose": "point",
+          "face": "smug",
+          "scale": 1.25,
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "AY'DAN BİLE!"
+        },
+        {
+          "type": "pop",
+          "text": "ROKET YOK!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.6,
+          "rot": 5
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Yani sed gerçekten muhteşem. Sadece uzaydan değil, yakından bakınca muhteşem.",
+      "text": "Yani sed gerçekten muhteşem. Sadece uzaydan değil, yakından bakınca muhteşem.",
+      "bg": "hill",
+      "actors": [
+        {
+          "id": "isci",
+          "x": 0.3,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.15,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "x": 0.72,
+          "w": 0.5,
+          "h": 0.32
+        },
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Herkesin tekrarladığı her şey doğru değildir.",
+      "text": "Günün dersi: Herkesin tekrarladığı her şey doğru değildir.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "yang",
+          "x": 0.45,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "yang",
+          "delay": 0.8
+        },
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu Çin Seddi uzaydan görünür diyen arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu Çin Seddi uzaydan görünür diyen arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "id": "030",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "1934'e Kadar Soyadın Yoktu!",
+  "year": "1934",
+  "kanca_yazi": "1934'e kadar kimsenin soyadı yoktu?",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "1934'e kadar Türkiye'de çoğu insanın soyadı yoktu 🪪😳\n\nİnsanlar \"Bakkalın oğlu\", \"Uzun Ahmet\" gibi lakaplarla ayırt ediliyordu. 21 Haziran 1934'te kabul edilen Soyadı Kanunu ile herkese soyadı alma zorunluluğu geldi ve iki yıl süre tanındı. Kasım 1934'te Meclis, Mustafa Kemal'e \"Atatürk\" soyadını verdi ve bu soyadını başka kimsenin almasını yasakladı.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #soyadıkanunu #atatürk #cumhuriyet #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "1934'e kadar Türkiye'de çoğu insanın soyadı yoktu. Peki herkes birbirini nasıl ayırıyordu?",
+      "text": "1934'e kadar Türkiye'de çoğu insanın soyadı yoktu. Peki herkes birbirini nasıl ayırıyordu?",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "SOYADI?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "YOK!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "Cevap: lakaplarla! Uzun Ahmet, Bakkalın oğlu Mehmet, Kör Ali. Mahallede işe yarar, ama resmi işlerde tam bir karmaşa.",
+      "text": "Cevap: lakaplarla! Uzun Ahmet, Bakkalın oğlu Mehmet, Kör Ali. Mahallede işe yarar, ama resmi işlerde tam bir karmaşa.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "ahmet",
+          "x": 0.28,
+          "hat": null,
+          "pose": "point",
+          "face": "smug",
+          "scale": 1.15,
+          "talk": true
+        },
+        {
+          "id": "mehmet",
+          "x": 0.72,
+          "hat": null,
+          "pose": "shrug",
+          "face": "happy",
+          "flip": true,
+          "scale": 1.0
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "UZUN AHMET!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 96,
+          "f": 0.35,
+          "rot": -6
+        }
+      ]
+    },
+    {
+      "say": "Düşünsene: Sınıfta beş Mehmet var ve beşi de babasının adıyla çağrılıyor. Askerlikte, mahkemede kim kimdir, kimse bilemiyor.",
+      "text": "Düşünsene: Sınıfta beş Mehmet var ve beşi de babasının adıyla çağrılıyor. Askerlikte, mahkemede kim kimdir, kimse bilemiyor.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "m1",
+          "x": 0.2,
+          "hat": null,
+          "pose": "shock",
+          "face": "surprised",
+          "scale": 0.95
+        },
+        {
+          "id": "m2",
+          "x": 0.5,
+          "hat": null,
+          "pose": "shrug",
+          "face": "think",
+          "scale": 0.95
+        },
+        {
+          "id": "m3",
+          "x": 0.8,
+          "hat": null,
+          "pose": "point",
+          "face": "happy",
+          "flip": true,
+          "scale": 0.95
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "5 MEHMET!",
+          "x": 0.5,
+          "y": 0.18,
+          "size": 110,
+          "f": 0.4,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "21 Haziran 1934'te Soyadı Kanunu çıkar. Herkes kendine bir soyadı seçecek, bunun için iki yıl süre var.",
+      "text": "21 Haziran 1934'te Soyadı Kanunu çıkar. Herkes kendine bir soyadı seçecek, bunun için iki yıl süre var.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "memur",
+          "x": 0.35,
+          "hat": null,
+          "pose": "open",
+          "face": "confident",
+          "scale": 1.25,
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "SOYADI KANUNU"
+        },
+        {
+          "type": "pop",
+          "text": "2 YIL SÜRE!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.7,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Kimi mesleğini seçer, kimi memleketini, kimi de güçlü bir kelime. Demirci, Karadeniz, Yılmaz derken, ülke soyadına kavuşur.",
+      "text": "Kimi mesleğini seçer, kimi memleketini, kimi de güçlü bir kelime. Demirci, Karadeniz, Yılmaz derken, ülke soyadına kavuşur.",
+      "bg": "city",
+      "actors": [
+        {
+          "id": "demirci",
+          "x": 0.3,
+          "hat": null,
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.15,
+          "anim": "bounce"
+        },
+        {
+          "id": "yolcu",
+          "x": 0.7,
+          "hat": null,
+          "pose": "think",
+          "face": "think",
+          "flip": true,
+          "scale": 1.1
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "yolcu",
+          "f": 0.5
+        },
+        {
+          "type": "pop",
+          "text": "YILMAZ!",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.75,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Mustafa Kemal'in soyadını Meclis verdi: Atatürk. Ve bu soyadını başka hiç kimse alamaz.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Mustafa Kemal'in soyadını Meclis verdi: Atatürk. Ve bu soyadını başka hiç kimse alamaz.",
+      "bg": "palace",
+      "actors": [
+        {
+          "id": "mk",
+          "x": 0.4,
+          "hat": null,
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "ATATÜRK",
+          "x": 0.5,
+          "y": 0.2,
+          "size": 110,
+          "f": 0.55,
+          "rot": -5
+        },
+        {
+          "type": "ban",
+          "x": 0.78,
+          "y": 0.4,
+          "scale": 0.6,
+          "f": 0.8
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Günün dersi: İsmin seni tanıtır, ama ona anlam katan sensin.",
+      "text": "Günün dersi: İsmin seni tanıtır, ama ona anlam katan sensin.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "ahmet",
+          "x": 0.45,
+          "hat": null,
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu soyadının hikâyesini merak eden birine gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu soyadının hikâyesini merak eden birine gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}

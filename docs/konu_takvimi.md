@@ -33,8 +33,15 @@ Durum: ✅ senaryosu yazıldı · ⬜ sırada
 | 027 | Cezeri'nin robotları (1206) | 800 Yıl Önceki Robotlar | ✅ |
 | 028 | Uzay yarışı ve köpek Layka (1957) | Uzaya İlk Çıkan Canlı Kimdi? (ilk: meyve sinekleri, 1947) | ✅ |
 | 029 | Kurtuluş Savaşı – Sakarya (1921) | 22 Gün 22 Gece Süren Savaş | ✅ |
-| 030 | Soyadı Kanunu (1934) | Herkes Bir Günde Soyadı Seçti! | ⬜ |
+| 030 | Soyadı Kanunu (1934) | 1934'e Kadar Soyadın Yoktu! | ✅ |
+| 031 | Çin Seddi uzaydan görünmez (Yang Liwei, 2003) | Çin Seddi Uzaydan Görünmez! | ✅ |
+| 032 | Mona Lisa'nın çalınması (1911) | Mona Lisa'yı Ünlü Yapan Hırsız | ✅ |
+| 033 | Karaköy-Beyoğlu Tüneli (1875) | Dünyanın İkinci Metrosu İstanbul'da! | ✅ |
+| 034 | İstiklal Marşı ve Akif'in ödülü (1921) | Ödülü İstemedi, Marşı Yazdı! | ✅ |
+| 035 | Eyfel Kulesi sökülecekti (1889-1910) | Eyfel Kulesi Sökülecekti! | ✅ |
+| 036 | Divanü Lügati't-Türk ve Ali Emîrî (1072 / 1910'lar) | Sahafta Bulunan Hazine | ✅ |
 
 > 017: Evliya Çelebi'nin rüyasında Peygamber'den "şefaat" yerine yanlışlıkla "seyahat" istemesi anlatısı (kendi anlatımı).
 > 022: Ali Kuşçu'nun adını taşıyan bir Ay krateri doğrulanamadığı için bölüm Dünya'nın dönüşü tartışmasına odaklandı.
 > 023-029 (18 Kasım): "kanca_yazi" alanı ve son cümlede gönderme (DM) sebebi eklendi. 023'te 1937 Dersim harekâtı anlatılmadı (şiddet kuralı). 024'te Ekim tarihi 2018 kömür yazısına dayanıyor, "olabilir" diye anlatıldı.
+> 030-036 (25 Kasım): İstatistikte en uzun izlenenler efsane yıkma (Viking 38 sn) ve somut insan/keşif hikâyeleri (Piri Reis, Cem Sultan); soyut karşılaştırmalar (Kleopatra, Ali Kuşçu) zayıf kaldı. Bölümler ~125-140 kelimeye kısaltıldı. 030'da "bir günde" yerine doğru bilgi (2 yıl süre) kullanıldı. 033'te ilk yolcuların çekinmesi "anlatılana göre" diye verildi. 036'da bulunuş yılı kaynaklarda 1914/1915 farklı, "Birinci Dünya Savaşı yılları" denildi; fiyat verilmedi.

@@ -1,0 +1,313 @@
+{
+  "id": "035",
+  "series": "ÇÖP ADAMLA TARİH",
+  "title": "Eyfel Kulesi Sökülecekti!",
+  "year": "1889",
+  "kanca_yazi": "Eyfel Kulesi sökülecekti!",
+  "voice_fx": {
+    "pitch": 1.15,
+    "noise": 0.2,
+    "noise_w": 0.3
+  },
+  "instagram_caption": "Eyfel Kulesi 20 yıl sonra sökülmek üzere yapıldı 🗼😮\n\nKule 1889 Paris Dünya Fuarı için dikildi. Pek çok ünlü sanatçı ona \"işe yaramaz, korkunç\" diye karşı çıktı. Gustave Eiffel'in arazi izni 20 yıllıktı ve kule 1910'da şehre devredilecekti. Onu kurtaran, tepesinde yapılan bilim deneyleri ve özellikle radyo yayınları oldu.\n\nHer gün yeni bir tarih hikâyesi için takip et 📚\n\n#tarih #eyfelkulesi #paris #mühendislik #çöpadamlatarih",
+  "scenes": [
+    {
+      "say": "Eyfel Kulesi sadece 20 yıl ayakta kalsın diye yapıldı. Sonra sökülecekti!",
+      "text": "Eyfel Kulesi sadece 20 yıl ayakta kalsın diye yapıldı. Sonra sökülecekti!",
+      "voice_delay": 1.0,
+      "emotion": "şaşkın",
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "wave",
+        "face": "happy",
+        "beats": [
+          {
+            "t": 0.45,
+            "pose": "point",
+            "face": "wink"
+          },
+          {
+            "f": 0.0,
+            "pose": "hips",
+            "face": "happy"
+          },
+          {
+            "f": 0.3,
+            "pose": "think",
+            "face": "think"
+          },
+          {
+            "f": 0.6,
+            "pose": "open",
+            "face": "surprised"
+          },
+          {
+            "f": 0.85,
+            "pose": "shrug",
+            "face": "happy"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "SÖKÜLECEK?",
+          "x": 0.27,
+          "y": 0.15,
+          "size": 120,
+          "f": 0.0,
+          "rot": -10,
+          "until_f": 0.55
+        },
+        {
+          "type": "pop",
+          "text": "20 YIL!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 88,
+          "f": 0.6,
+          "rot": 5
+        }
+      ]
+    },
+    {
+      "say": "1889, Paris. Büyük bir dünya fuarı var. Mühendis Gustave Eiffel, o güne kadar yapılmış en yüksek yapıyı dikiyor.",
+      "text": "1889, Paris. Büyük bir dünya fuarı var. Mühendis Gustave Eiffel, o güne kadar yapılmış en yüksek yapıyı dikiyor.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "eiffel",
+          "x": 0.3,
+          "hat": "tophat",
+          "pose": "point",
+          "face": "confident",
+          "scale": 1.2
+        }
+      ],
+      "props": [
+        {
+          "type": "ruler",
+          "x": 0.7,
+          "y_top": 0.15,
+          "labels": [
+            [
+              0.2,
+              "~300 m"
+            ]
+          ]
+        },
+        {
+          "type": "pop",
+          "text": "EN YÜKSEK!",
+          "x": 0.45,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.7,
+          "rot": -5
+        }
+      ]
+    },
+    {
+      "say": "Ama herkes sevinmez. Ünlü sanatçılar gazetede mektup yayımlar: Bu işe yaramaz, korkunç bir demir yığını!",
+      "text": "Ama herkes sevinmez. Ünlü sanatçılar gazetede mektup yayımlar: Bu işe yaramaz, korkunç bir demir yığını!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "sanatci",
+          "x": 0.35,
+          "hat": "tophat",
+          "pose": "shock",
+          "face": "shock",
+          "scale": 1.2,
+          "anim": "shake",
+          "holds": "scroll"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "KORKUNÇ!",
+          "x": 0.65,
+          "y": 0.2,
+          "size": 120,
+          "f": 0.6,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "Üstelik Eiffel'in arazi izni sadece 20 yıllık. 1910'da kule şehre geçecek ve sökülebilecek.",
+      "text": "Üstelik Eiffel'in arazi izni sadece 20 yıllık. 1910'da kule şehre geçecek ve sökülebilecek.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "eiffel",
+          "x": 0.4,
+          "hat": "tophat",
+          "pose": "sad",
+          "face": "sad",
+          "scale": 1.3
+        }
+      ],
+      "props": [
+        {
+          "type": "sign",
+          "x": 0.75,
+          "y": 0.6,
+          "text": "İZİN: 20 YIL"
+        }
+      ]
+    },
+    {
+      "say": "İşin en ilginç kısmı ne biliyor musun? Kuleyi kurtaran şey güzelliği değil, tepesindeki anten oldu! Eiffel orada bilim deneyleri yaptırır, 1898'de ilk radyo bağlantısı kurulur.",
+      "text": "İşin en ilginç kısmı ne biliyor musun? Kuleyi kurtaran şey güzelliği değil, tepesindeki anten oldu! Eiffel orada bilim deneyleri yaptırır, 1898'de ilk radyo bağlantısı kurulur.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "eiffel",
+          "x": 0.35,
+          "hat": "tophat",
+          "pose": "think",
+          "face": "think",
+          "scale": 1.25
+        }
+      ],
+      "props": [
+        {
+          "type": "bulb",
+          "actor": "eiffel",
+          "f": 0.35
+        },
+        {
+          "type": "pop",
+          "text": "ANTEN!",
+          "x": 0.65,
+          "y": 0.2,
+          "size": 120,
+          "f": 0.55,
+          "rot": -6
+        }
+      ],
+      "emotion": "şaşkın"
+    },
+    {
+      "say": "Kule bir radyo istasyonuna dönüşür. Bu kadar faydalı bir yapı sökülür mü? Sökülmez! İzin 70 yıl uzatılır.",
+      "text": "Kule bir radyo istasyonuna dönüşür. Bu kadar faydalı bir yapı sökülür mü? Sökülmez! İzin 70 yıl uzatılır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "eiffel",
+          "x": 0.4,
+          "hat": "tophat",
+          "pose": "cheer",
+          "face": "happy",
+          "scale": 1.3,
+          "anim": "bounce"
+        }
+      ],
+      "props": [
+        {
+          "type": "pop",
+          "text": "70 YIL DAHA!",
+          "x": 0.6,
+          "y": 0.2,
+          "size": 100,
+          "f": 0.7,
+          "rot": 6
+        }
+      ]
+    },
+    {
+      "say": "O korkunç denilen demir yığını, bugün dünyanın en çok fotoğrafı çekilen yerlerinden biri. Sanatçılara sürpriz!",
+      "text": "O korkunç denilen demir yığını, bugün dünyanın en çok fotoğrafı çekilen yerlerinden biri. Sanatçılara sürpriz!",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "sanatci",
+          "x": 0.4,
+          "hat": "tophat",
+          "pose": "shrug",
+          "face": "happy",
+          "scale": 1.25
+        }
+      ],
+      "props": [
+        {
+          "type": "sun",
+          "x": 0.85,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "say": "Günün dersi: Bir şeyi kurtarmanın en iyi yolu, onu faydalı kılmaktır.",
+      "text": "Günün dersi: Bir şeyi kurtarmanın en iyi yolu, onu faydalı kılmaktır.",
+      "bg": "plain",
+      "actors": [
+        {
+          "id": "eiffel",
+          "x": 0.45,
+          "hat": "tophat",
+          "pose": "hips",
+          "face": "confident",
+          "scale": 1.35
+        }
+      ],
+      "props": [
+        {
+          "type": "sfx",
+          "name": "rimshot",
+          "f": 0.75
+        }
+      ],
+      "emotion": "sakin"
+    },
+    {
+      "say": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu Paris'e gitmeyi hayal eden arkadaşına gönder.",
+      "text": "İşte böyle! Yarın yeni hikâye var, takip et. Bunu Paris'e gitmeyi hayal eden arkadaşına gönder.",
+      "voice_delay": 0.5,
+      "narrator": {
+        "x": 0.5,
+        "y": 0.97,
+        "scale": 1.6,
+        "pose": "open",
+        "face": "happy",
+        "beats": [
+          {
+            "f": 0.3,
+            "pose": "point",
+            "face": "happy"
+          },
+          {
+            "f": 0.72,
+            "pose": "wave",
+            "face": "wink"
+          }
+        ]
+      },
+      "props": [
+        {
+          "type": "pop",
+          "text": "TAKİP ET!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.25,
+          "rot": -5,
+          "until_f": 0.6
+        },
+        {
+          "type": "pop",
+          "text": "GÖNDER!",
+          "x": 0.5,
+          "y": 0.13,
+          "size": 120,
+          "f": 0.65,
+          "rot": 5
+        }
+      ]
+    }
+  ]
+}
