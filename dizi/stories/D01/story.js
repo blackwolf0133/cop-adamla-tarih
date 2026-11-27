@@ -49,7 +49,7 @@ function cameraPath() {
   key(Lb('L11') - .1, [YO.aycaX + .25, 1.25, .6], [YO.aycaX, 1.04, YO.pillowZ], 38, 'glide', .9, { creep: .1, drift: .03 });
   // sabah, antre: Nihat aynada; Ayça mutfak kapısında
   key(Lb('L12') - .1, [99.9, 1.5, 1.9], [99.7, 1.15, -1.6], 56, 'whip', .32, { creep: .22 });
-  key(Lb('L13') - .1, [100.4, 1.45, 1.7], [100.35, 1.15, -1.6], 52, 'glide', .7, { creep: .25 });
+  key(Lb('L13') - .1, [99.75, 1.45, 1.75], [100.65, 1.15, -1.7], 52, 'glide', .7, { creep: .25 });
   // son: salon penceresi, Ayça'ya yaklaş
   key(Lb('L14') - .2, [200.5, 1.45, 2.0], [200.55, 1.3, -1.2], 46, 'whip', .32, { creep: .3, drift: .04 });
   key(Le('L14') + .2, [200.3, 1.42, 1.0], [200.25, 1.36, -1.0], 38, 'glide', 1.8, { creep: .2, drift: .02 });
@@ -181,7 +181,7 @@ export function frame(t, ctx) {
       mouth: talking('L13') ? flap(env, t) : 0, armL: fixing ? [150 + Math.sin(t * 9) * 8, 70] : [18, 30], armR: atDoor ? [55, 40] : fixing ? [140, 80] : [14, 8],
       propR: atDoor ? 'keys' : undefined, bob: pop(c1) + pop(c2), lean: atDoor ? -2 : 0, lit: 1, shade: DAY, rim: { color: '#ffd59a', a: .4 } });
     Nn.castFrom(V(107, 3.2, .6));
-    Aa.show(); Aa.place(100.38, 0, -.25, cam, tint);
+    Aa.show(); Aa.place(101.2, 0, -1.0, cam, tint);
     Aa.draw({ expr: atDoor ? 'neutral' : 'focused', look: -.85, lid: .15, blink: bl(8, A('L13')), armR: [40, 95], propR: 'tea', armL: [20, 30], lit: 1, shade: DAY, rim: { color: '#ffd59a', a: .5 } });
     Aa.castFrom(V(107, 3.2, .6));
     // kapı açılır, merdiven ışığı girer; söz bitince kapanır

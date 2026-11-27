@@ -8,6 +8,7 @@ on:
         required: true
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: dizi-ses-${{ inputs.bolum }}
   cancel-in-progress: false
@@ -31,3 +32,7 @@ jobs:
           git add -f dizi/stories/${{ inputs.bolum }}/voice
           git commit -m "Dizi sesi: ${{ inputs.bolum }}" || echo "değişiklik yok"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+      - name: Render'ı başlat
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dizi-render.yml -f bolum=${{ inputs.bolum }}
