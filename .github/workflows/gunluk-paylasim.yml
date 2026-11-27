@@ -135,6 +135,7 @@ jobs:
         env:
           FORCE: ${{ inputs.sadece_video && '1' || '' }}
           PYTHONUNBUFFERED: "1"
+          GH_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_VOICE: "Puck"
           CB_TEMPO: "1.0"   # Chatterbox okuma hızı (1.1 = biraz daha hızlı)

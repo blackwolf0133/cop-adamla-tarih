@@ -59,6 +59,12 @@ def queue():
 
 
 def cmd_status(_):
+    if DIZI:
+        q = dizi_sira()
+        print(f"Sırada {len(q)} dizi bölümü var.")
+        for d, ep in q[:10]:
+            print(f"  {ep['id']}  {ep['title']}")
+        return
     q = queue()
     st = load_state()
     print(f"Sırada {len(q)} bölüm var.")
@@ -70,7 +76,58 @@ def cmd_status(_):
         print(f"  [paylaşıldı {p['date']}] {p['id']} {p.get('permalink') or ''}")
 
 
+# ---------------------------------------------------------------- Çapkın Nihat dizisi (kanal/format.txt = dizi)
+DIZI = os.path.exists(os.path.join(ROOT, "kanal", "format.txt")) and \
+    open(os.path.join(ROOT, "kanal", "format.txt"), encoding="utf-8").read().strip() == "dizi"
+
+
+def dizi_sira():
+    """Paylaşılmamış dizi bölümleri (dizi/stories/D01, D02 ...), bolum.json'u olanlar."""
+    done = {p["id"] for p in load_state()["posted"]}
+    out = []
+    for d in sorted(glob.glob(os.path.join(ROOT, "dizi", "stories", "D[0-9]*"))):
+        bj = os.path.join(d, "bolum.json")
+        if os.path.exists(bj):
+            ep = json.load(open(bj, encoding="utf-8"))
+            if ep["id"] not in done:
+                out.append((d, ep))
+    return out
+
+
+def dizi_render():
+    import subprocess
+    q = dizi_sira()
+    if not q:
+        print("::error::Sırada dizi bölümü yok (dizi/stories/Dxx/bolum.json).")
+        sys.exit(1)
+    _git, _slot, _neden = saat_kapisi.karar()
+    if not _git and not os.environ.get("FORCE"):
+        print(_neden)
+        set_output("skip", "true")
+        return
+    d, ep = q[0]
+    tag = "dizi-" + ep["id"]
+    os.makedirs(os.path.join(ROOT, "output"), exist_ok=True)
+    out = os.path.join(ROOT, "output", f"{ep['id']}.mp4")
+    r = subprocess.run(["gh", "release", "download", tag, "-p", f"{ep['id']}.mp4", "-O", out, "--clobber"], capture_output=True, text=True)
+    if r.returncode != 0 or not os.path.exists(out):
+        print(f"::error::{tag} sürümünde video yok (render bitmemiş olabilir): {r.stderr.strip()}")
+        sys.exit(1)
+    notlar = subprocess.run(["gh", "release", "view", tag, "--json", "body", "--jq", ".body"], capture_output=True, text=True).stdout.strip()
+    muzik = notlar.split("·")[0].replace("Müzik:", "").strip() if notlar else ""
+    kredi = f'\n\nMüzik: "{muzik}" Kevin MacLeod (incompetech.com) · CC BY 4.0' if muzik and muzik != "sentetik" else ""
+    cap = ep["caption"] + kredi + "\n\n" + " ".join(ep.get("hashtags", []))
+    set_output("skip", "false")
+    json.dump({"id": ep["id"], "path": out, "title": ep["title"], "caption": cap},
+              open(TODAY, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    print(f"Hazır: {out}")
+    if len(q) - 1 < 3:
+        print(f"::warning::Bu bölümden sonra sırada {len(q) - 1} dizi bölümü kalacak.")
+
+
 def cmd_render(_):
+    if DIZI:
+        return dizi_render()
     sys.path.insert(0, ROOT)
     from engine import render as R
     q = queue()
