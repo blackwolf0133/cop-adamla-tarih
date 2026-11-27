@@ -4,3 +4,5 @@ models/*.onnx*
 __pycache__/
 *.pyc
 site/
+dizi/engine/node_modules/
+dizi/stories/*/out/

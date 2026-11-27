@@ -1,0 +1,23 @@
+{
+ "sesler": {
+  "ic":    {"voice": "Vindemiatrix", "fx": "ic",  "tempo": 0.97},
+  "ayca":  {"voice": "Vindemiatrix", "fx": "oda", "tempo": 1.0},
+  "nihat": {"voice": "Algenib",      "fx": "oda", "tempo": 1.0}
+ },
+ "satirlar": [
+  {"id": "L01", "kim": "ic",    "metin": "Gece iki on dört.", "ara": 0.35},
+  {"id": "L02", "kim": "ic",    "metin": "Nihat'ın telefonu titredi.", "ara": 0.3},
+  {"id": "L03", "kim": "ic",    "metin": "Ben uyuyormuş gibi yaptım.", "ara": 0.3},
+  {"id": "L04", "kim": "ic",    "metin": "On iki yıllık evliyiz. Nihat telefonunu hiç yüzüstü koymazdı.", "ara": 0.55},
+  {"id": "L05", "kim": "ic",    "metin": "Son üç aydır koyuyor.", "ara": 0.35},
+  {"id": "L06", "kim": "ic",    "metin": "Ekran bir an yandı. Tek bir mesaj: Yarın aynı yerde mi?", "ara": 0.5},
+  {"id": "L07", "kim": "ic",    "metin": "Gönderen: Bizim takımdaki Kaan.", "ara": 0.45},
+  {"id": "L08", "kim": "ic",    "metin": "Nihat futbol oynamaz ki.", "ara": 0.55},
+  {"id": "L09", "kim": "nihat", "metin": "Uyumadın mı sen?", "ara": 0.7},
+  {"id": "L10", "kim": "ayca",  "metin": "Su içmeye kalktım.", "ara": 0.45},
+  {"id": "L11", "kim": "ic",    "metin": "Yalan söyledim. Ama bu evde ilk yalanı söyleyen ben değildim.", "ara": 0.6},
+  {"id": "L12", "kim": "ic",    "metin": "Sabah her zamankinden erken kalktı. Gömleğini iki kez değiştirdi.", "ara": 0.75},
+  {"id": "L13", "kim": "nihat", "metin": "Akşam geç kalırım, mesai var.", "ara": 0.45},
+  {"id": "L14", "kim": "ic",    "metin": "Aynı yer neresiydi, Nihat?", "ara": 0.8}
+ ]
+}
