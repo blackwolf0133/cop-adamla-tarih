@@ -207,6 +207,10 @@ def hikaye_paylas(publisher, video_path, video_url):
     Reel zaten paylaşıldı ve kaydı yazıldı, hikâye yüzünden iş akışı ASLA başarısız olmamalı.
     14 Kasım: Instagram bazen videoyu işleyemiyor -> 3 deneme, ama süre bütçeli
     (iş zaman aşımına uğrarsa paylaşım kaydı yazılmaz ve ertesi gün aynı Reel tekrar paylaşılır!)."""
+    # 27 Kasım: Meta işletme hesabını "otomasyon" gerekçesiyle kısıtladı; API çağrılarını azaltmak için hikâye kapalı.
+    if os.environ.get("HIKAYE", "0") != "1":
+        print("Hikâye paylaşımı kapalı (HIKAYE=1 ile açılır).")
+        return None
     import time
     if os.environ.get("HIKAYE_KAPALI") == "1":
         print("Hikâye paylaşımı kapalı (HIKAYE_KAPALI=1).")
