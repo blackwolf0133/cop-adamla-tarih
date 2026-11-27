@@ -21,7 +21,7 @@ import numpy as np
 
 SR = 48000
 MODELLER = os.environ.get("GEMINI_TTS_MODELS",
-                          "gemini-3.8-flash-lite-tts,gemini-3.1-flash-tts-preview,gemini-2.5-flash-preview-tts").split(",")
+                          "gemini-3.1-flash-tts-preview,gemini-3.8-flash-lite-tts,gemini-2.5-flash-preview-tts").split(",")
 FX = {
     # iç ses: yakın mikrofon, yumuşak, hafif oda yankısı (düşünce gibi)
     "ic": "highpass=f=110,lowpass=f=8500,equalizer=f=220:t=q:w=1:g=2.5,acompressor=threshold=-24dB:ratio=3:attack=6:release=150,"
@@ -36,10 +36,16 @@ def _norm(t):
     return re.sub(r"[^a-zçğıöşü0-9 ]+", " ", t).split()
 
 
+_SON = {"model": None}
+
+
 def tts(metin, ses):
     key = os.environ["GEMINI_API_KEY"]
     son = None
-    for model in [m.strip() for m in MODELLER if m.strip()]:
+    sira = [m.strip() for m in MODELLER if m.strip()]
+    if _SON["model"] in sira:
+        sira.remove(_SON["model"]); sira.insert(0, _SON["model"])
+    for model in sira:
         dil = True
         for deneme in range(4):
             sc = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": ses}}}
@@ -54,6 +60,7 @@ def tts(metin, ses):
                 r = json.load(urllib.request.urlopen(req, timeout=180))
                 pcm = base64.b64decode(r["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
                 print(f"  {model} · {ses}", flush=True)
+                _SON["model"] = model
                 return np.frombuffer(pcm, dtype="<i2").astype(np.float32) / 32768
             except urllib.error.HTTPError as e:
                 msg = e.read().decode()[:240]
@@ -103,16 +110,15 @@ def whisper():
 
 def dok(x):
     """(döküm metni, [(kelime, bas, bit)]) — x: 48 kHz mono."""
-    import tempfile
-    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
-        p = f.name
-    yaz(p, x)
-    segs, _ = whisper().transcribe(p, language="tr", beam_size=5, word_timestamps=True)
+    # 16 kHz diziyi doğrudan ver (PyAV ile dosya açma sürüm uyumsuzluğuna takılmasın)
+    raw = (np.clip(x, -1, 1) * 32767).astype("<i2").tobytes()
+    a16 = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "s16le", "-ar", str(SR), "-ac", "1", "-i", "-",
+                                        "-ar", "16000", "-f", "f32le", "-"], input=raw, capture_output=True, check=True).stdout, np.float32)
+    segs, _ = whisper().transcribe(a16, language="tr", beam_size=5, word_timestamps=True)
     kel = []
     for s in segs:
         for w in (s.words or []):
             kel.append((w.word.strip(), float(w.start), float(w.end)))
-    os.remove(p)
     return " ".join(k[0] for k in kel), kel
 
 
