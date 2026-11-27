@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:Poppins;src:url(/fonts/Poppins-Bold.ttf)} body{margin:0;background:#111}</style>
+<script type="importmap">{ "imports": { "three": "/engine/node_modules/three/build/three.module.js" } }</script></head>
+<body><canvas id="sheet" width="1080" height="1080"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { Toon } from '/engine/src/toon.js';
+import { LOOK } from '/lib/kadro.js';
+const scene = new THREE.Scene();
+const c = document.getElementById('sheet'), g = c.getContext('2d');
+// arka plan: mor -> mürdüm, ortada sıcak bir hale (gece lambası)
+let gr = g.createLinearGradient(0, 0, 0, 1080); gr.addColorStop(0, '#3a2a6e'); gr.addColorStop(1, '#7a2a5a'); g.fillStyle = gr; g.fillRect(0, 0, 1080, 1080);
+const rg = g.createRadialGradient(540, 470, 40, 540, 470, 520); rg.addColorStop(0, 'rgba(255,200,120,.55)'); rg.addColorStop(1, 'rgba(255,200,120,0)'); g.fillStyle = rg; g.fillRect(0, 0, 1080, 1080);
+// film şeridi deliği hissi: üst ve alt kenarda küçük yuvarlatılmış kareler
+g.fillStyle = 'rgba(255,255,255,.10)'; for (let x = 30; x < 1080; x += 90) { g.beginPath(); g.roundRect(x, 70, 44, 30, 8); g.fill(); g.beginPath(); g.roundRect(x, 980, 44, 30, 8); g.fill(); }
+const draw = (look, p, x, y, s) => {
+  const t = new Toon(look, scene); t.draw(p);
+  const cw = t.c.width, ch = t.c.height;
+  // kartın üst kısmı (kafa + omuzlar): tasarım y -160..560
+  const sy = 0, sh = ch * .62;
+  g.drawImage(t.c, 0, sy, cw, sh, x - cw * s / 2, y, cw * s, sh * s);
+};
+draw(LOOK.nihat, { expr: 'smug', look: -.55, lookY: -.05, lit: 1, rim: { color: '#ffc27a', a: .45 }, armL: [10, 4], armR: [10, 4] }, 690, 170, .92);
+draw(LOOK.ayca, { expr: 'focused', look: .8, gazeX: 1.4, lid: .05, brow: .2, lit: -1, rim: { color: '#ffc27a', a: .35 }, armL: [10, 4], armR: [10, 4] }, 375, 235, .92);
+await document.fonts.load('800 60px Poppins');
+g.textAlign = 'center'; g.font = '800 66px Poppins'; g.lineJoin = 'round'; g.strokeStyle = '#2a1a2c'; g.lineWidth = 14; g.strokeText('ÇİZGİDEN DİZİ', 540, 235); g.fillStyle = '#ffd27a'; g.fillText('ÇİZGİDEN DİZİ', 540, 235);
+window.__ready = true;
+</script></body></html>
