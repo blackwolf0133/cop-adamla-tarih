@@ -181,10 +181,12 @@ def kes(x, metinler):
         ilk = [t[k] for k in range(len(yazi)) if sahip[k] == i and t[k]]
         if son and ilk:
             c = (son[-1][1] + ilk[0][0]) / 2
+            lo, hi = son[-1][1] - .02, ilk[0][0] + .02             # yalnızca iki satırın ARASINDAKİ boşlukta ara
         else:                                                    # harf oranına göre tahmin
             c = dur * sum(len(m) for m in metinler[:i]) / sum(len(m) for m in metinler)
-        # sınırı en yakın sessiz noktaya çek (±0.25 sn içinde en düşük enerji)
-        hop = int(SR * .01); i0 = max(0, int((c - .25) * SR)); i1 = min(len(x), int((c + .25) * SR))
+            lo, hi = c - .25, c + .25
+        # sınırı o aralıktaki en sessiz noktaya çek
+        hop = int(SR * .01); i0 = max(0, int(max(lo, c - .4) * SR)); i1 = min(len(x), int(min(hi, c + .4) * SR))
         seg = x[i0:i1]
         if len(seg) > hop * 3:
             e = np.convolve(seg ** 2, np.ones(hop), "same"); c = (i0 + int(np.argmin(e))) / SR

@@ -217,6 +217,7 @@ export function yatakOdasi(scene) {
   const moon = keySpot('#9fb4ff', 3.6, [4.2, 4.4, -5.5], [.1, .6, -1.3], 22 * DEG, { map: moonMap }); L.add(moon); L.add(moon.target);
   const street = new THREE.PointLight('#ff9a50', 1.8, 0, 1.1); street.position.set(2.3, 1.2, -2.8); L.add(street);
   const hemi = new THREE.HemisphereLight('#5a6ac0', '#3a2a50', 1.05); L.add(hemi);
+  const fillN = new THREE.PointLight('#8fa0e8', 2.4, 0, 1.6); fillN.position.set(-1.7, 1.15, -1.55); L.add(fillN);           // Nihat'ın komodinine düşen soğuk dolgu (koridor)
   shadows(g);
   [phone, clock].forEach(o => o.traverse(m => { if (m.isMesh) m.castShadow = false; }));
   return { g, L, phone, leak, phoneLight, sc, scTex, screen, handPhone, cc, ccTex, lampN, lampA, moon, hemi, curtains };

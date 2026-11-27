@@ -14,7 +14,7 @@ const story = process.argv[2] || 'is-odasi';
 const SD = path.join(here, '..', 'stories', story), OUT = path.join(SD, 'out'); fs.mkdirSync(OUT, { recursive: true });
 const scale = +(args.scale || 1);
 const CHROME = findChrome();
-const ANGLE = process.platform === 'win32' ? ['--use-angle=d3d11'] : process.platform === 'darwin' ? ['--use-angle=metal'] : [];
+const ANGLE = process.platform === 'win32' ? ['--use-angle=d3d11'] : process.platform === 'darwin' ? ['--use-angle=metal'] : (process.env.CI ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : []);
 
 const { server, port } = await startServer();
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: 'new', protocolTimeout: 0,
@@ -48,7 +48,9 @@ if (args.stills) {
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', filt, '-q:v', '3', sheet]);
   console.log('sheet', sheet);
 } else {
-  const FPS = meta.FPS, from = +(args.from || 0), to = +(args.to || meta.DUR), N = Math.round((to - from) * FPS);
+  const FPS = meta.FPS; let from = +(args.from || 0), to = +(args.to || meta.DUR);
+  if (args.f0 != null) { from = +args.f0 / FPS; to = +args.f1 / FPS; }
+  const N = args.f0 != null ? (+args.f1 - +args.f0) : Math.round((to - from) * FPS);
   const name = args.name || meta.NAME + (scale !== 1 ? `_x${scale}` : '');
   const silent = path.join(OUT, name + '_video.mp4');
   const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'png', '-i', '-',
@@ -63,7 +65,7 @@ if (args.stills) {
   console.log(`\n${N} frames in ${((Date.now() - t1) / 1000).toFixed(1)} s`);
   const mix = path.join(SD, 'audio', 'mix.wav');
   const final = path.join(OUT, name + '.mp4');
-  if (fs.existsSync(mix)) {
+  if (fs.existsSync(mix) && !args.silent) {
     execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', silent, '-ss', String(from), '-t', String(to - from), '-i', mix, '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-shortest', final]);
     fs.unlinkSync(silent);
   } else fs.renameSync(silent, final);

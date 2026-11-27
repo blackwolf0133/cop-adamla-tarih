@@ -1,0 +1,101 @@
+# Çapkın Nihat: bir bölümü render eder (yumurta-stili motoru, parçalara bölünmüş) ve "dizi-<bölüm>" sürümüne koyar.
+name: Dizi render
+on:
+  workflow_dispatch:
+    inputs:
+      bolum:
+        description: "Bölüm klasörü (dizi/stories altında, örn. D01)"
+        required: true
+      parca:
+        description: "Kaç parçaya bölünsün"
+        default: "12"
+      olcek:
+        description: "Çözünürlük ölçeği (1 = 1080x1920, 0.5 = taslak)"
+        default: "1"
+permissions:
+  contents: write
+concurrency:
+  group: dizi-render-${{ inputs.bolum }}
+  cancel-in-progress: true
+env:
+  CI: "1"
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      parcalar: ${{ steps.p.outputs.parcalar }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: cd dizi/engine && npm ci --silent
+      - id: p
+        run: |
+          cd dizi/engine && node render.mjs ${{ inputs.bolum }} --cues
+          python3 - <<'PY' >> $GITHUB_OUTPUT
+          import json, math
+          d = json.load(open("../stories/${{ inputs.bolum }}/audio/cues.json"))
+          n = int(round(d["DUR"] * 30)); k = int("${{ inputs.parca }}")
+          step = math.ceil(n / k)
+          parts = [{"i": i, "f0": a, "f1": min(n, a + step)} for i, a in enumerate(range(0, n, step))]
+          print("parcalar=" + json.dumps(parts))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cues
+          path: dizi/stories/${{ inputs.bolum }}/audio/cues.json
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        p: ${{ fromJSON(needs.plan.outputs.parcalar) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: cd dizi/engine && npm ci --silent
+      - run: cd dizi/engine && node render.mjs ${{ inputs.bolum }} --f0=${{ matrix.p.f0 }} --f1=${{ matrix.p.f1 }} --scale=${{ inputs.olcek }} --silent=1 --name=parca_${{ matrix.p.i }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: parca-${{ matrix.p.i }}
+          path: dizi/stories/${{ inputs.bolum }}/out/parca_${{ matrix.p.i }}.mp4
+  kurgu:
+    needs: [plan, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg && pip install numpy
+      - uses: actions/download-artifact@v4
+        with:
+          path: parcalar
+      - name: Müzik (Kevin MacLeod, CC BY 4.0)
+        run: |
+          for ad in "Dark Times" "Heartbreaking" "Sad Trio"; do
+            u="https://incompetech.com/music/royalty-free/mp3-royaltyfree/${ad// /%20}.mp3"
+            if curl -fsSL -A "Mozilla/5.0" "$u" -o muzik.mp3 && [ -s muzik.mp3 ]; then echo "müzik: $ad"; echo "$ad" > muzik_ad.txt; break; fi
+          done || true
+      - name: Miks ve birleştirme
+        run: |
+          B=dizi/stories/${{ inputs.bolum }}
+          mkdir -p $B/audio && cp parcalar/cues/cues.json $B/audio/
+          python dizi/tools/dizi_mix.py $B $( [ -s muzik.mp3 ] && echo muzik.mp3 )
+          ls parcalar/parca-*/parca_*.mp4 | sort -t_ -k2 -n > liste.txt
+          sed 's/^/file /' liste.txt > concat.txt; cat concat.txt
+          ffmpeg -v error -y -f concat -safe 0 -i concat.txt -c copy video.mp4
+          ffmpeg -v error -y -i video.mp4 -i $B/audio/mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart ${{ inputs.bolum }}.mp4
+          ffprobe -v error -show_entries format=duration:stream=width,height -of compact ${{ inputs.bolum }}.mp4
+      - name: Sürüme yükle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          T=dizi-${{ inputs.bolum }}
+          gh release delete $T -y --cleanup-tag 2>/dev/null || true
+          gh release create $T ${{ inputs.bolum }}.mp4 --prerelease --title "Çapkın Nihat ${{ inputs.bolum }}" --notes "Müzik: $(cat muzik_ad.txt 2>/dev/null || echo sentetik) · Kevin MacLeod (incompetech.com) · CC BY 4.0"
