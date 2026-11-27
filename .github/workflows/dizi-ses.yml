@@ -3,17 +3,22 @@ name: Dizi sesi
 on:
   workflow_dispatch:
     inputs:
-      bolum: {description: "Bölüm klasörü (dizi/stories altında, örn. D01)", required: true}
+      bolum:
+        description: "Bölüm klasörü (dizi/stories altında, örn. D01)"
+        required: true
 permissions:
   contents: write
-concurrency: {group: dizi-ses-${{ inputs.bolum }}, cancel-in-progress: false}
+concurrency:
+  group: dizi-ses-${{ inputs.bolum }}
+  cancel-in-progress: false
 jobs:
   ses:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: "3.12"}
+        with:
+          python-version: "3.12"
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: pip install numpy faster-whisper
       - env:
