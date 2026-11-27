@@ -47,7 +47,7 @@ function under(g, path, lit, k = 1) {
 }
 function ink(g, path) { g.strokeStyle = PLUM; g.lineWidth = THIN; g.lineJoin = 'round'; path(); g.stroke(); }
 function variation(look) {                 // every character's head differs a little (seeded by its look)
-  let hsh = 7; for (const ch of JSON.stringify(look)) hsh = (hsh * 31 + ch.charCodeAt(0)) % 9973;
+  let hsh = 7; for (const ch of (look.id || JSON.stringify(look))) hsh = (hsh * 31 + ch.charCodeAt(0)) % 9973;
   const r = k => ((hsh * (k + 3) * 7919) % 1000) / 1000 - .5;
   return { egg: -.11 + r(1) * .06, nT: 1.75 + r(2) * .24, nB: 2.3 + r(3) * .24, r: 1 + r(4) * .05 };
 }

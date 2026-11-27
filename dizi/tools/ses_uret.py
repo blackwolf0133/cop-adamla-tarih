@@ -47,7 +47,7 @@ def tts(metin, ses):
         sira.remove(_SON["model"]); sira.insert(0, _SON["model"])
     for model in sira:
         dil = True
-        for deneme in range(4):
+        for deneme in range(8):
             sc = {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": ses}}}
             if dil:
                 sc["languageCode"] = "tr-TR"
@@ -69,10 +69,11 @@ def tts(metin, ses):
                 if e.code == 400 and dil and "language" in msg.lower():
                     dil = False
                     continue
-                if e.code == 429 and "minute" not in msg.lower() and "per_minute" not in msg.lower():
+                gunluk = e.code == 429 and ("per day" in msg.lower() or "perday" in msg.lower().replace("_", ""))
+                if gunluk:
                     break
-                if e.code in (429, 500, 503):
-                    time.sleep(20 * (deneme + 1))
+                if e.code in (429, 500, 503) and deneme < 7:
+                    time.sleep(35)
                     continue
                 break
             except (KeyError, IndexError, TimeoutError, urllib.error.URLError) as e:
@@ -160,11 +161,65 @@ def hizala(metin, x, bas):
     return [{"word": w, "start": round(bas + a, 3), "end": round(bas + b, 3)} for w, (a, b) in zip(yazi, t)]
 
 
+def kes(x, metinler):
+    """Bir konuşmacının tek parça sesini satırlara böler: whisper kelime saatleri + yazıyla hizalama; sınır = iki satır
+    arasındaki sessizliğin ortası."""
+    _, kel = dok(x)
+    yazi, sahip = [], []
+    for i, m in enumerate(metinler):
+        for w in m.split():
+            yazi.append(" ".join(_norm(w))); sahip.append(i)
+    hn = [" ".join(_norm(k[0])) for k in kel]
+    t = [None] * len(yazi)
+    for a, b, n in difflib.SequenceMatcher(None, yazi, hn, autojunk=False).get_matching_blocks():
+        for k in range(n):
+            t[a + k] = (kel[b + k][1], kel[b + k][2])
+    sinir = [0]
+    dur = len(x) / SR
+    for i in range(1, len(metinler)):
+        son = [t[k] for k in range(len(yazi)) if sahip[k] == i - 1 and t[k]]
+        ilk = [t[k] for k in range(len(yazi)) if sahip[k] == i and t[k]]
+        if son and ilk:
+            c = (son[-1][1] + ilk[0][0]) / 2
+        else:                                                    # harf oranına göre tahmin
+            c = dur * sum(len(m) for m in metinler[:i]) / sum(len(m) for m in metinler)
+        # sınırı en yakın sessiz noktaya çek (±0.25 sn içinde en düşük enerji)
+        hop = int(SR * .01); i0 = max(0, int((c - .25) * SR)); i1 = min(len(x), int((c + .25) * SR))
+        seg = x[i0:i1]
+        if len(seg) > hop * 3:
+            e = np.convolve(seg ** 2, np.ones(hop), "same"); c = (i0 + int(np.argmin(e))) / SR
+        sinir.append(int(c * SR))
+    sinir.append(len(x))
+    parca = []
+    for i in range(len(metinler)):
+        y = x[sinir[i]:sinir[i + 1]]
+        a = np.abs(y); th = max(1e-4, a.max() * .02)
+        idx = np.where(a > th)[0]
+        y = y[max(0, idx[0] - int(.03 * SR)): idx[-1] + int(.06 * SR)] if len(idx) else y
+        parca.append(y.copy())
+    return parca
+
+
 def main(bolum):
     vd = os.path.join(bolum, "voice")
     cfg = json.load(open(os.path.join(vd, "satirlar.json"), encoding="utf-8"))
     os.makedirs(os.path.join(vd, "satir"), exist_ok=True)
     sessiz = os.environ.get("TTS_ENGINE") == "sessiz"
+    hazir = {}
+    if not sessiz and os.environ.get("TOPLU", "1") == "1":
+        for kim, ses in cfg["sesler"].items():
+            sl = [s for s in cfg["satirlar"] if s["kim"] == kim]
+            if not sl:
+                continue
+            print(f"== {kim}: {len(sl)} satır tek istekte ({ses['voice']})", flush=True)
+            try:
+                ham = tts("\n\n".join(s["metin"] for s in sl), ses["voice"])
+                x = ffmpeg_isle(ham, "anull", 1.0)
+                for s, y in zip(sl, kes(x, [s["metin"] for s in sl])):
+                    hazir[s["id"]] = y
+                time.sleep(5)
+            except Exception as e:  # noqa: BLE001
+                print(f"::warning::{kim} toplu okunamadı, satır satır denenecek: {e}", flush=True)
     parcalar, words, lines = [], [], []
     t = 0.25
     for s in cfg["satirlar"]:
@@ -172,6 +227,18 @@ def main(bolum):
         print(f"{s['id']} [{s['kim']}] {s['metin']}", flush=True)
         if sessiz:
             x = np.zeros(int(SR * max(.8, len(s["metin"]) * .075)), np.float32)
+        elif s["id"] in hazir:
+            y = hazir[s["id"]]
+            raw = (np.clip(y, -1, 1) * 32767).astype("<i2").tobytes()
+            tempo = ses.get("tempo", 1.0)
+            chain = (f"atempo={tempo}," if abs(tempo - 1) > .005 else "") + FX[ses.get("fx", "oda")]
+            x = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-f", "s16le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", chain,
+                                              "-ar", str(SR), "-ac", "1", "-f", "f32le", "-"], input=raw, capture_output=True, check=True).stdout, np.float32).copy()
+            try:
+                dokum, _ = dok(x)
+                print(f"  okunuş: {dokum}", flush=True)
+            except Exception:  # noqa: BLE001
+                pass
         else:
             en_iyi = None
             for deneme in range(3):

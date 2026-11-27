@@ -13,7 +13,7 @@ export function groupWords(words) {
   return out;
 }
 
-export function drawCaption(g, groups, t, W, H, { font = '"Segoe UI Black", "Arial Black", sans-serif', size = 74, y = .70 } = {}) {
+export function drawCaption(g, groups, t, W, H, { font = 'Poppins, "Segoe UI Black", "Arial Black", sans-serif', size = 74, y = .70 } = {}) {
   const c = groups.find(c => t >= c.start - .02 && t < c.until);
   if (!c) return;
   const text = c.text.replace(/^"|"$/g, '').replace(/"/g, '');

@@ -26,7 +26,7 @@ const env = await (await fetch(base + (story.ENV || 'voice/env.json'))).json().c
 const groups = groupWords(words.words);
 const scene = new THREE.Scene();
 const cam = new THREE.PerspectiveCamera(50, W / H, .1, 400);
-const ctx = { THREE, scene, cam, renderer, W, H, words: words.words, env, fps: story.FPS || 30 };
+const ctx = { THREE, scene, cam, renderer, W, H, words: words.words, lines: words.lines || [], env, fps: story.FPS || 30 };
 await story.setup(ctx);
 const post = new Post(renderer, W, H);
 
@@ -50,6 +50,6 @@ window.render = (t) => {
   if (!q.has('nocap') && look.captions !== false) drawCaption(g, groups, t, W, H);
   if (story.overlay) story.overlay(g, t, ctx);
 };
-window.__meta = { DUR: story.DUR, FPS: story.FPS || 30, NAME: story.NAME || STORY, W, H, CUES: story.CUES || [] };
+window.__meta = { DUR: story.DUR, LINES: words.lines || [], FPS: story.FPS || 30, NAME: story.NAME || STORY, W, H, CUES: story.CUES || [] };
 window.__ready = true;
 if (!q.has('capture')) { const t0 = performance.now(); const loop = () => { window.render(((performance.now() - t0) / 1000) % story.DUR); requestAnimationFrame(loop); }; loop(); }
