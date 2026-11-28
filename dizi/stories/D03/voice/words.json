@@ -1,0 +1,672 @@
+{
+ "words": [
+  {
+   "word": "Pazar",
+   "start": 0.25,
+   "end": 0.59,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "sabahı.",
+   "start": 0.59,
+   "end": 1.11,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "Dünkü",
+   "start": 1.51,
+   "end": 1.95,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "gömleği",
+   "start": 1.95,
+   "end": 2.39,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "çamaşır",
+   "start": 2.39,
+   "end": 2.83,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "sepetindeydi.",
+   "start": 2.83,
+   "end": 3.61,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "Maçtan",
+   "start": 4.123,
+   "end": 4.543,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "dönen",
+   "start": 4.543,
+   "end": 4.883,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "bir",
+   "start": 4.883,
+   "end": 5.003,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "adamın",
+   "start": 5.003,
+   "end": 5.363,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "gömleği.",
+   "start": 5.363,
+   "end": 5.903,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "Ter",
+   "start": 6.303,
+   "end": 6.643,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "kokusu",
+   "start": 6.643,
+   "end": 7.103,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "yok.",
+   "start": 7.103,
+   "end": 7.283,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "Vanilya",
+   "start": 7.924,
+   "end": 8.404,
+   "line": "L03",
+   "kim": "ic"
+  },
+  {
+   "word": "kokuyordu.",
+   "start": 8.404,
+   "end": 9.109,
+   "line": "L03",
+   "kim": "ic"
+  },
+  {
+   "word": "Ben",
+   "start": 9.559,
+   "end": 9.739,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "vanilya",
+   "start": 9.739,
+   "end": 10.159,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "sürmem.",
+   "start": 10.159,
+   "end": 10.519,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "Hiç",
+   "start": 10.739,
+   "end": 11.079,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "sürmedim.",
+   "start": 11.079,
+   "end": 11.499,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "Dünkü",
+   "start": 12.177,
+   "end": 12.437,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "aramayı",
+   "start": 12.437,
+   "end": 12.877,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "silmiştim.",
+   "start": 12.877,
+   "end": 13.457,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "Nihat",
+   "start": 13.657,
+   "end": 14.157,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "hiçbir",
+   "start": 14.157,
+   "end": 14.357,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "şey",
+   "start": 14.357,
+   "end": 14.617,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "anlamadı.",
+   "start": 14.617,
+   "end": 15.137,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "Yakasında",
+   "start": 15.662,
+   "end": 16.102,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "bir",
+   "start": 16.102,
+   "end": 16.302,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "saç",
+   "start": 16.302,
+   "end": 16.502,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "teli",
+   "start": 16.502,
+   "end": 16.842,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "vardı.",
+   "start": 16.842,
+   "end": 17.142,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "Uzun",
+   "start": 17.662,
+   "end": 18.102,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "ve",
+   "start": 18.102,
+   "end": 18.302,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "sarı.",
+   "start": 18.302,
+   "end": 18.622,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "Benim",
+   "start": 19.272,
+   "end": 19.432,
+   "line": "L07",
+   "kim": "ic"
+  },
+  {
+   "word": "saçım",
+   "start": 19.432,
+   "end": 19.812,
+   "line": "L07",
+   "kim": "ic"
+  },
+  {
+   "word": "kestane.",
+   "start": 19.812,
+   "end": 20.312,
+   "line": "L07",
+   "kim": "ic"
+  },
+  {
+   "word": "Bu",
+   "start": 20.986,
+   "end": 21.146,
+   "line": "L08",
+   "kim": "ayca"
+  },
+  {
+   "word": "saç",
+   "start": 21.146,
+   "end": 21.386,
+   "line": "L08",
+   "kim": "ayca"
+  },
+  {
+   "word": "kimin,",
+   "start": 21.386,
+   "end": 21.826,
+   "line": "L08",
+   "kim": "ayca"
+  },
+  {
+   "word": "Nihat?",
+   "start": 21.826,
+   "end": 22.445,
+   "line": "L08",
+   "kim": "ayca"
+  },
+  {
+   "word": "Asansörde",
+   "start": 22.895,
+   "end": 23.755,
+   "line": "L09",
+   "kim": "nihat"
+  },
+  {
+   "word": "biri",
+   "start": 23.755,
+   "end": 24.035,
+   "line": "L09",
+   "kim": "nihat"
+  },
+  {
+   "word": "sürtündü",
+   "start": 24.035,
+   "end": 24.855,
+   "line": "L09",
+   "kim": "nihat"
+  },
+  {
+   "word": "herhalde.",
+   "start": 24.855,
+   "end": 25.655,
+   "line": "L09",
+   "kim": "nihat"
+  },
+  {
+   "word": "Kalabalıktı.",
+   "start": 25.715,
+   "end": 26.755,
+   "line": "L09",
+   "kim": "nihat"
+  },
+  {
+   "word": "Halı",
+   "start": 27.414,
+   "end": 27.734,
+   "line": "L10",
+   "kim": "ayca"
+  },
+  {
+   "word": "sahanın",
+   "start": 27.734,
+   "end": 28.074,
+   "line": "L10",
+   "kim": "ayca"
+  },
+  {
+   "word": "asansörü",
+   "start": 28.074,
+   "end": 28.682,
+   "line": "L10",
+   "kim": "ayca"
+  },
+  {
+   "word": "mü",
+   "start": 28.682,
+   "end": 28.834,
+   "line": "L10",
+   "kim": "ayca"
+  },
+  {
+   "word": "var?",
+   "start": 28.834,
+   "end": 29.014,
+   "line": "L10",
+   "kim": "ayca"
+  },
+  {
+   "word": "Hayatım,",
+   "start": 29.64,
+   "end": 30.44,
+   "line": "L11",
+   "kim": "nihat"
+  },
+  {
+   "word": "bizim",
+   "start": 30.68,
+   "end": 31.0,
+   "line": "L11",
+   "kim": "nihat"
+  },
+  {
+   "word": "apartmanın",
+   "start": 31.0,
+   "end": 31.72,
+   "line": "L11",
+   "kim": "nihat"
+  },
+  {
+   "word": "asansörü.",
+   "start": 31.72,
+   "end": 32.36,
+   "line": "L11",
+   "kim": "nihat"
+  },
+  {
+   "word": "Hadi",
+   "start": 32.54,
+   "end": 32.96,
+   "line": "L11",
+   "kim": "nihat"
+  },
+  {
+   "word": "ama.",
+   "start": 32.96,
+   "end": 33.34,
+   "line": "L11",
+   "kim": "nihat"
+  },
+  {
+   "word": "Gülümsedi.",
+   "start": 33.964,
+   "end": 34.524,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "Yalan",
+   "start": 34.864,
+   "end": 35.304,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "söylerken",
+   "start": 35.304,
+   "end": 35.864,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "hep",
+   "start": 35.864,
+   "end": 36.064,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "gülümser.",
+   "start": 36.064,
+   "end": 36.624,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "Akşam",
+   "start": 37.189,
+   "end": 37.509,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "çöpü",
+   "start": 37.509,
+   "end": 37.752,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "çıkarırken",
+   "start": 37.752,
+   "end": 38.361,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "merdivende",
+   "start": 38.361,
+   "end": 38.969,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "durdum.",
+   "start": 38.969,
+   "end": 39.329,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "Aynı",
+   "start": 39.911,
+   "end": 40.191,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "koku.",
+   "start": 40.191,
+   "end": 40.531,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "Vanilya.",
+   "start": 41.151,
+   "end": 41.831,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "Alt",
+   "start": 42.071,
+   "end": 42.231,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "kattan",
+   "start": 42.231,
+   "end": 42.611,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "geliyordu.",
+   "start": 42.611,
+   "end": 43.171,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "Bu",
+   "start": 44.12,
+   "end": 44.22,
+   "line": "L15",
+   "kim": "ic"
+  },
+  {
+   "word": "apartmanda",
+   "start": 44.22,
+   "end": 44.82,
+   "line": "L15",
+   "kim": "ic"
+  },
+  {
+   "word": "vanilya",
+   "start": 44.82,
+   "end": 45.28,
+   "line": "L15",
+   "kim": "ic"
+  },
+  {
+   "word": "kokan",
+   "start": 45.28,
+   "end": 45.62,
+   "line": "L15",
+   "kim": "ic"
+  },
+  {
+   "word": "kim?",
+   "start": 45.62,
+   "end": 45.78,
+   "line": "L15",
+   "kim": "ic"
+  }
+ ],
+ "lines": [
+  {
+   "id": "L01",
+   "kim": "ic",
+   "start": 0.25,
+   "end": 3.723,
+   "text": "Pazar sabahı. Dünkü gömleği çamaşır sepetindeydi."
+  },
+  {
+   "id": "L02",
+   "kim": "ic",
+   "start": 4.123,
+   "end": 7.474,
+   "text": "Maçtan dönen bir adamın gömleği. Ter kokusu yok."
+  },
+  {
+   "id": "L03",
+   "kim": "ic",
+   "start": 7.924,
+   "end": 9.109,
+   "text": "Vanilya kokuyordu."
+  },
+  {
+   "id": "L04",
+   "kim": "ic",
+   "start": 9.559,
+   "end": 11.727,
+   "text": "Ben vanilya sürmem. Hiç sürmedim."
+  },
+  {
+   "id": "L05",
+   "kim": "ic",
+   "start": 12.177,
+   "end": 15.262,
+   "text": "Dünkü aramayı silmiştim. Nihat hiçbir şey anlamadı."
+  },
+  {
+   "id": "L06",
+   "kim": "ic",
+   "start": 15.662,
+   "end": 18.722,
+   "text": "Yakasında bir saç teli vardı. Uzun ve sarı."
+  },
+  {
+   "id": "L07",
+   "kim": "ic",
+   "start": 19.272,
+   "end": 20.486,
+   "text": "Benim saçım kestane."
+  },
+  {
+   "id": "L08",
+   "kim": "ayca",
+   "start": 20.986,
+   "end": 22.445,
+   "text": "Bu saç kimin, Nihat?"
+  },
+  {
+   "id": "L09",
+   "kim": "nihat",
+   "start": 22.895,
+   "end": 26.914,
+   "text": "Asansörde biri sürtündü herhalde. Kalabalıktı."
+  },
+  {
+   "id": "L10",
+   "kim": "ayca",
+   "start": 27.414,
+   "end": 29.14,
+   "text": "Halı sahanın asansörü mü var?"
+  },
+  {
+   "id": "L11",
+   "kim": "nihat",
+   "start": 29.64,
+   "end": 33.364,
+   "text": "Hayatım, bizim apartmanın asansörü. Hadi ama."
+  },
+  {
+   "id": "L12",
+   "kim": "ic",
+   "start": 33.964,
+   "end": 36.789,
+   "text": "Gülümsedi. Yalan söylerken hep gülümser."
+  },
+  {
+   "id": "L13",
+   "kim": "ic",
+   "start": 37.189,
+   "end": 39.411,
+   "text": "Akşam çöpü çıkarırken merdivende durdum."
+  },
+  {
+   "id": "L14",
+   "kim": "ic",
+   "start": 39.911,
+   "end": 43.32,
+   "text": "Aynı koku. Vanilya. Alt kattan geliyordu."
+  },
+  {
+   "id": "L15",
+   "kim": "ic",
+   "start": 44.12,
+   "end": 45.925,
+   "text": "Bu apartmanda vanilya kokan kim?"
+  }
+ ],
+ "dur": 46.325
+}
