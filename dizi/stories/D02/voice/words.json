@@ -1,0 +1,658 @@
+{
+ "words": [
+  {
+   "word": "Cumartesi",
+   "start": 0.25,
+   "end": 0.85,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "akşamı.",
+   "start": 0.85,
+   "end": 1.77,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "Nihat",
+   "start": 1.77,
+   "end": 2.35,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "halı",
+   "start": 2.35,
+   "end": 2.69,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "sahaya",
+   "start": 2.69,
+   "end": 3.09,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "gidiyormuş.",
+   "start": 3.09,
+   "end": 3.51,
+   "line": "L01",
+   "kim": "ic"
+  },
+  {
+   "word": "Çantasını",
+   "start": 4.245,
+   "end": 4.805,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "kendisi",
+   "start": 4.805,
+   "end": 5.245,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "hazırladı.",
+   "start": 5.245,
+   "end": 5.785,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "On",
+   "start": 5.785,
+   "end": 6.161,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "iki",
+   "start": 6.161,
+   "end": 6.725,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "yılda",
+   "start": 6.725,
+   "end": 7.285,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "ilk",
+   "start": 7.285,
+   "end": 7.465,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "kez.",
+   "start": 7.465,
+   "end": 7.925,
+   "line": "L02",
+   "kim": "ic"
+  },
+  {
+   "word": "Ben",
+   "start": 8.584,
+   "end": 8.784,
+   "line": "L03",
+   "kim": "nihat"
+  },
+  {
+   "word": "bir",
+   "start": 8.784,
+   "end": 8.924,
+   "line": "L03",
+   "kim": "nihat"
+  },
+  {
+   "word": "duş",
+   "start": 8.924,
+   "end": 9.164,
+   "line": "L03",
+   "kim": "nihat"
+  },
+  {
+   "word": "alıp",
+   "start": 9.164,
+   "end": 9.344,
+   "line": "L03",
+   "kim": "nihat"
+  },
+  {
+   "word": "çıkıyorum,",
+   "start": 9.344,
+   "end": 9.764,
+   "line": "L03",
+   "kim": "nihat"
+  },
+  {
+   "word": "hayatım.",
+   "start": 9.764,
+   "end": 10.244,
+   "line": "L03",
+   "kim": "nihat"
+  },
+  {
+   "word": "Su",
+   "start": 10.618,
+   "end": 11.338,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "sesi",
+   "start": 11.338,
+   "end": 11.558,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "başlar",
+   "start": 11.558,
+   "end": 12.078,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "başlamaz",
+   "start": 12.078,
+   "end": 12.678,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "çantayı",
+   "start": 12.678,
+   "end": 13.198,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "açtım.",
+   "start": 13.198,
+   "end": 13.578,
+   "line": "L04",
+   "kim": "ic"
+  },
+  {
+   "word": "Kramponlar",
+   "start": 14.17,
+   "end": 14.99,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "yepyeni.",
+   "start": 14.99,
+   "end": 15.75,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "Etiketi",
+   "start": 16.01,
+   "end": 16.71,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "bile",
+   "start": 16.71,
+   "end": 16.85,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "üstünde.",
+   "start": 16.85,
+   "end": 17.39,
+   "line": "L05",
+   "kim": "ic"
+  },
+  {
+   "word": "Kim",
+   "start": 18.124,
+   "end": 18.344,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "hiç",
+   "start": 18.344,
+   "end": 18.624,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "giymediği",
+   "start": 18.624,
+   "end": 19.364,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "ayakkabıyla",
+   "start": 19.364,
+   "end": 20.004,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "maça",
+   "start": 20.004,
+   "end": 20.344,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "gider?",
+   "start": 20.344,
+   "end": 20.584,
+   "line": "L06",
+   "kim": "ic"
+  },
+  {
+   "word": "Telefonu",
+   "start": 21.295,
+   "end": 21.835,
+   "line": "L07",
+   "kim": "ic"
+  },
+  {
+   "word": "ceketinin",
+   "start": 21.835,
+   "end": 22.255,
+   "line": "L07",
+   "kim": "ic"
+  },
+  {
+   "word": "cebindeydi.",
+   "start": 22.255,
+   "end": 22.995,
+   "line": "L07",
+   "kim": "ic"
+  },
+  {
+   "word": "Şifresi",
+   "start": 23.612,
+   "end": 24.312,
+   "line": "L08",
+   "kim": "ic"
+  },
+  {
+   "word": "hâlâ",
+   "start": 24.312,
+   "end": 24.752,
+   "line": "L08",
+   "kim": "ic"
+  },
+  {
+   "word": "düğün",
+   "start": 24.752,
+   "end": 25.132,
+   "line": "L08",
+   "kim": "ic"
+  },
+  {
+   "word": "tarihimiz.",
+   "start": 25.132,
+   "end": 25.792,
+   "line": "L08",
+   "kim": "ic"
+  },
+  {
+   "word": "Ne",
+   "start": 26.272,
+   "end": 26.572,
+   "line": "L08",
+   "kim": "ic"
+  },
+  {
+   "word": "incelik.",
+   "start": 26.572,
+   "end": 27.232,
+   "line": "L08",
+   "kim": "ic"
+  },
+  {
+   "word": "Rehberde",
+   "start": 27.806,
+   "end": 28.366,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "tek",
+   "start": 28.366,
+   "end": 28.586,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "bir",
+   "start": 28.586,
+   "end": 28.806,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "Kaan",
+   "start": 28.806,
+   "end": 29.126,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "vardı.",
+   "start": 29.126,
+   "end": 29.606,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "Bizim",
+   "start": 30.186,
+   "end": 30.406,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "takımdaki",
+   "start": 30.406,
+   "end": 30.946,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "Kaan.",
+   "start": 30.946,
+   "end": 31.374,
+   "line": "L09",
+   "kim": "ic"
+  },
+  {
+   "word": "Aradım.",
+   "start": 31.974,
+   "end": 32.394,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "Bir",
+   "start": 32.654,
+   "end": 33.314,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "kez",
+   "start": 33.314,
+   "end": 33.594,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "çaldı.",
+   "start": 33.594,
+   "end": 34.254,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "İki",
+   "start": 34.574,
+   "end": 35.174,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "kez",
+   "start": 35.174,
+   "end": 35.474,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "çaldı.",
+   "start": 35.474,
+   "end": 36.094,
+   "line": "L10",
+   "kim": "ic"
+  },
+  {
+   "word": "Alo?",
+   "start": 36.847,
+   "end": 37.167,
+   "line": "L11",
+   "kim": "kaan"
+  },
+  {
+   "word": "Nihat?",
+   "start": 37.727,
+   "end": 38.107,
+   "line": "L11",
+   "kim": "kaan"
+  },
+  {
+   "word": "Bir",
+   "start": 38.747,
+   "end": 38.887,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "kadın",
+   "start": 38.887,
+   "end": 39.127,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "sesi.",
+   "start": 39.127,
+   "end": 39.427,
+   "line": "L12",
+   "kim": "ic"
+  },
+  {
+   "word": "Tam",
+   "start": 40.328,
+   "end": 40.608,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "o",
+   "start": 40.608,
+   "end": 40.928,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "an,",
+   "start": 40.928,
+   "end": 41.188,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "banyoda",
+   "start": 41.188,
+   "end": 42.188,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "su",
+   "start": 42.188,
+   "end": 42.428,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "sesi",
+   "start": 42.428,
+   "end": 42.648,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "kesildi.",
+   "start": 42.648,
+   "end": 43.368,
+   "line": "L13",
+   "kim": "ic"
+  },
+  {
+   "word": "Bizim",
+   "start": 44.24,
+   "end": 44.46,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "takımdaki",
+   "start": 44.46,
+   "end": 45.08,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "Kaan...",
+   "start": 45.08,
+   "end": 45.52,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "bir",
+   "start": 45.52,
+   "end": 46.54,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "kadın",
+   "start": 46.54,
+   "end": 46.84,
+   "line": "L14",
+   "kim": "ic"
+  },
+  {
+   "word": "mıydı?",
+   "start": 46.84,
+   "end": 47.38,
+   "line": "L14",
+   "kim": "ic"
+  }
+ ],
+ "lines": [
+  {
+   "id": "L01",
+   "kim": "ic",
+   "start": 0.25,
+   "end": 3.795,
+   "text": "Cumartesi akşamı. Nihat halı sahaya gidiyormuş."
+  },
+  {
+   "id": "L02",
+   "kim": "ic",
+   "start": 4.245,
+   "end": 8.084,
+   "text": "Çantasını kendisi hazırladı. On iki yılda ilk kez."
+  },
+  {
+   "id": "L03",
+   "kim": "nihat",
+   "start": 8.584,
+   "end": 10.268,
+   "text": "Ben bir duş alıp çıkıyorum, hayatım."
+  },
+  {
+   "id": "L04",
+   "kim": "ic",
+   "start": 10.618,
+   "end": 13.72,
+   "text": "Su sesi başlar başlamaz çantayı açtım."
+  },
+  {
+   "id": "L05",
+   "kim": "ic",
+   "start": 14.17,
+   "end": 17.574,
+   "text": "Kramponlar yepyeni. Etiketi bile üstünde."
+  },
+  {
+   "id": "L06",
+   "kim": "ic",
+   "start": 18.124,
+   "end": 20.945,
+   "text": "Kim hiç giymediği ayakkabıyla maça gider?"
+  },
+  {
+   "id": "L07",
+   "kim": "ic",
+   "start": 21.295,
+   "end": 23.112,
+   "text": "Telefonu ceketinin cebindeydi."
+  },
+  {
+   "id": "L08",
+   "kim": "ic",
+   "start": 23.612,
+   "end": 27.406,
+   "text": "Şifresi hâlâ düğün tarihimiz. Ne incelik."
+  },
+  {
+   "id": "L09",
+   "kim": "ic",
+   "start": 27.806,
+   "end": 31.374,
+   "text": "Rehberde tek bir Kaan vardı. Bizim takımdaki Kaan."
+  },
+  {
+   "id": "L10",
+   "kim": "ic",
+   "start": 31.974,
+   "end": 36.247,
+   "text": "Aradım. Bir kez çaldı. İki kez çaldı."
+  },
+  {
+   "id": "L11",
+   "kim": "kaan",
+   "start": 36.847,
+   "end": 38.297,
+   "text": "Alo? Nihat?"
+  },
+  {
+   "id": "L12",
+   "kim": "ic",
+   "start": 38.747,
+   "end": 39.728,
+   "text": "Bir kadın sesi."
+  },
+  {
+   "id": "L13",
+   "kim": "ic",
+   "start": 40.328,
+   "end": 43.44,
+   "text": "Tam o an, banyoda su sesi kesildi."
+  },
+  {
+   "id": "L14",
+   "kim": "ic",
+   "start": 44.24,
+   "end": 47.411,
+   "text": "Bizim takımdaki Kaan... bir kadın mıydı?"
+  }
+ ],
+ "dur": 47.811
+}
