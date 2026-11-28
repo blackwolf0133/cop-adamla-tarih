@@ -1,0 +1,24 @@
+{
+ "sesler": {
+  "ic":    {"voice": "Vindemiatrix", "fx": "ic",  "tempo": 0.97},
+  "ayca":  {"voice": "Vindemiatrix", "fx": "oda", "tempo": 1.0},
+  "nihat": {"voice": "Algenib",      "fx": "oda", "tempo": 1.0}
+ },
+ "satirlar": [
+  {"id": "L01", "kim": "ic",    "metin": "Pazar sabahı. Dünkü gömleği çamaşır sepetindeydi.", "ara": 0.35},
+  {"id": "L02", "kim": "ic",    "metin": "Maçtan dönen bir adamın gömleği. Ter kokusu yok.", "ara": 0.4},
+  {"id": "L03", "kim": "ic",    "metin": "Vanilya kokuyordu.", "ara": 0.45},
+  {"id": "L04", "kim": "ic",    "metin": "Ben vanilya sürmem. Hiç sürmedim.", "ara": 0.45},
+  {"id": "L05", "kim": "ic",    "metin": "Dünkü aramayı silmiştim. Nihat hiçbir şey anlamadı.", "ara": 0.45},
+  {"id": "L06", "kim": "ic",    "metin": "Yakasında bir saç teli vardı. Uzun ve sarı.", "ara": 0.4},
+  {"id": "L07", "kim": "ic",    "metin": "Benim saçım kestane.", "ara": 0.55},
+  {"id": "L08", "kim": "ayca",  "metin": "Bu saç kimin, Nihat?", "ara": 0.5},
+  {"id": "L09", "kim": "nihat", "metin": "Asansörde biri sürtündü herhalde. Kalabalıktı.", "ara": 0.45},
+  {"id": "L10", "kim": "ayca",  "metin": "Halı sahanın asansörü mü var?", "ara": 0.5},
+  {"id": "L11", "kim": "nihat", "metin": "Hayatım, bizim apartmanın asansörü. Hadi ama.", "ara": 0.5},
+  {"id": "L12", "kim": "ic",    "metin": "Gülümsedi. Yalan söylerken hep gülümser.", "ara": 0.6},
+  {"id": "L13", "kim": "ic",    "metin": "Akşam çöpü çıkarırken merdivende durdum.", "ara": 0.4},
+  {"id": "L14", "kim": "ic",    "metin": "Aynı koku. Vanilya. Alt kattan geliyordu.", "ara": 0.5},
+  {"id": "L15", "kim": "ic",    "metin": "Bu apartmanda vanilya kokan kim?", "ara": 0.8}
+ ]
+}

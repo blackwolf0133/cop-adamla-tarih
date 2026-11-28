@@ -303,3 +303,77 @@ export function salonPencere(scene) {
   shadows(g);
   return { g, L };
 }
+
+// ---------------------------------------------------------------- APARTMAN MERDİVENİ (x ≈ 300), akşam
+// Ayça'ların sahanlığı (y = 0), merdiven sağa doğru alt kata iner (alt sahanlık y = -1.36). Alt katın kapısı (Daire 3) arka duvarda,
+// altından sıcak ışık sızar. Ana ışık: sahanlıktaki duvar apliği (sıcak, görünür); dolgu: merdiven penceresinden soğuk akşam.
+export const MD = { x: 300, aycaPos: V(300.6, 0, -.85), kapiAyca: V(298.7, 0, -2.4), altKapi: V(304.9, -1.36, -2.4), altY: -1.36 };
+function doorNo(n) {
+  const [c, g] = cv(128, 96); g.fillStyle = D('#e8d38a'); g.beginPath(); g.roundRect(4, 4, 120, 88, 14); g.fill();
+  g.strokeStyle = D('#6a4a20'); g.lineWidth = 6; g.stroke(); g.fillStyle = D('#3a2410'); g.font = '800 64px Poppins, sans-serif'; g.textAlign = 'center'; g.fillText(String(n), 64, 72);
+  return texOf(c);
+}
+export function merdiven(scene) {
+  const g = new THREE.Group(); scene.add(g); const L = new THREE.Group(); scene.add(L);
+  const X = 300, Y1 = MD.altY;
+  // zeminler: sahanlık (mozaik), alt kat zemini (boşluğun altı da)
+  const tf = tileFloorTex({ a: '#b8b0a4', b: '#a39a8e', line: '#6a625a', rep: [3, 3] });
+  const fl = new THREE.Mesh(new THREE.PlaneGeometry(3.7, 4), painted(tf)); fl.rotation.x = -Math.PI / 2; fl.position.set(X - .65, 0, -.4); g.add(fl);
+  const fl2 = new THREE.Mesh(new THREE.PlaneGeometry(5, 4), painted(tileFloorTex({ a: '#a8a094', b: '#958c80', line: '#5a524a', rep: [4, 3] }))); fl2.rotation.x = -Math.PI / 2; fl2.position.set(X + 3.7, Y1, -.4); g.add(fl2);
+  // sahanlığın kenarı (kalın döşeme alnı, boşluğa bakan)
+  box(.12, 1.36, 4, flat('#c9c0b2'), X + 1.14, Y1 / 2 - .005, -.4, g);
+  // duvarlar: arka (yeşil yağlı boya alt, desenli üst), sol, sağ
+  const wp = wallpaperTex({ base: '#c9b98a', motif: '#dccf9e', line: '#8a7a4a', rep: [1 / .85, 1 / .85], seed: 31 });
+  plane(10, 5, painted(wp), X + 2, .9, -2.4, 0, g);
+  box(10, 1.0, .03, flat('#4f7a64'), X + 2, .5, -2.37, g); box(10, .05, .05, flat('#e8e0c8'), X + 2, 1.02, -2.35, g);
+  box(10, 1.0, .03, flat('#4f7a64'), X + 2, Y1 + .5, -2.36, g);
+  plane(4, 5, painted(wallpaperTex({ base: '#c9b98a', motif: '#dccf9e', line: '#8a7a4a', rep: [1 / .85, 1 / .85], seed: 32 })), X - 2.5, .9, -.4, Math.PI / 2, g);
+  plane(4, 5, painted(wp), X + 6.2, .9, -.4, -Math.PI / 2, g);
+  // basamaklar: 8 adet, arka duvar boyunca sağa iner
+  const st = flat('#d8d0c2'), stE = flat('#8a8276');
+  for (let i = 0; i < 8; i++) {
+    const top = -(i + 1) * .17, x0 = X + 1.2 + i * .3;
+    box(.3, top - Y1 + .001, 1.2, st, x0 + .15, (top + Y1) / 2, -1.8, g);
+    box(.31, .025, 1.22, stE, x0 + .15, top - .01, -1.8, g);                 // basamak burnu (koyu şerit)
+  }
+  // korkuluk: sahanlık kenarı boyunca ve merdiven boyunca eğik
+  const rail = flat('#5a3a2a'), bar = flat('#2f2a34');
+  const rx = X + 1.12;
+  for (let z = -1.15; z <= .95; z += .24) box(.025, .95, .025, bar, rx, .475, z, g);
+  { const r = box(.07, .06, 2.2, rail, rx, .98, -.1, g); }
+  for (let i = 0; i <= 8; i++) { const x = X + 1.2 + i * .3, y = -(i) * .17; box(.025, .95, .025, bar, x, y + .3, -1.18, g); }
+  { const len = Math.hypot(2.4, 1.36), r = new THREE.Mesh(new THREE.BoxGeometry(len, .06, .07), rail); r.position.set(X + 2.4, .125, -1.18); r.rotation.z = -Math.atan2(1.36, 2.4); g.add(r); }
+  // Ayça'ların kapısı (Daire 7): kasa, kapı, numara, paspas, ayakkabılık
+  const kasa = flat('#efe6d4');
+  box(.1, 2.18, .12, kasa, MD.kapiAyca.x - .52, 1.09, -2.36, g); box(.1, 2.18, .12, kasa, MD.kapiAyca.x + .52, 1.09, -2.36, g); box(1.14, .1, .12, kasa, MD.kapiAyca.x, 2.15, -2.36, g);
+  box(.94, 2.08, .05, painted(woodTex({ base: '#7a4a32', rep: [1, 2], vertical: true })), MD.kapiAyca.x, 1.04, -2.37, g);
+  for (const y of [.55, 1.5]) box(.68, .68, .02, flat('#6a3e28'), MD.kapiAyca.x, y, -2.34, g);
+  box(.04, .14, .04, flat('#d8b44a'), MD.kapiAyca.x + .36, 1.02, -2.33, g);
+  plane(.16, .12, new THREE.MeshLambertMaterial({ map: doorNo(7) }), MD.kapiAyca.x, 1.72, -2.325, 0, g);
+  const mat = new THREE.Mesh(new THREE.PlaneGeometry(.9, .5), painted(carpetTex({ base: '#8a4a3a', band: '#e6b45a', rep: [1, 1] }))); mat.rotation.x = -Math.PI / 2; mat.position.set(MD.kapiAyca.x, .006, -1.95); g.add(mat);
+  box(.7, .45, .3, painted(woodTex({ base: '#a07850', rep: [1, 1] })), X - 1.85, .225, -2.2, g);
+  // alt kat kapısı (Daire 3): altından sıcak ışık, önünde paspas
+  const ax = MD.altKapi.x;
+  box(.1, 2.18, .12, kasa, ax - .52, Y1 + 1.09, -2.35, g); box(.1, 2.18, .12, kasa, ax + .52, Y1 + 1.09, -2.35, g); box(1.14, .1, .12, kasa, ax, Y1 + 2.15, -2.35, g);
+  box(.94, 2.06, .05, painted(woodTex({ base: '#9a3a3a', rep: [1, 2], vertical: true })), ax, Y1 + 1.05, -2.36, g);
+  box(.04, .14, .04, flat('#d8b44a'), ax - .36, Y1 + 1.02, -2.32, g);
+  plane(.16, .12, new THREE.MeshLambertMaterial({ map: doorNo(3) }), ax, Y1 + 1.72, -2.325, 0, g);
+  const leak = plane(.9, .03, new THREE.MeshBasicMaterial({ color: HDR(1.6, 1.05, .55) }), ax, Y1 + .016, -2.33, 0, g); leak.layers.set(1);
+  const leakFloor = new THREE.Mesh(new THREE.PlaneGeometry(1.0, .4), new THREE.MeshBasicMaterial({ color: HDR(1.0, .65, .3), transparent: true, opacity: .35, depthWrite: false })); leakFloor.rotation.x = -Math.PI / 2; leakFloor.position.set(ax, Y1 + .008, -2.15); leakFloor.layers.set(1); g.add(leakFloor);
+  const leakL = new THREE.PointLight('#ffb070', 1.6, 0, 1.6); leakL.position.set(ax, Y1 + .1, -2.0); L.add(leakL);
+  const mat2 = new THREE.Mesh(new THREE.PlaneGeometry(.8, .45), painted(carpetTex({ base: '#d86a8a', band: '#f2d6a0', rep: [1, 1] }))); mat2.rotation.x = -Math.PI / 2; mat2.position.set(ax, Y1 + .006, -1.95); g.add(mat2);
+  // saksı (alt kat kapısının yanında)
+  const pot = new THREE.Mesh(new THREE.CylinderGeometry(.15, .11, .32, 16), flat('#e8e2d6')); pot.position.set(ax + .85, Y1 + .16, -2.1); g.add(pot);
+  for (let i = 0; i < 7; i++) { const l = new THREE.Mesh(new THREE.SphereGeometry(.14, 10, 8), flat(i % 2 ? '#4f9a5a' : '#3a7a4a')); l.scale.set(.5, 1.5, .5); l.position.set(ax + .85 + Math.cos(i) * .1, Y1 + .55 + (i % 3) * .1, -2.1 + Math.sin(i) * .08); l.rotation.z = Math.cos(i) * .5; g.add(l); }
+  // ışık: sahanlık apliği (ana, sıcak, görünür) + alt kat apliği (zayıf) + soğuk akşam dolgusu
+  const ap = new THREE.Group(); ap.position.set(X + .3, 2.05, -2.36); g.add(ap);
+  box(.1, .16, .06, flat('#c9a64a'), 0, 0, .02, ap);
+  const shadeM = new THREE.MeshBasicMaterial({ color: HDR(1.8, 1.35, .8) }); const sh = new THREE.Mesh(new THREE.SphereGeometry(.11, 16, 10, 0, Math.PI * 2, 0, Math.PI / 2), shadeM); sh.rotation.x = Math.PI; sh.position.set(0, -.02, .12); sh.layers.set(1); ap.add(sh);
+  glow(g, [X + .3, 1.98, -2.2], '#ffb870', 1.0, .6);
+  const key = keySpot('#ffc58a', 5.5, [X + .3, 2.0, -2.0], [X + .7, 0, -.2], 62 * DEG, { penumbra: .7 }); key.decay = 0; L.add(key); L.add(key.target);
+  const ap2 = new THREE.PointLight('#ffc08a', .9, 0, 1.5); ap2.position.set(X + 4.2, Y1 + 2.0, -2.0); L.add(ap2); glow(g, [X + 4.2, Y1 + 2.0, -2.25], '#ffb870', .6, .5);
+  const hemi = new THREE.HemisphereLight('#7080c8', '#4a3a40', .9); L.add(hemi);
+  const win = new THREE.PointLight('#9fb4ff', 1.2, 0, 1.2); win.position.set(X - 2.2, 1.8, .8); L.add(win);
+  shadows(g);
+  return { g, L, leakL, key };
+}

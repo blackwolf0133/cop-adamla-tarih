@@ -1,0 +1,24 @@
+{
+ "sesler": {
+  "ic":    {"voice": "Vindemiatrix", "fx": "ic",  "tempo": 0.97},
+  "ayca":  {"voice": "Vindemiatrix", "fx": "oda", "tempo": 1.0},
+  "nihat": {"voice": "Algenib",      "fx": "oda", "tempo": 1.0},
+  "kaan":  {"voice": "Leda",         "fx": "oda", "tempo": 0.95}
+ },
+ "satirlar": [
+  {"id": "L01", "kim": "ic",    "metin": "Cumartesi akşamı. Nihat halı sahaya gidiyormuş.", "ara": 0.35},
+  {"id": "L02", "kim": "ic",    "metin": "Çantasını kendisi hazırladı. On iki yılda ilk kez.", "ara": 0.45},
+  {"id": "L03", "kim": "nihat", "metin": "Ben bir duş alıp çıkıyorum, hayatım.", "ara": 0.5},
+  {"id": "L04", "kim": "ic",    "metin": "Su sesi başlar başlamaz çantayı açtım.", "ara": 0.35},
+  {"id": "L05", "kim": "ic",    "metin": "Kramponlar yepyeni. Etiketi bile üstünde.", "ara": 0.45},
+  {"id": "L06", "kim": "ic",    "metin": "Kim hiç giymediği ayakkabıyla maça gider?", "ara": 0.55},
+  {"id": "L07", "kim": "ic",    "metin": "Telefonu ceketinin cebindeydi.", "ara": 0.35},
+  {"id": "L08", "kim": "ic",    "metin": "Şifresi hâlâ düğün tarihimiz. Ne incelik.", "ara": 0.5},
+  {"id": "L09", "kim": "ic",    "metin": "Rehberde tek bir Kaan vardı. Bizim takımdaki Kaan.", "ara": 0.4},
+  {"id": "L10", "kim": "ic",    "metin": "Aradım. Bir kez çaldı. İki kez çaldı.", "ara": 0.6},
+  {"id": "L11", "kim": "kaan",  "metin": "Alo? Nihat?", "ara": 0.6},
+  {"id": "L12", "kim": "ic",    "metin": "Bir kadın sesi.", "ara": 0.45},
+  {"id": "L13", "kim": "ic",    "metin": "Tam o an, banyoda su sesi kesildi.", "ara": 0.6},
+  {"id": "L14", "kim": "ic",    "metin": "Bizim takımdaki Kaan... bir kadın mıydı?", "ara": 0.8}
+ ]
+}
